@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Notes from the build — Mohammad Najjar writes about SaaS architecture, Laravel at scale, Flutter in production, team leadership, and hard-won lessons from shipping 90+ projects.">
+<title>Blog — Mohammad Najjar</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>NOTES FROM THE BUILD</span>
+    <span>SAAS · LARAVEL · FLUTTER · LEADERSHIP</span>
+    <span>NEW POSTS EVERY TWO WEEKS</span>
+    <span>WRITTEN FROM DUBAI</span>
+    <span>NOTES FROM THE BUILD</span>
+    <span>SAAS · LARAVEL · FLUTTER · LEADERSHIP</span>
+    <span>NEW POSTS EVERY TWO WEEKS</span>
+    <span>WRITTEN FROM DUBAI</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="container">
+  <nav class="site-nav">
+    <a href="index.html" class="logo">Najjar.dev</a>
+    <div class="nav-links">
+      <a href="work.html">Work</a>
+      <a href="services.html">Services</a>
+      <a href="process.html">Process</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <a href="contact.html" class="nav-cta">Hire Me →</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</div>
+
+<!-- HEADER -->
+<header class="page-header">
+  <div class="container">
+    <div class="eyebrow">The blog</div>
+    <h1>Notes from<br>the <span class="serif">build.</span></h1>
+    <p>
+      Long-form thinking on SaaS architecture, Laravel at scale, Flutter in production,
+      team leadership, and the hard-won lessons from shipping 90+ projects. Written
+      when I have something worth saying, not on a content calendar.
+    </p>
+
+    <div class="filter-bar">
+      <button class="filter-chip active" data-filter="all">All posts</button>
+      <button class="filter-chip" data-filter="architecture">Architecture</button>
+      <button class="filter-chip" data-filter="laravel">Laravel</button>
+      <button class="filter-chip" data-filter="flutter">Flutter</button>
+      <button class="filter-chip" data-filter="leadership">Leadership</button>
+      <button class="filter-chip" data-filter="performance">Performance</button>
+    </div>
+  </div>
+</header>
+
+<!-- FEATURED + LIST -->
+<section>
+  <div class="container">
+
+    <!-- Featured post -->
+    <a href="blog/saas-mvp-in-6-weeks.html" class="blog-featured" data-tags="architecture,saas">
+      <div class="blog-featured-visual">Ship in <br>six weeks.</div>
+      <div class="blog-featured-body">
+        <div class="blog-meta">
+          <span class="cat">Architecture</span>
+          <span class="dot"></span>
+          <span>14 Apr 2026</span>
+          <span class="dot"></span>
+          <span>12 min read</span>
+        </div>
+        <h2>How I ship a SaaS MVP in exactly six weeks (and what I cut)</h2>
+        <p>
+          Six weeks isn't a deadline — it's a forcing function. The real work is deciding
+          what <em>not</em> to build. Here's the exact list of features I cut every time,
+          the three I refuse to compromise on, and why week 5 is the hardest.
+        </p>
+        <span class="blog-featured-link">Read the post →</span>
+      </div>
+    </a>
+
+    <!-- Grid of posts -->
+    <div class="blog-grid">
+
+      <a href="blog/laravel-performance.html" class="blog-card" data-tags="laravel,performance">
+        <div class="blog-thumb tone-accent">Laravel</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="cat">Performance</span>
+            <span class="dot"></span>
+            <span>02 Apr 2026</span>
+          </div>
+          <h3>From 8 seconds to 600 milliseconds: a Laravel performance autopsy</h3>
+          <p>The dashboard was slow and the client was patient — until they weren't. Here's the real profiling log, the five bottlenecks we found, and the fixes that actually moved the needle.</p>
+          <div class="blog-read">Read — 9 min <span>→</span></div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card" data-tags="flutter">
+        <div class="blog-thumb">Flutter</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="cat">Flutter</span>
+            <span class="dot"></span>
+            <span>21 Mar 2026</span>
+          </div>
+          <h3>Offline-first Flutter: the sync strategy that actually holds up in the field</h3>
+          <p>Drivers go underground. Delivery riders lose signal for 40 minutes. The naive "cache and retry" approach corrupts data. Here's the conflict resolution model I trust.</p>
+          <div class="blog-read">Read — 11 min <span>→</span></div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card" data-tags="leadership">
+        <div class="blog-thumb tone-lime">Team</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="cat">Leadership</span>
+            <span class="dot"></span>
+            <span>08 Mar 2026</span>
+          </div>
+          <h3>Leading eleven engineers without turning into a project manager</h3>
+          <p>I still write code every day. Here's how I organize my week, protect maker-time, and still review every PR that matters — without becoming the bottleneck.</p>
+          <div class="blog-read">Read — 7 min <span>→</span></div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card" data-tags="architecture,laravel">
+        <div class="blog-thumb tone-ink">Architecture</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="cat">Architecture</span>
+            <span class="dot"></span>
+            <span>22 Feb 2026</span>
+          </div>
+          <h3>Multi-tenant Laravel: the pattern I'd use every time</h3>
+          <p>Row-level tenant isolation, shared schema, zero dual-writes. Five years of multi-tenant mistakes condensed into one migration file and a middleware.</p>
+          <div class="blog-read">Read — 14 min <span>→</span></div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card" data-tags="architecture">
+        <div class="blog-thumb tone-accent">IoT</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="cat">Architecture</span>
+            <span class="dot"></span>
+            <span>05 Feb 2026</span>
+          </div>
+          <h3>How UCOFY ingests 58k IoT events a day without dropping one</h3>
+          <p>MQTT into a queue worker cluster, idempotent writes, and a dead-letter strategy that actually gets read. The boring architecture that made regulatory audit possible.</p>
+          <div class="blog-read">Read — 10 min <span>→</span></div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card" data-tags="leadership,performance">
+        <div class="blog-thumb">Hiring</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="cat">Leadership</span>
+            <span class="dot"></span>
+            <span>18 Jan 2026</span>
+          </div>
+          <h3>The take-home I ditched — and what I ask candidates instead</h3>
+          <p>Take-homes filter for the wrong skill. Here's the 60-minute pair programming format I've used for the last 30 hires, and why it gets me better signal with less candidate pain.</p>
+          <div class="blog-read">Read — 8 min <span>→</span></div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card" data-tags="flutter,performance">
+        <div class="blog-thumb tone-lime">Mobile</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="cat">Flutter</span>
+            <span class="dot"></span>
+            <span>29 Dec 2025</span>
+          </div>
+          <h3>Why I stopped using Bloc (and what replaced it)</h3>
+          <p>Bloc was great, right until it wasn't. On our last three production apps, the state management footprint shrunk 60% after switching to Riverpod + a thin domain layer.</p>
+          <div class="blog-read">Read — 6 min <span>→</span></div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card" data-tags="architecture">
+        <div class="blog-thumb tone-ink">RTL</div>
+        <div class="blog-body">
+          <div class="blog-meta">
+            <span class="cat">Architecture</span>
+            <span class="dot"></span>
+            <span>12 Dec 2025</span>
+          </div>
+          <h3>Bilingual Arabic/English web apps that don't suffer</h3>
+          <p>A proper RTL implementation isn't a flip — it's a design decision baked in from day one. The five patterns I use on every Arabic project.</p>
+          <div class="blog-read">Read — 9 min <span>→</span></div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Newsletter -->
+    <div style="margin-top: 80px; padding: 48px; border: 2px solid var(--ink); border-radius: 24px; background: var(--paper-dark); text-align: center;">
+      <div class="section-eyebrow" style="margin-bottom: 12px;">Stay in the loop</div>
+      <h3 style="font-family: var(--font-display); font-size: clamp(28px, 4vw, 44px); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 14px;">
+        New post, <span style="font-family: var(--font-serif); font-style: italic; font-weight: 400;">every other Friday.</span>
+      </h3>
+      <p style="font-size: 16px; color: var(--ink-soft); max-width: 520px; margin: 0 auto 24px;">
+        No spam, no sponsored drivel. Just the one thing I've learned this fortnight that I think is worth your inbox.
+      </p>
+      <form style="display: flex; gap: 12px; max-width: 480px; margin: 0 auto; flex-wrap: wrap;">
+        <input type="email" required placeholder="you@yourdomain.com" style="flex: 1; min-width: 220px; padding: 14px 18px; border: 2px solid var(--ink); border-radius: 50px; font-family: var(--font-display); font-size: 15px; background: var(--paper); outline: none;">
+        <button type="submit" class="btn-big" style="padding: 14px 28px; font-size: 15px;">Subscribe <span class="arrow">↗</span></button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-huge">Let's <span class="serif">talk</span>.<br>I respond in hours.</div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:mohammadnajjamgl@gmail.com">Email</a>
+        <a href="https://wa.me/971501026045" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.linkedin.com/in/mglnaj" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="work.html">Work</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Mohammad Najjar · Built with attention in Dubai</div>
+      <div>AVAILABLE FOR PROJECTS · RESPONSE TIME ~4H</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

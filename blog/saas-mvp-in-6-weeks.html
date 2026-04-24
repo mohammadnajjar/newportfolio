@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="How I ship a SaaS MVP in exactly six weeks — the framework, the features I cut every time, and why week 5 is always the hardest.">
+<title>How I ship a SaaS MVP in six weeks — Mohammad Najjar</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>BLOG · SAAS MVP IN SIX WEEKS</span>
+    <span>PUBLISHED 14 APR 2026</span>
+    <span>12 MIN READ</span>
+    <span>ARCHITECTURE · METHODOLOGY</span>
+    <span>BLOG · SAAS MVP IN SIX WEEKS</span>
+    <span>PUBLISHED 14 APR 2026</span>
+    <span>12 MIN READ</span>
+    <span>ARCHITECTURE · METHODOLOGY</span>
+  </div>
+</div>
+
+<div class="container">
+  <nav class="site-nav">
+    <a href="../index.html" class="logo">Najjar.dev</a>
+    <div class="nav-links">
+      <a href="../work.html">Work</a>
+      <a href="../services.html">Services</a>
+      <a href="../process.html">Process</a>
+      <a href="../blog.html" class="active">Blog</a>
+      <a href="../faq.html">FAQ</a>
+    </div>
+    <a href="../contact.html" class="nav-cta">Hire Me →</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</div>
+
+<div class="container">
+  <article class="blog-article">
+
+    <a href="../blog.html" class="project-back" style="margin-top: 24px;">← Back to blog</a>
+
+    <div class="blog-meta">
+      <span class="cat">Architecture</span>
+      <span class="dot"></span>
+      <span>14 Apr 2026</span>
+      <span class="dot"></span>
+      <span>12 min read</span>
+      <span class="dot"></span>
+      <span>By Mohammad Najjar</span>
+    </div>
+
+    <h1>How I ship a <span class="serif">SaaS MVP</span> in exactly six weeks</h1>
+
+    <p class="lead">
+      Six weeks isn't a deadline. It's a forcing function. The real work isn't
+      deciding what to build — it's deciding what not to. After shipping 40+ of
+      these, here's the exact framework, the features I cut every single time,
+      and why week five is always the one that breaks founders.
+    </p>
+
+    <p>
+      Founders come to me with a spec. The spec is always too long. That's not a
+      criticism — it's physics. You've been thinking about your product for
+      months; I've been thinking about it for an hour. Of course your mental model
+      has more branches than mine.
+    </p>
+
+    <p>
+      My job, in the first week, is to prune that tree down to what a paying
+      customer actually needs. Not what a pitch deck needs. Not what <em>future
+      you</em> might need when you have 500 customers. What <em>today's</em>
+      first user — the one who hasn't signed up yet — needs to reach a moment of
+      usefulness.
+    </p>
+
+    <h2>The six-week skeleton</h2>
+
+    <p>
+      Every MVP runs on the same backbone. The domain varies, the features vary,
+      the scoreline varies — but the cadence is identical. Six weeks broken into
+      four phases:
+    </p>
+
+    <ul>
+      <li><strong>Week 1:</strong> Discovery, cuts, and architecture. No code.</li>
+      <li><strong>Weeks 2–3:</strong> Auth, billing, admin shell. The boring stuff first.</li>
+      <li><strong>Weeks 4–5:</strong> The one feature that matters. The thing a user pays for.</li>
+      <li><strong>Week 6:</strong> Polish, deploy, and the launch checklist.</li>
+    </ul>
+
+    <p>
+      Notice what's missing: there's no "design week," no "user testing sprint,"
+      no "iterate on feedback." Those things happen — but they happen
+      <em>concurrently</em>, not in their own box. A six-week MVP doesn't have
+      the runway for sequential quality gates.
+    </p>
+
+    <h2>The things I cut every single time</h2>
+
+    <p>
+      Here's the list I bring to every kickoff call. If your spec contains any
+      of these, they're leaving the room. We can add them back in week 7 —
+      after you have paying customers telling you to.
+    </p>
+
+    <blockquote>
+      "But customers will expect it." No they won't. They'll expect it if you
+      <em>list</em> it. They won't notice if you don't.
+    </blockquote>
+
+    <h3>1. Social login</h3>
+    <p>
+      Email + password is fine for an MVP. Sign-in-with-Google costs you a day
+      of integration, a Google Cloud console, an OAuth consent screen that needs
+      review if you go past 100 users, and a dependency that can break on you
+      without warning. Launch with email. Add Google in week 7 if users ask.
+      <em>They will not ask.</em>
+    </p>
+
+    <h3>2. Password reset by SMS</h3>
+    <p>
+      You don't have 1,000 users yet. You have zero. Email password reset is
+      free, it works, and Twilio costs per message. Ship the email flow. Add
+      SMS when the cost per password reset is less than the cost per signup.
+    </p>
+
+    <h3>3. In-app notifications</h3>
+    <p>
+      Email is a notification system that already exists, has infinite retention,
+      works on every device, and users read. A bell icon with a badge count is
+      half a week of engineering that buys you nothing a weekly digest email
+      doesn't.
+    </p>
+
+    <h3>4. Dark mode</h3>
+    <p>
+      Nobody has ever canceled a subscription because a SaaS lacked dark mode.
+      It's a week of CSS variables and QA that doesn't convert a single user.
+      Six months from now, when your product has design DNA worth respecting,
+      do it right. Not now.
+    </p>
+
+    <h2>The three I refuse to compromise on</h2>
+
+    <p>
+      Equally important is the list of things I <em>won't</em> ship without.
+      These are the non-negotiables. Skip any of them and the MVP isn't a
+      product, it's a demo:
+    </p>
+
+    <ol>
+      <li>
+        <strong>Billing that can actually charge a card.</strong> Not "billing
+        coming soon." Not a Stripe test key. An MVP that can't take money
+        isn't an MVP — it's a prototype with HTML.
+      </li>
+      <li>
+        <strong>A password reset flow that actually works.</strong> 30% of your
+        early users will lock themselves out in the first week. If your
+        recovery flow doesn't work, those users are permanently gone.
+      </li>
+      <li>
+        <strong>An admin panel you can use without a database client.</strong>
+        Not Forge, not phpMyAdmin, not SSH + MySQL CLI. A real admin panel
+        where you or your support person can see a user, toggle a flag, refund
+        a charge. You will use it every single day.
+      </li>
+    </ol>
+
+    <h2>Why week five is always the hardest</h2>
+
+    <p>
+      In weeks 1–4, everyone's excited. Auth ships. Billing ships. The shell
+      comes together. Founders get their first <em>look, it's real</em>
+      moment. Then week five arrives and reality hits.
+    </p>
+
+    <p>
+      Week five is when the one feature that actually matters — the thing your
+      product is <em>for</em> — collides with the time you have left. Every MVP
+      I've ever done, the core feature is more complex than the spec suggested.
+      Not because founders are wrong. Because the spec only captured the happy
+      path, and production is an obstacle course of edge cases.
+    </p>
+
+    <pre><code>// The naive spec:
+user.uploads(receipt)
+  .then(r =&gt; ocr.extract(r))
+  .then(data =&gt; db.save(data))
+
+// The actual week 5 reality:
+// — what if the receipt is a PDF?
+// — what if the photo is upside down?
+// — what if OCR returns 3 possible values?
+// — what if the user uploads the same receipt twice?
+// — what if OCR is down?
+// — what if the user cancels mid-upload?</code></pre>
+
+    <p>
+      My rule for week five: <strong>cut every "nice to have" in the core
+      feature, no exceptions.</strong> Every founder wants to push back. Every
+      founder wants to keep "just this one small thing." It's never just one
+      small thing — it's the thing that pushes week six into week eight.
+    </p>
+
+    <h2>Week six — the launch week</h2>
+
+    <p>
+      Week six is never about building. If you're still building in week six,
+      you've already slipped. Week six is: deploy, test on real devices, fill
+      the legal pages, set up the transactional emails, run the checkout on a
+      real card, and write the launch post.
+    </p>
+
+    <p>
+      I ship on a Wednesday. Not Friday — Friday ships die over the weekend
+      when nobody's watching. Not Monday — Monday is for the team to recover
+      from weekend panic. Wednesday gives you Thursday and Friday to fix
+      what's broken before anyone important is watching.
+    </p>
+
+    <h2>What's outside the MVP</h2>
+
+    <p>
+      The question I get most is: "what about all the things we cut?" The
+      answer: <em>they're in version 1.1.</em> An MVP is not a finished
+      product. It's the smallest possible version of your product that can
+      take money and teach you what you got wrong. Everything else is
+      <em>version 1.1, 1.2, 1.3…</em>
+    </p>
+
+    <p>
+      If the MVP succeeds, you'll spend the next six months adding back the
+      things you cut — but only the ones that actually mattered. Most of
+      them, it turns out, don't. That's the whole point of the exercise.
+    </p>
+
+    <h2>The uncomfortable truth</h2>
+
+    <p>
+      Six weeks is a constraint, not a promise. I promise a shipped product.
+      I don't promise it'll be <em>your</em> vision of the product. It'll be
+      the smallest version of your product that actually works — and in my
+      experience, that's the version your users prefer anyway.
+    </p>
+
+    <p>
+      If you're considering a SaaS MVP and the "six weeks" number scares you,
+      that's a good sign. If it sounds comfortable, your spec is too short.
+    </p>
+
+    <div class="blog-tags">
+      <span>SaaS</span>
+      <span>Architecture</span>
+      <span>Methodology</span>
+      <span>MVP</span>
+      <span>Laravel</span>
+      <span>Founders</span>
+    </div>
+
+    <div class="author-card">
+      <div class="author-avatar">MN</div>
+      <div class="author-body">
+        <div class="name">Mohammad Najjar</div>
+        <div class="bio">Full-stack engineer and tech lead based in Dubai. Ships SaaS MVPs, leads engineering teams, writes occasionally about the things that work in production.</div>
+      </div>
+    </div>
+
+  </article>
+</div>
+
+<!-- CTA -->
+<section class="mega-cta">
+  <div class="container mega-cta-content">
+    <h2>Got a SaaS idea<br>and six <span class="serif">weeks?</span></h2>
+    <p>Tell me about it. 30-minute call, no obligation — I'll tell you honestly whether the scope fits, what I'd cut, and when I could start.</p>
+    <a href="../contact.html" class="btn-big">Book a call <span class="arrow">↗</span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-huge">Let's <span class="serif">talk</span>.<br>I respond in hours.</div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:mohammadnajjamgl@gmail.com">Email</a>
+        <a href="https://wa.me/971501026045" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.linkedin.com/in/mglnaj" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="../work.html">Work</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../faq.html">FAQ</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Mohammad Najjar · Built with attention in Dubai</div>
+      <div>AVAILABLE FOR PROJECTS · RESPONSE TIME ~4H</div>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

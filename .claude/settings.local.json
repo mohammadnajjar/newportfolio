@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m http.server 8765)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:8765/index.html)",
+      "Bash(curl -s -o /dev/null -w \"CSS %{http_code}\\\\n\" http://localhost:8765/assets/css/styles.css)",
+      "Bash(curl -s -o /dev/null -w \"JS %{http_code}\\\\n\" http://localhost:8765/assets/js/main.js)",
+      "WebFetch(domain:yslootahtech.com)",
+      "Bash(curl -s -o /dev/null -w \"Server: %{http_code}\\\\n\" http://localhost:8765/index.html)"
+    ]
+  }
+}
