@@ -1,8 +1,9 @@
+import type { ReactElement } from 'react'
 import Link from 'next/link'
 
 type HeadlineKey = 'talk' | 'contact' | ''
 
-const headlineMap: Record<HeadlineKey, JSX.Element> = {
+const headlineMap: Record<HeadlineKey, ReactElement> = {
   talk: (
     <>
       Let&apos;s talk. <span className="serif">I respond</span><br />in hours.

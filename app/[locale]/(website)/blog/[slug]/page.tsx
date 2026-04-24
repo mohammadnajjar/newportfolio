@@ -35,71 +35,40 @@ export default async function BlogPostPage({ params }: PageProps) {
       <SiteTicker items={`READING · ${post.category.toUpperCase()} | ${post.readTime.toUpperCase()} | BY MOHAMMAD NAJJAR · DUBAI`} />
       <SiteNav active="blog" />
 
-      <header className="page-header" style={{ paddingBottom: '32px' }}>
-        <div className="container">
-          <div style={{ marginBottom: '24px' }}>
-            <Link href="/blog" className="btn-ghost">← All posts</Link>
-          </div>
-          <div className="eyebrow">{post.category}</div>
-          <h1>{post.title}</h1>
-          <div className="blog-meta" style={{ marginTop: '24px', fontSize: '14px' }}>
-            <span>{post.date}</span>
-            <span className="dot"></span>
-            <span>{post.readTime}</span>
-          </div>
-        </div>
-      </header>
-
       <section style={{ paddingTop: '40px' }}>
         <div className="container">
           <div className="faq-layout">
             <BlogTOC items={post.toc} />
 
             <article className="blog-article">
+              <Link href="/blog" className="project-back" style={{ marginTop: '24px', display: 'inline-block' }}>← Back to blog</Link>
+
+              <div className="blog-meta">
+                <span className="cat">{post.category}</span>
+                <span className="dot"></span>
+                <span>{post.date}</span>
+                <span className="dot"></span>
+                <span>{post.readTime}</span>
+                <span className="dot"></span>
+                <span>By Mohammad Najjar</span>
+              </div>
+
+              <h1>{post.title}</h1>
+
               <p className="lead">{post.lead}</p>
               <div dangerouslySetInnerHTML={{ __html: post.body }} />
 
-              <div className="article-tags" style={{ marginTop: '48px', display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+              <div className="blog-tags">
                 {post.tags.map(t => (
-                  <span key={t} className="tech-pill">{t}</span>
+                  <span key={t}>{t}</span>
                 ))}
               </div>
 
-              <div
-                className="author-card"
-                style={{
-                  marginTop: '48px',
-                  padding: '28px',
-                  border: '2px solid var(--ink)',
-                  borderRadius: '20px',
-                  background: 'var(--paper-dark)',
-                  display: 'flex',
-                  gap: '20px',
-                  alignItems: 'center',
-                }}
-              >
-                <div
-                  style={{
-                    width: '64px',
-                    height: '64px',
-                    borderRadius: '50%',
-                    background: 'var(--accent)',
-                    color: 'var(--paper)',
-                    display: 'grid',
-                    placeItems: 'center',
-                    fontFamily: 'var(--font-display)',
-                    fontWeight: 900,
-                    fontSize: '22px',
-                    flexShrink: 0,
-                  }}
-                >
-                  MN
-                </div>
-                <div>
-                  <div style={{ fontWeight: 800, marginBottom: '4px' }}>Mohammad Najjar</div>
-                  <div style={{ color: 'var(--ink-soft)', fontSize: '14px' }}>
-                    Senior software engineer · 6+ years shipping SaaS, mobile and web apps from Dubai.
-                  </div>
+              <div className="author-card">
+                <div className="author-avatar">MN</div>
+                <div className="author-body">
+                  <div className="name">Mohammad Najjar</div>
+                  <div className="bio">Full-stack engineer and tech lead based in Dubai. Ships SaaS MVPs, leads engineering teams, writes occasionally about the things that work in production.</div>
                 </div>
               </div>
             </article>

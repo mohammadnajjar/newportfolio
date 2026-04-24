@@ -2147,12 +2147,16 @@ footer {
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-size: clamp(48px, 6vw, 80px);
+  font-size: clamp(32px, 4vw, 56px);
   font-weight: 900;
   letter-spacing: -0.04em;
   border-bottom: 2px solid var(--ink);
   position: relative;
   overflow: hidden;
+  padding: 24px 28px;
+  text-align: center;
+  word-break: break-word;
+  line-height: 1.05;
 }
 
 .portfolio-thumb.tone-accent { background: var(--accent); }

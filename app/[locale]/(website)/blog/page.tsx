@@ -18,23 +18,11 @@ export default function BlogPage() {
       <SiteTicker items="NOTES FROM THE BUILD | SAAS · LARAVEL · FLUTTER · LEADERSHIP | NEW POSTS EVERY TWO WEEKS | WRITTEN FROM DUBAI" />
       <SiteNav active="blog" />
 
-      <header className="page-header">
-        <div className="container">
-          <div className="eyebrow">The blog</div>
-          <h1>Notes from<br />the <span className="serif">build.</span></h1>
-          <p>
-            Long-form thinking on SaaS architecture, Laravel at scale, Flutter in production,
-            team leadership, and the hard-won lessons from shipping 90+ projects. Written
-            when I have something worth saying, not on a content calendar.
-          </p>
-        </div>
-      </header>
-
       <BlogList featured={featured} posts={others} />
 
       <section style={{ paddingTop: 0 }}>
         <div className="container">
-          <div style={{ marginTop: '80px', padding: '48px', border: '2px solid var(--ink)', borderRadius: '24px', background: 'var(--paper-dark)', textAlign: 'center' }}>
+          <div style={{ padding: '48px', border: '2px solid var(--ink)', borderRadius: '24px', background: 'var(--paper-dark)', textAlign: 'center' }}>
             <div className="section-eyebrow" style={{ marginBottom: '12px' }}>Stay in the loop</div>
             <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 900, letterSpacing: '-0.03em', marginBottom: '14px' }}>
               New post, <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400 }}>every other Friday.</span>

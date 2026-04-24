@@ -30,20 +30,31 @@ export default function BlogList({ featured, posts }: Props) {
 
   return (
     <>
-      <div className="filter-bar">
-        {filters.map(f => (
-          <button
-            key={f.id}
-            type="button"
-            className={`filter-chip${active === f.id ? ' active' : ''}`}
-            onClick={() => setActive(f.id)}
-          >
-            {f.label}
-          </button>
-        ))}
-      </div>
+      <header className="page-header">
+        <div className="container">
+          <div className="eyebrow">The blog</div>
+          <h1>Notes from<br />the <span className="serif">build.</span></h1>
+          <p>
+            Long-form thinking on SaaS architecture, Laravel at scale, Flutter in production,
+            team leadership, and the hard-won lessons from shipping 90+ projects. Written
+            when I have something worth saying, not on a content calendar.
+          </p>
+          <div className="filter-bar">
+            {filters.map(f => (
+              <button
+                key={f.id}
+                type="button"
+                className={`filter-chip${active === f.id ? ' active' : ''}`}
+                onClick={() => setActive(f.id)}
+              >
+                {f.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </header>
 
-      <section style={{ paddingTop: 0 }}>
+      <section>
         <div className="container">
           {featuredVisible && (
             <Link href={postHref(featured)} className="blog-featured">
