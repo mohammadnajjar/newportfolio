@@ -560,6 +560,53 @@ nav.site-nav {
   text-transform: uppercase;
 }
 
+/* Tech logos strip */
+.tech-logos-strip {
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  padding: 32px 0;
+  background: var(--paper-dark);
+}
+
+.tech-logos-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.45;
+  margin-bottom: 20px;
+}
+
+.tech-logos-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 4px;
+}
+
+.tech-logo-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: 1.5px solid transparent;
+  border-radius: 10px;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  transition: all 0.2s ease;
+}
+
+.tech-logo-item:hover {
+  border-color: var(--ink);
+  background: var(--paper);
+  transform: translateY(-2px);
+}
+
+.tech-logo-item svg { flex-shrink: 0; display: block; }
+
 
 /* ============================================================
    8. Services grid
@@ -3029,6 +3076,12 @@ footer {
   letter-spacing: -0.01em;
   transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
   cursor: default;
+}
+
+.tech-item-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .tech-item:hover {

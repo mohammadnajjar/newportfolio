@@ -47,7 +47,7 @@ const industries = [
   },
 ]
 
-
+export const metadata = {
   title: 'Services',
   description: 'SaaS MVP, Enterprise platforms, mobile apps, performance audits, and fractional CTO. Fixed pricing, real accountability.',
 }
