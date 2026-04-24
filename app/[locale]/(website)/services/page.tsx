@@ -2,8 +2,52 @@ import Link from 'next/link'
 import SiteTicker from '@/modules/common/SiteTicker'
 import SiteNav from '@/modules/common/SiteNav'
 import SiteFooter from '@/modules/common/SiteFooter'
+import TechStack from '@/modules/services/TechStack'
 
-export const metadata = {
+const industries = [
+  {
+    icon: '🏥',
+    title: 'Health Care',
+    desc: 'Digital health solutions, patient management systems, and medical data analytics.',
+  },
+  {
+    icon: '🏦',
+    title: 'Banking',
+    desc: 'Secure banking platforms, digital wallets, and real-time transaction systems.',
+  },
+  {
+    icon: '📈',
+    title: 'Financial',
+    desc: 'FinTech innovations, investment platforms, and regulatory compliance tools.',
+  },
+  {
+    icon: '✈️',
+    title: 'Tourism',
+    desc: 'Travel booking systems, hospitality management, and visitor experience apps.',
+  },
+  {
+    icon: '🛍️',
+    title: 'Retail',
+    desc: 'E-commerce platforms, inventory management, and omnichannel solutions.',
+  },
+  {
+    icon: '🏭',
+    title: 'Manufacturing',
+    desc: 'Smart factory solutions, supply chain optimization, and quality control systems.',
+  },
+  {
+    icon: '🚚',
+    title: 'Logistics & Transportation',
+    desc: 'Fleet management, route optimization, and real-time tracking solutions.',
+  },
+  {
+    icon: '💻',
+    title: 'Information Technologies',
+    desc: 'Enterprise IT solutions, cloud infrastructure, and cybersecurity services.',
+  },
+]
+
+
   title: 'Services',
   description: 'SaaS MVP, Enterprise platforms, mobile apps, performance audits, and fractional CTO. Fixed pricing, real accountability.',
 }
@@ -135,6 +179,46 @@ export default function ServicesPage() {
               </tbody>
             </table>
           </div>
+        </div>
+      </section>
+
+      <section className="industry-section">
+        <div className="container">
+          <div className="section-intro">
+            <div className="section-eyebrow">Domains</div>
+            <h2 className="section-title">
+              Industry <span className="serif">expertise.</span>
+            </h2>
+            <p className="section-desc">
+              We&apos;ve excelled our experience in a wide range of industries to bring
+              valuable insights and provide truly beneficial solutions.
+            </p>
+          </div>
+
+          <div className="industry-grid">
+            {industries.map(ind => (
+              <div key={ind.title} className="industry-card">
+                <div className="industry-icon">{ind.icon}</div>
+                <h3>{ind.title}</h3>
+                <p>{ind.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container">
+          <div className="section-intro">
+            <div className="section-eyebrow">Stack</div>
+            <h2 className="section-title">
+              Our technology <span className="serif">stack.</span>
+            </h2>
+            <p className="section-desc">
+              We leverage cutting-edge technologies to build robust, scalable solutions.
+            </p>
+          </div>
+          <TechStack />
         </div>
       </section>
 
