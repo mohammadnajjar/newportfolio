@@ -2238,6 +2238,39 @@ footer {
   width: 100%;
 }
 
+.websites-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.website-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 2px solid var(--ink);
+  border-radius: 50px;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+}
+
+.website-chip:hover {
+  background: var(--lime);
+  box-shadow: 3px 3px 0 var(--ink);
+  transform: translate(-1px, -1px);
+}
+
+.website-chip span {
+  font-size: 11px;
+  opacity: 0.6;
+}
+
 
 /* ============================================================
    20. Blog
