@@ -3,6 +3,7 @@ import SiteTicker from '@/modules/common/SiteTicker'
 import SiteNav from '@/modules/common/SiteNav'
 import SiteFooter from '@/modules/common/SiteFooter'
 import FAQAccordion from '@/modules/faq/FAQAccordion'
+import SkillsGrid from '@/modules/experience/SkillsGrid'
 
 const techLogos = [
   {
@@ -306,9 +307,24 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* TESTIMONIAL */}
-      <section className="testimonial-section">
+      {/* SKILLS */}
+      <section id="skills">
         <div className="container">
+          <div className="section-intro">
+            <div className="section-eyebrow">Skills</div>
+            <h2 className="section-title">
+              The full <span className="serif">tech stack</span>
+            </h2>
+            <p className="section-desc">
+              Languages, frameworks, databases, and the practices that hold them together.
+            </p>
+          </div>
+          <SkillsGrid />
+        </div>
+      </section>
+
+      {/* TESTIMONIAL */}
+      <section className="testimonial-section">        <div className="container">
           <p className="quote-big">
             Mohammad is an outstanding full-stack engineer who ranks in the{' '}
             <em>top 10%</em> of our peer group. Thoughtful, thorough, and a true
