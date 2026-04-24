@@ -14,37 +14,9 @@
 </head>
 <body>
 
-<!-- TICKER -->
-<div class="ticker" aria-hidden="true">
-  <div class="ticker-track">
-    <span>SELECTED WORK · 2019 — 2026</span>
-    <span>90+ PROJECTS SHIPPED</span>
-    <span>DUBAI · MENA · WORLDWIDE</span>
-    <span>SAAS · ENTERPRISE · MOBILE · IOT</span>
-    <span>SELECTED WORK · 2019 — 2026</span>
-    <span>90+ PROJECTS SHIPPED</span>
-    <span>DUBAI · MENA · WORLDWIDE</span>
-    <span>SAAS · ENTERPRISE · MOBILE · IOT</span>
-  </div>
-</div>
+<site-ticker items="SELECTED WORK · 2019 — 2026 | 50+ PROJECTS SHIPPED | DUBAI · MENA · WORLDWIDE | SAAS · ENTERPRISE · MOBILE · IOT"></site-ticker>
 
-<!-- NAV -->
-<div class="container">
-  <nav class="site-nav">
-    <a href="index.html" class="logo">Najjar.dev</a>
-    <div class="nav-links">
-      <a href="work.html" class="active">Work</a>
-      <a href="services.html">Services</a>
-      <a href="process.html">Process</a>
-      <a href="blog.html">Blog</a>
-      <a href="faq.html">FAQ</a>
-    </div>
-    <a href="contact.html" class="nav-cta">Hire Me →</a>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-</div>
+<site-nav active="work"></site-nav>
 
 <!-- HEADER -->
 <header class="page-header">
@@ -52,7 +24,7 @@
     <div class="eyebrow">Selected work</div>
     <h1>Real projects,<br><span class="serif">real impact</span></h1>
     <p>
-      A curated selection from 90+ shipped projects. SaaS platforms, enterprise
+      A curated selection from 50+ shipped projects. SaaS platforms, enterprise
       systems, mobile apps, and IoT integrations — each one running in production,
       serving real users, delivering measurable results.
     </p>
@@ -226,6 +198,57 @@
         </div>
       </a>
 
+      <!-- Lootah Shop -->
+      <a href="projects/lootah-shop.html" class="portfolio-card" data-tags="apps,ecommerce">
+        <div class="portfolio-thumb tone-accent">
+          <span class="badge">Full Stack</span>
+          Lootah Shop
+        </div>
+        <div class="portfolio-body">
+          <div class="cat">Retail · Mobile App + Dashboard</div>
+          <h3>Lootah Shop</h3>
+          <p>Fully owned end-to-end: designed and built the backend API, Flutter mobile app, and admin dashboard. The complete retail ecosystem for YS Lootah's shopping platform.</p>
+          <div class="portfolio-tags">
+            <span>Laravel</span><span>Flutter</span><span>Admin Dashboard</span><span>MySQL</span>
+          </div>
+          <div class="portfolio-link">View case study <span>→</span></div>
+        </div>
+      </a>
+
+      <!-- Lootah E-commerce -->
+      <a href="projects/lootah-ecommerce.html" class="portfolio-card" data-tags="apps,ecommerce">
+        <div class="portfolio-thumb tone-blue">
+          <span class="badge">Backend</span>
+          Lootah E-com
+        </div>
+        <div class="portfolio-body">
+          <div class="cat">E-commerce · Mobile App</div>
+          <h3>Lootah E-commerce</h3>
+          <p>Backend API for Lootah's main e-commerce mobile app. Product catalog, cart, checkout, order management, and delivery tracking — all powered by a single robust API.</p>
+          <div class="portfolio-tags">
+            <span>Laravel</span><span>Flutter</span><span>REST API</span><span>MySQL</span>
+          </div>
+          <div class="portfolio-link">View case study <span>→</span></div>
+        </div>
+      </a>
+
+      <!-- Offer 123 -->
+      <a href="projects/offer123.html" class="portfolio-card" data-tags="apps,ecommerce">
+        <div class="portfolio-thumb tone-lime">
+          <span class="badge">Backend</span>
+          Offer 123
+        </div>
+        <div class="portfolio-body">
+          <div class="cat">Deals &amp; Offers · Mobile App</div>
+          <h3>Offer 123</h3>
+          <p>Deals and offers aggregator mobile app. Built the backend API handling merchant onboarding, offer listings, user targeting, and redemption tracking.</p>
+          <div class="portfolio-tags">
+            <span>Laravel</span><span>Flutter</span><span>Push Notifications</span><span>MySQL</span>
+          </div>
+          <div class="portfolio-link">View case study <span>→</span></div>
+        </div>
+      </a>
+
     </div>
   </div>
 </section>
@@ -235,7 +258,7 @@
   <div class="container">
     <div class="section-eyebrow">Websites &amp; web projects</div>
     <h2 class="section-title" style="margin-bottom: 0.5rem;">Every pixel, <span class="serif">solo</span></h2>
-    <p style="color: var(--ink-mute); margin-bottom: 3rem; max-width: 560px;">40+ websites designed and built end-to-end. From concept and design to deployment and DNS.</p>
+    <p style="color: var(--ink-mute); margin-bottom: 3rem; max-width: 560px;">40+ websites designed and built end-to-end — solo. From concept and design to deployment and DNS.</p>
 
     <div class="portfolio-grid">
 
@@ -439,7 +462,7 @@
 <div class="results-strip">
   <div class="results-row">
     <div class="result-item">
-      <div class="result-big">90<span class="plus">+</span></div>
+      <div class="result-big">50<span class="plus">+</span></div>
       <div class="result-lbl">Projects Shipped</div>
     </div>
     <div class="result-item">
@@ -457,38 +480,9 @@
   </div>
 </div>
 
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-huge">
-        Got a project<br>
-        in <span class="serif">mind?</span>
-      </div>
+<site-footer></site-footer>
 
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <a href="mailto:mohammadnajjamgl@gmail.com">Email</a>
-        <a href="https://wa.me/971501026045" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="https://www.linkedin.com/in/mglnaj" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Navigate</h4>
-        <a href="work.html">Work</a>
-        <a href="services.html">Services</a>
-        <a href="process.html">Process</a>
-        <a href="faq.html">FAQ</a>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div>© 2026 Mohammad Najjar · Built with attention in Dubai</div>
-      <div>AVAILABLE FOR PROJECTS · RESPONSE TIME ~4H</div>
-    </div>
-  </div>
-</footer>
-
+<script src="assets/js/components.js" defer></script>
 <script src="assets/js/main.js" defer></script>
 </body>
 </html>

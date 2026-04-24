@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Offer 123 — Deals and offers aggregator mobile app. Built the backend API: merchant onboarding, offer listings, targeting, and redemption tracking.">
+<title>Offer 123 — Case Study · Mohammad Najjar</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<site-ticker items="CASE STUDY · OFFER 123 | DEALS &amp; OFFERS · MOBILE APP | IOS &amp; ANDROID | MERCHANT ONBOARDING · TARGETING · REDEMPTION"></site-ticker>
+
+<site-nav active="work"></site-nav>
+
+<!-- HERO -->
+<header class="project-hero">
+  <div class="container">
+    <a href="../work.html" class="project-back">← Back to all work</a>
+
+    <div class="project-meta-row">
+      <span>Deals &amp; Offers · Mobile App</span>
+      <span class="pipe">/</span>
+      <span>2023</span>
+      <span class="pipe">/</span>
+      <span>3 months</span>
+      <span class="pipe">/</span>
+      <span>Backend Developer</span>
+    </div>
+
+    <h1 class="project-title">Offer 123</h1>
+
+    <p class="project-summary">
+      A deals and offers aggregator mobile app on iOS and Android.
+      Built the backend API handling the full offer lifecycle: merchant onboarding,
+      offer creation and scheduling, user targeting, geo-based discovery,
+      and redemption tracking — all powering the Flutter app.
+    </p>
+
+    <div class="project-hero-actions">
+      <a href="https://play.google.com/store/apps/dev?id=7656896123374250636" class="btn-big" target="_blank" rel="noopener">
+        View on Play Store <span class="arrow">↗</span>
+      </a>
+      <a href="#methods" class="btn-ghost">Read the story →</a>
+    </div>
+  </div>
+
+  <!-- Cover -->
+  <div class="project-cover tone-lime">
+    <div class="project-cover-inner">Offer 123</div>
+  </div>
+</header>
+
+<!-- BODY -->
+<section class="project-body" id="methods">
+  <div class="container">
+    <div class="project-layout">
+
+      <div class="project-narrative">
+        <h2>Methods &amp; <span class="serif">journey</span></h2>
+
+        <p>
+          Offer 123 is an offers and deals discovery app — merchants publish
+          time-limited promotions, users browse and redeem them through the app.
+          The product lives entirely in its backend: the quality of the offer
+          targeting, the redemption validation, and the merchant tools determine
+          whether the platform creates value for both sides.
+        </p>
+
+        <h3>The challenge</h3>
+        <p>
+          A deals platform needs to balance two very different user types through
+          a single API: merchants managing their promotions and users browsing and
+          redeeming them. The core technical challenge is redemption integrity —
+          an offer must be redeemable exactly the allowed number of times, under
+          the right conditions, with no double-spends.
+        </p>
+
+        <ul>
+          <li>Merchant onboarding: business profile, category selection, branch locations</li>
+          <li>Offer creation: title, description, terms, discount value, valid period, redemption limit</li>
+          <li>Offer scheduling: active / inactive / expired states with automatic transitions</li>
+          <li>User targeting: by location, category preference, and usage history</li>
+          <li>Geo-based discovery: nearby offers sorted by distance using location data</li>
+          <li>Redemption flow: QR code generation, merchant-side scanning, per-user limit enforcement</li>
+          <li>Push notifications: new offers matching user preferences, expiry reminders</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <h3>The architecture</h3>
+        <p>
+          Laravel with MySQL. Offer state managed as an enum with automatic
+          transitions triggered by scheduled jobs — no manual intervention
+          needed to activate or expire offers at the right time. Redemption
+          uses a database-level unique constraint per (user, offer) pair to
+          prevent race conditions on simultaneous redemption attempts.
+        </p>
+        <p>
+          Geo-based discovery uses MySQL's spatial index on branch coordinates,
+          returning offers sorted by distance within a configurable radius.
+          Merchant dashboard built with Filament — merchants log in and manage
+          everything themselves without needing support tickets.
+        </p>
+
+        <h3>What shipped</h3>
+        <p>
+          A production API serving iOS and Android: merchant self-service portal,
+          offer lifecycle management, geo-based offer discovery, QR code redemption
+          with race-condition-safe validation, and push notifications — delivered
+          in 3 months from kick-off to production.
+        </p>
+
+        <h3>The outcome</h3>
+        <p>
+          Merchants publish and manage their own offers without developer involvement.
+          Users discover nearby deals in real time. Redemptions are validated
+          instantly with zero double-spend incidents since launch.
+        </p>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="project-sidebar">
+        <h4>Project details</h4>
+
+        <div class="project-detail-item">
+          <div class="lbl">Project</div>
+          <div class="val">Offer 123<small>Deals &amp; Offers Platform</small></div>
+        </div>
+        <div class="project-detail-item">
+          <div class="lbl">Category</div>
+          <div class="val">Deals &amp; Offers · Mobile App</div>
+        </div>
+        <div class="project-detail-item">
+          <div class="lbl">My role</div>
+          <div class="val">Backend Developer<small>API, DB Design, Merchant Portal</small></div>
+        </div>
+        <div class="project-detail-item">
+          <div class="lbl">Services</div>
+          <div class="val">Backend API<small>Redemption Engine, Geo Discovery, Push</small></div>
+        </div>
+        <div class="project-detail-item">
+          <div class="lbl">Timeline</div>
+          <div class="val">3 months<small>2023</small></div>
+        </div>
+        <div class="project-detail-item">
+          <div class="lbl">Platform</div>
+          <div class="val">iOS &amp; Android<small>Flutter frontend (separate team)</small></div>
+        </div>
+        <div class="project-detail-item">
+          <div class="lbl">Client</div>
+          <div class="val">YS Lootah Group<small>Dubai, UAE</small></div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- KPI -->
+<section class="kpi-strip">
+  <div class="container">
+    <div class="section-eyebrow">The numbers</div>
+    <h2 class="section-title">Real <span class="serif">results</span></h2>
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="lbl">Redemption safety</div>
+        <div class="num">DB<span class="plus">-level</span></div>
+        <div class="desc">Unique constraint at the database layer — zero double-spend incidents.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="lbl">Offer transitions</div>
+        <div class="num">Auto</div>
+        <div class="desc">Scheduled jobs activate and expire offers automatically — zero manual ops.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="lbl">Discovery</div>
+        <div class="num">Geo</div>
+        <div class="desc">Spatial index on branch coordinates — nearby offers sorted by distance in real time.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="lbl">Delivered</div>
+        <div class="num">3<span class="plus"> mo</span></div>
+        <div class="desc">From kick-off to production in 3 months — merchant portal, app API, and push all live.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section class="tech-strip">
+  <div class="container">
+    <div class="eyebrow">Technologies</div>
+    <h2>Built with <span class="serif">care</span></h2>
+    <div class="tech-row">
+      <div class="tech-pill">Laravel 10</div>
+      <div class="tech-pill">Flutter (API client)</div>
+      <div class="tech-pill">MySQL Spatial Index</div>
+      <div class="tech-pill">Filament Admin</div>
+      <div class="tech-pill">Firebase Push</div>
+      <div class="tech-pill">QR Code Redemption</div>
+      <div class="tech-pill">Scheduled Jobs</div>
+      <div class="tech-pill">REST API</div>
+      <div class="tech-pill">Docker</div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section">
+  <div class="container">
+    <div class="section-eyebrow">Gallery</div>
+    <h2 class="section-title">A peek <span class="serif">inside</span></h2>
+    <div class="gallery-grid">
+      <div class="gallery-item tone-lime">
+        <span class="num">01</span>
+        <span class="label">Offer discovery — nearby</span>
+      </div>
+      <div class="gallery-item tone-ink">
+        <span class="num">02</span>
+        <span class="label">Offer detail &amp; terms</span>
+      </div>
+      <div class="gallery-item tone-paper">
+        <span class="num">03</span>
+        <span class="label">QR redemption flow</span>
+      </div>
+      <div class="gallery-item">
+        <span class="num">04</span>
+        <span class="label">Merchant — create offer</span>
+      </div>
+      <div class="gallery-item tone-lime">
+        <span class="num">05</span>
+        <span class="label">Merchant — redemption log</span>
+      </div>
+      <div class="gallery-item tone-paper">
+        <span class="num">06</span>
+        <span class="label">Push notification targeting</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEXT PROJECT -->
+<section class="next-project">
+  <div class="container">
+    <div class="eyebrow">Ready for the next one?</div>
+    <a href="khadoom.html" class="next-link">
+      <h3>Khadoom<br><span style="font-family: var(--font-serif); font-style: italic; font-weight: 400; color: rgba(255,255,255,0.55);">On-demand Services · 3 Apps · 1 Backend</span></h3>
+      <span class="arrow-big">→</span>
+    </a>
+  </div>
+</section>
+
+<site-footer></site-footer>
+
+<script src="../assets/js/components.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

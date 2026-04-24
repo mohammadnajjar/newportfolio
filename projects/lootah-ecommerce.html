@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Lootah E-commerce — Backend API for the main YS Lootah e-commerce mobile app. Product catalog, cart, checkout, orders, and delivery tracking.">
+<title>Lootah E-commerce — Case Study · Mohammad Najjar</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<site-ticker items="CASE STUDY · LOOTAH E-COMMERCE | RETAIL · MOBILE APP | IOS &amp; ANDROID | BACKEND API · ORDER MANAGEMENT · PAYMENTS"></site-ticker>
+
+<site-nav active="work"></site-nav>
+
+<!-- HERO -->
+<header class="project-hero">
+  <div class="container">
+    <a href="../work.html" class="project-back">← Back to all work</a>
+
+    <div class="project-meta-row">
+      <span>E-commerce · Mobile App</span>
+      <span class="pipe">/</span>
+      <span>2023</span>
+      <span class="pipe">/</span>
+      <span>4 months</span>
+      <span class="pipe">/</span>
+      <span>Backend Developer</span>
+    </div>
+
+    <h1 class="project-title">Lootah E-commerce</h1>
+
+    <p class="project-summary">
+      The main e-commerce mobile app for YS Lootah Group on iOS and Android.
+      Built the entire backend API: product catalog, cart engine, checkout flow,
+      payment integration, order lifecycle management, and delivery tracking —
+      powering the Flutter frontend built by the mobile team.
+    </p>
+
+    <div class="project-hero-actions">
+      <a href="https://play.google.com/store/apps/dev?id=7656896123374250636" class="btn-big" target="_blank" rel="noopener">
+        View on Play Store <span class="arrow">↗</span>
+      </a>
+      <a href="#methods" class="btn-ghost">Read the story →</a>
+    </div>
+  </div>
+
+  <!-- Cover -->
+  <div class="project-cover tone-blue">
+    <div class="project-cover-inner">Lootah E-com</div>
+  </div>
+</header>
+
+<!-- BODY -->
+<section class="project-body" id="methods">
+  <div class="container">
+    <div class="project-layout">
+
+      <div class="project-narrative">
+        <h2>Methods &amp; <span class="serif">journey</span></h2>
+
+        <p>
+          Lootah E-commerce is the primary retail mobile app for YS Lootah Group,
+          one of Dubai's diversified conglomerates. The app needed a backend that
+          could handle the scale of an enterprise retail operation: wide product
+          catalog, complex pricing rules, multiple delivery zones, and a clean
+          API for the Flutter team to build against.
+        </p>
+
+        <h3>The challenge</h3>
+        <p>
+          Enterprise retail backends have layers that simple shop backends don't:
+          category hierarchies, SKU-level inventory, tiered pricing, promotional
+          rules, multi-address delivery management, and reporting for operations
+          teams — all while maintaining a fast, consistent API for mobile clients.
+        </p>
+
+        <ul>
+          <li>Deep product catalog: categories, subcategories, variants, SKU management</li>
+          <li>Cart engine: multi-item, quantity management, price recalculation on each update</li>
+          <li>Promo codes and discount rules with stacking restrictions</li>
+          <li>Multi-address management with delivery zone validation</li>
+          <li>Payment integration: card, wallet, and cash on delivery flows</li>
+          <li>Order lifecycle with real-time status updates pushed to the app</li>
+          <li>Reporting endpoints for the operations team</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <h3>The architecture</h3>
+        <p>
+          Laravel with a clean repository pattern to keep business logic out of
+          controllers. Product data modeled with a flexible attribute system to
+          handle varying product types without schema migrations for each new
+          category. Cart state is persisted server-side tied to the user session —
+          no trust issues with client-side totals hitting the payment gateway.
+        </p>
+        <p>
+          Pricing rules evaluated through a pipeline: base price → category discount
+          → promo code → loyalty tier. Every applied rule is logged for the receipt
+          and for fraud review. Order status transitions are event-driven with
+          Firebase Cloud Messaging firing on each state change.
+        </p>
+
+        <h3>What shipped</h3>
+        <p>
+          A production API powering the iOS and Android apps: full product catalog
+          with variant management, server-side cart, multi-payment checkout, promotional
+          rules engine, delivery tracking, and push notification alerts for every
+          order milestone.
+        </p>
+
+        <h3>The outcome</h3>
+        <p>
+          The Flutter team received a stable, well-documented API with consistent
+          response shapes across every endpoint. Orders process correctly on first
+          attempt. The operations team monitors order flow in real time without
+          needing developer involvement for day-to-day issues.
+        </p>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="project-sidebar">
+        <h4>Project details</h4>
+
+        <div class="project-detail-item">
+          <div class="lbl">Project</div>
+          <div class="val">Lootah E-commerce<small>YS Lootah Group</small></div>
+        </div>
+        <div class="project-detail-item">
+          <div class="lbl">Category</div>
+          <div class="val">E-commerce · Mobile App</div>
+        </div>
+        <div class="project-detail-item">
+          <div class="lbl">My role</div>
+          <div class="val">Backend Developer<small>API, DB Design, Payments</small></div>
+        </div>
+        <div class="project-detail-item">
+          <div class="lbl">Services</div>
+          <div class="val">Backend API<small>Cart, Checkout, Orders, Notifications</small></div>
+        </div>
+        <div class="project-detail-item">
+          <div class="lbl">Timeline</div>
+          <div class="val">4 months<small>2023</small></div>
+        </div>
+        <div class="project-detail-item">
+          <div class="lbl">Platform</div>
+          <div class="val">iOS &amp; Android<small>Flutter frontend (separate team)</small></div>
+        </div>
+        <div class="project-detail-item">
+          <div class="lbl">Client</div>
+          <div class="val">YS Lootah Group<small>Dubai, UAE</small></div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- KPI -->
+<section class="kpi-strip">
+  <div class="container">
+    <div class="section-eyebrow">The numbers</div>
+    <h2 class="section-title">Real <span class="serif">results</span></h2>
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="lbl">Cart accuracy</div>
+        <div class="num">Server<span class="plus">-side</span></div>
+        <div class="desc">Cart totals computed server-side — no client-submitted prices reach the payment gateway.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="lbl">Pricing pipeline</div>
+        <div class="num">4</div>
+        <div class="desc">Layers: base price, category discount, promo code, loyalty tier — logged per order.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="lbl">Order states</div>
+        <div class="num">7</div>
+        <div class="desc">Full lifecycle with real-time push notifications on every status change.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="lbl">API contract</div>
+        <div class="num">Stable</div>
+        <div class="desc">Consistent response shapes across all endpoints — Flutter team shipped faster because of it.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section class="tech-strip">
+  <div class="container">
+    <div class="eyebrow">Technologies</div>
+    <h2>Built with <span class="serif">care</span></h2>
+    <div class="tech-row">
+      <div class="tech-pill">Laravel 10</div>
+      <div class="tech-pill">Flutter (API client)</div>
+      <div class="tech-pill">MySQL 8</div>
+      <div class="tech-pill">Payment Gateway</div>
+      <div class="tech-pill">Firebase Push</div>
+      <div class="tech-pill">Repository Pattern</div>
+      <div class="tech-pill">Event-Driven Notifications</div>
+      <div class="tech-pill">REST API</div>
+      <div class="tech-pill">Docker</div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section">
+  <div class="container">
+    <div class="section-eyebrow">Gallery</div>
+    <h2 class="section-title">A peek <span class="serif">inside</span></h2>
+    <div class="gallery-grid">
+      <div class="gallery-item tone-blue">
+        <span class="num">01</span>
+        <span class="label">Product catalog &amp; variants</span>
+      </div>
+      <div class="gallery-item tone-paper">
+        <span class="num">02</span>
+        <span class="label">Cart engine &amp; promo codes</span>
+      </div>
+      <div class="gallery-item tone-ink">
+        <span class="num">03</span>
+        <span class="label">Checkout &amp; payment flow</span>
+      </div>
+      <div class="gallery-item">
+        <span class="num">04</span>
+        <span class="label">Order tracking &amp; push alerts</span>
+      </div>
+      <div class="gallery-item tone-blue">
+        <span class="num">05</span>
+        <span class="label">Delivery address management</span>
+      </div>
+      <div class="gallery-item tone-paper">
+        <span class="num">06</span>
+        <span class="label">Operations reporting</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEXT PROJECT -->
+<section class="next-project">
+  <div class="container">
+    <div class="eyebrow">Ready for the next one?</div>
+    <a href="lootah-shop.html" class="next-link">
+      <h3>Lootah Shop<br><span style="font-family: var(--font-serif); font-style: italic; font-weight: 400; color: rgba(255,255,255,0.55);">Full Stack · Built Solo End-to-End</span></h3>
+      <span class="arrow-big">→</span>
+    </a>
+  </div>
+</section>
+
+<site-footer></site-footer>
+
+<script src="../assets/js/components.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>
