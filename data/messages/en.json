@@ -1,0 +1,26 @@
+{
+  "site": {
+    "title": "Mohammad Najjar — Senior software engineer",
+    "tagline": "Notes from the build."
+  },
+  "nav": {
+    "work": "Work",
+    "services": "Services",
+    "process": "Process",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "connect": "Connect",
+    "rights": "All rights reserved"
+  },
+  "common": {
+    "readMore": "Read more",
+    "viewAll": "View all",
+    "bookCall": "Book a call",
+    "talk": "talk",
+    "contact": "contact"
+  }
+}
