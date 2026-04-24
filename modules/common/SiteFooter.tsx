@@ -44,6 +44,7 @@ export default function SiteFooter({ headline = '' }: { headline?: HeadlineKey }
             <Link href="/work">Work</Link>
             <Link href="/services">Services</Link>
             <Link href="/process">Process</Link>
+            <Link href="/experience">Experience</Link>
             <Link href="/blog">Blog</Link>
             <Link href="/faq">FAQ</Link>
             <Link href="/contact">Contact</Link>

@@ -5,8 +5,8 @@ import SiteFooter from '@/modules/common/SiteFooter'
 import { appsAndSaaS, websites, websiteChips, type ProjectListing } from '@/lib/projects'
 
 export const metadata = {
-  title: 'Work — 50+ Projects',
-  description: 'Selected work from 50+ shipped projects. SaaS, IoT, mobile apps, e-commerce, and corporate websites.',
+  title: 'Work — 80+ Projects',
+  description: 'Selected work from 80+ shipped projects. SaaS, IoT, mobile apps, e-commerce, and corporate websites.',
 }
 
 function PortfolioCard({ p }: { p: ProjectListing }) {
@@ -42,7 +42,7 @@ function PortfolioCard({ p }: { p: ProjectListing }) {
 export default function WorkPage() {
   return (
     <>
-      <SiteTicker items="SELECTED WORK · 2019 — 2026 | 50+ PROJECTS SHIPPED | DUBAI · MENA · WORLDWIDE | SAAS · ENTERPRISE · MOBILE · IOT" />
+      <SiteTicker items="SELECTED WORK · 2019 — 2026 | 80+ PROJECTS SHIPPED | DUBAI · MENA · WORLDWIDE | SAAS · ENTERPRISE · MOBILE · IOT" />
       <SiteNav active="work" />
 
       <header className="page-header">
@@ -50,7 +50,7 @@ export default function WorkPage() {
           <div className="eyebrow">Selected work</div>
           <h1>Real projects,<br /><span className="serif">real impact</span></h1>
           <p>
-            A curated selection from 50+ shipped projects. SaaS platforms, enterprise
+            A curated selection from 80+ shipped projects. SaaS platforms, enterprise
             systems, mobile apps, and IoT integrations — each one running in production,
             serving real users, delivering measurable results.
           </p>
@@ -73,7 +73,7 @@ export default function WorkPage() {
             Every pixel, <span className="serif">solo</span>
           </h2>
           <p style={{ color: 'var(--ink-mute)', marginBottom: '3rem', maxWidth: '560px' }}>
-            40+ websites designed and built end-to-end — solo. From concept and design to deployment and DNS.
+            60+ websites designed and built end-to-end — solo. From concept and design to deployment and DNS.
           </p>
 
           <div className="portfolio-grid">
@@ -96,7 +96,7 @@ export default function WorkPage() {
       <div className="results-strip">
         <div className="results-row">
           <div className="result-item">
-            <div className="result-big">50<span className="plus">+</span></div>
+            <div className="result-big">80<span className="plus">+</span></div>
             <div className="result-lbl">Projects Shipped</div>
           </div>
           <div className="result-item">

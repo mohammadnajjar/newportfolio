@@ -7,6 +7,7 @@ const navItems = [
   { slug: 'work', label: 'Work' },
   { slug: 'services', label: 'Services' },
   { slug: 'process', label: 'Process' },
+  { slug: 'experience', label: 'Experience' },
   { slug: 'blog', label: 'Blog' },
   { slug: 'faq', label: 'FAQ' },
 ]
