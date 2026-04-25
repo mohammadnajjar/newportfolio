@@ -20,9 +20,14 @@ function PortfolioCard({ p }: { p: ProjectListing }) {
       rel={isExternal ? 'noopener' : undefined}
       data-tags={p.filterTags.join(',')}
     >
-      <div className={`portfolio-thumb ${p.tone}`}>
+      <div className={`portfolio-thumb ${p.image ? 'has-image' : p.tone}`}>
         <span className="badge">{p.badge}</span>
-        {p.shortTitle || p.title}
+        {p.image ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={p.image} alt={p.title} className="portfolio-thumb-img" loading="lazy" />
+        ) : (
+          p.shortTitle || p.title
+        )}
       </div>
       <div className="portfolio-body">
         <div className="cat">{p.category}</div>

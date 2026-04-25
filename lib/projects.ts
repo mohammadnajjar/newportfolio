@@ -11,6 +11,7 @@ export interface ProjectListing {
   tags: string[]
   filterTags: string[]
   external?: string
+  image?: string          // path under /images/projects/ e.g. '/images/projects/ucofy.png'
 }
 
 export interface ProjectDetail extends ProjectListing {
@@ -48,6 +49,7 @@ export const appsAndSaaS: ProjectListing[] = [
     tone: 'tone-accent',
     tags: ['Laravel', 'Flutter', 'IoT', 'MySQL'],
     filterTags: ['apps', 'enterprise'],
+    image: '/images/projects/ucofy.png',
   },
   {
     slug: 'yjoz',
@@ -59,6 +61,7 @@ export const appsAndSaaS: ProjectListing[] = [
     tone: 'tone-lime',
     tags: ['Flutter', 'Laravel API', 'Firebase', 'Payments'],
     filterTags: ['apps', 'ecommerce'],
+    image: '/images/projects/yjoz.png',
   },
   {
     slug: 'lootah-islamic',
@@ -69,6 +72,7 @@ export const appsAndSaaS: ProjectListing[] = [
     tone: 'tone-blue',
     tags: ['Laravel', 'Flutter', 'REST API', 'MySQL'],
     filterTags: ['apps', 'ecommerce'],
+    image: '/images/projects/lootah-shop.png',
   },
   {
     slug: 'dirim',
@@ -79,6 +83,7 @@ export const appsAndSaaS: ProjectListing[] = [
     tone: 'tone-accent',
     tags: ['Laravel', 'Flutter', 'WebSockets', 'MySQL'],
     filterTags: ['apps', 'ecommerce'],
+    image: '/images/projects/drim.png',
   },
   {
     slug: 'lootah-biofuels',
@@ -90,6 +95,7 @@ export const appsAndSaaS: ProjectListing[] = [
     tone: 'tone-lime',
     tags: ['Laravel', 'Flutter', 'WordPress', 'MySQL'],
     filterTags: ['apps', 'enterprise'],
+    image: '/images/projects/lootah-biofuels.png',
   },
   {
     slug: 'stockart',
@@ -100,6 +106,7 @@ export const appsAndSaaS: ProjectListing[] = [
     tone: 'tone-paper',
     tags: ['Laravel', 'Flutter', 'Stripe', 'MySQL'],
     filterTags: ['apps', 'ecommerce'],
+    image: '/images/projects/stockart.png',
   },
   {
     slug: 'carbonproof',
@@ -121,6 +128,7 @@ export const appsAndSaaS: ProjectListing[] = [
     tone: 'tone-accent',
     tags: ['Laravel', 'Flutter', 'Push Notifications', 'MySQL'],
     filterTags: ['apps'],
+    image: '/images/projects/khadoom.jpg',
   },
   {
     slug: 'luxam',
@@ -131,6 +139,7 @@ export const appsAndSaaS: ProjectListing[] = [
     tone: 'tone-lime',
     tags: ['Laravel', 'Flutter', 'Payment Gateway', 'Firebase'],
     filterTags: ['apps', 'ecommerce'],
+    image: '/images/projects/reparee.png',
   },
   {
     slug: 'lootah-shop',
@@ -141,6 +150,7 @@ export const appsAndSaaS: ProjectListing[] = [
     tone: 'tone-accent',
     tags: ['Laravel', 'Flutter', 'Admin Dashboard', 'MySQL'],
     filterTags: ['apps', 'ecommerce'],
+    image: '/images/projects/lootah-shop.png',
   },
   {
     slug: 'lootah-ecommerce',
@@ -152,6 +162,7 @@ export const appsAndSaaS: ProjectListing[] = [
     tone: 'tone-blue',
     tags: ['Laravel', 'Flutter', 'REST API', 'MySQL'],
     filterTags: ['apps', 'ecommerce'],
+    image: '/images/projects/alo-mall.png',
   },
   {
     slug: 'offer123',
@@ -162,6 +173,7 @@ export const appsAndSaaS: ProjectListing[] = [
     tone: 'tone-lime',
     tags: ['Laravel', 'Flutter', 'Push Notifications', 'MySQL'],
     filterTags: ['apps', 'ecommerce'],
+    image: '/images/projects/offers123.jpg',
   },
 ]
 
@@ -176,6 +188,7 @@ export const websites: ProjectListing[] = [
     tone: 'tone-blue',
     tags: ['Laravel', 'React', 'Meilisearch'],
     filterTags: ['websites', 'realestate'],
+    image: '/images/projects/royce.png',
   },
   {
     slug: 'yslinvestments',
@@ -187,6 +200,7 @@ export const websites: ProjectListing[] = [
     tone: 'tone-paper',
     tags: ['Laravel', 'Multi-tenant', 'CMS'],
     filterTags: ['websites', 'enterprise'],
+    image: '/images/projects/yslinvestments.png',
   },
   {
     slug: 'zmkauto',
@@ -198,6 +212,7 @@ export const websites: ProjectListing[] = [
     tone: '',
     tags: ['Laravel', 'Vue.js', 'Reporting'],
     filterTags: ['websites', 'enterprise'],
+    image: '/images/projects/zmkauto.png',
   },
   {
     slug: 'mindtrax',
@@ -257,6 +272,7 @@ export const websites: ProjectListing[] = [
     tags: ['WordPress', 'Custom Theme', 'SEO'],
     filterTags: ['websites', 'enterprise'],
     external: 'https://nottingham-mep.com',
+    image: '/images/projects/nottingham.png',
   },
   {
     slug: 'reparee',
@@ -268,6 +284,7 @@ export const websites: ProjectListing[] = [
     tags: ['Laravel', 'Vue.js', 'Booking Engine'],
     filterTags: ['websites'],
     external: 'https://reparee.com',
+    image: '/images/projects/reparee.png',
   },
 ]
 
