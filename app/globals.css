@@ -3717,3 +3717,141 @@ footer {
   margin-right: 2px;
 }
 .quote-mark.closing { margin-left: 2px; margin-right: 0; }
+
+
+/* ============================================================
+   18. Language switcher (in nav)
+   ============================================================ */
+.nav-lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  background: var(--paper);
+  margin: 0 12px;
+}
+.nav-lang-btn {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: var(--ink-mute);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  line-height: 1;
+  min-width: 28px;
+}
+.nav-lang-btn:hover { color: var(--ink); }
+.nav-lang-btn.active {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+@media (max-width: 880px) {
+  .nav-lang { margin: 0 8px; }
+  .nav-lang-btn { padding: 5px 8px; font-size: 11px; }
+}
+
+
+/* ============================================================
+   19. RTL (Arabic) — html[dir="rtl"]
+   ============================================================ */
+body.locale-ar {
+  font-family: 'IBM Plex Sans Arabic', 'Archivo', sans-serif;
+}
+
+html[dir="rtl"] code,
+html[dir="rtl"] pre,
+html[dir="rtl"] .hcc-code,
+html[dir="rtl"] .hero-mono-caption,
+html[dir="rtl"] .section-eyebrow,
+html[dir="rtl"] .eyebrow,
+html[dir="rtl"] .ticker,
+html[dir="rtl"] .logo {
+  font-family: var(--font-mono);
+}
+
+html[dir="rtl"] .hcc-code {
+  direction: ltr;
+  text-align: left;
+}
+
+html[dir="rtl"] .ticker-track {
+  direction: ltr;
+}
+
+html[dir="rtl"] .stat-big,
+html[dir="rtl"] .result-big,
+html[dir="rtl"] .hc-big,
+html[dir="rtl"] .kpi-card .num {
+  direction: ltr;
+  display: inline-block;
+}
+
+html[dir="rtl"] .arrow,
+html[dir="rtl"] .arrow-big {
+  display: inline-block;
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] .process-num-big,
+html[dir="rtl"] .service-num,
+html[dir="rtl"] .principle-num {
+  font-family: var(--font-mono);
+  unicode-bidi: isolate;
+}
+
+html[dir="rtl"] input[type="email"],
+html[dir="rtl"] input[type="tel"],
+html[dir="rtl"] input[type="number"] {
+  direction: ltr;
+  text-align: right;
+}
+
+html[dir="rtl"] .compare-table th,
+html[dir="rtl"] .compare-table td:not(:first-child) {
+  text-align: center;
+}
+html[dir="rtl"] .compare-table td:first-child,
+html[dir="rtl"] .compare-table th:first-child {
+  text-align: right;
+}
+
+html[dir="rtl"] .footer-col h4,
+html[dir="rtl"] .footer-col a {
+  text-align: right;
+}
+
+html[dir="rtl"] .quote-mark {
+  margin-right: 0;
+  margin-left: 2px;
+}
+html[dir="rtl"] .quote-mark.closing {
+  margin-left: 0;
+  margin-right: 2px;
+}
+
+html[dir="rtl"] .work-tech span,
+html[dir="rtl"] .portfolio-tags span,
+html[dir="rtl"] .blog-tags span,
+html[dir="rtl"] .tech-pill,
+html[dir="rtl"] .tech-item span:last-child,
+html[dir="rtl"] .website-chip {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+html[dir="rtl"] .blog-article {
+  text-align: right;
+}
+html[dir="rtl"] .blog-article > div {
+  /* Long-form prose stays in English direction until translated */
+  direction: ltr;
+  text-align: left;
+}
+

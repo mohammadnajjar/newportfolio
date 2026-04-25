@@ -1,39 +1,63 @@
 'use client'
 
-import { useState } from 'react'
-import Link from 'next/link'
+import { useState, useTransition } from 'react'
+import { useTranslations, useLocale } from 'next-intl'
+import { Link, usePathname, useRouter } from '@/lib/i18n/navigation'
 
-const navItems = [
-  { slug: 'work', label: 'Work' },
-  { slug: 'services', label: 'Services' },
-  { slug: 'process', label: 'Process' },
-  { slug: 'experience', label: 'Experience' },
-  { slug: 'blog', label: 'Blog' },
-  { slug: 'faq', label: 'FAQ' },
-]
+const navIds = ['work', 'services', 'process', 'experience', 'blog', 'faq'] as const
 
 export default function SiteNav({ active }: { active?: string }) {
   const [open, setOpen] = useState(false)
+  const t = useTranslations('nav')
+  const locale = useLocale()
+  const pathname = usePathname()
+  const router = useRouter()
+  const [, startTransition] = useTransition()
+
+  const switchLocale = (next: 'en' | 'ar') => {
+    if (next === locale) return
+    startTransition(() => {
+      router.replace(pathname, { locale: next })
+    })
+  }
 
   return (
     <div className="container">
       <nav className="site-nav">
         <Link href="/" className="logo">Najjar.dev</Link>
         <div className={`nav-links${open ? ' open' : ''}`}>
-          {navItems.map(({ slug, label }) => (
+          {navIds.map(id => (
             <Link
-              key={slug}
-              href={`/${slug}`}
-              className={active === slug ? 'active' : ''}
+              key={id}
+              href={`/${id}`}
+              className={active === id ? 'active' : ''}
             >
-              {label}
+              {t(id)}
             </Link>
           ))}
         </div>
-        <Link href="/contact" className="nav-cta">Hire Me →</Link>
+        <div className="nav-lang" role="group" aria-label={t('language')}>
+          <button
+            type="button"
+            className={`nav-lang-btn${locale === 'en' ? ' active' : ''}`}
+            onClick={() => switchLocale('en')}
+            aria-pressed={locale === 'en'}
+          >
+            EN
+          </button>
+          <button
+            type="button"
+            className={`nav-lang-btn${locale === 'ar' ? ' active' : ''}`}
+            onClick={() => switchLocale('ar')}
+            aria-pressed={locale === 'ar'}
+          >
+            ع
+          </button>
+        </div>
+        <Link href="/contact" className="nav-cta">{t('hireMe')}</Link>
         <button
           className="nav-toggle"
-          aria-label="Toggle navigation"
+          aria-label={t('toggle')}
           aria-expanded={open}
           onClick={() => setOpen(o => !o)}
         >

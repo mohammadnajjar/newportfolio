@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/lib/i18n/navigation'
 import type { BlogPostMeta } from '@/lib/blog-posts'
 
 interface Props {
@@ -9,21 +10,20 @@ interface Props {
   posts: BlogPostMeta[]
 }
 
-const filters = [
-  { id: 'all', label: 'All posts' },
-  { id: 'architecture', label: 'Architecture' },
-  { id: 'laravel', label: 'Laravel' },
-  { id: 'flutter', label: 'Flutter' },
-  { id: 'leadership', label: 'Leadership' },
-  { id: 'performance', label: 'Performance' },
-]
-
 function postHref(p: BlogPostMeta) {
   return p.published ? `/blog/${p.slug}` : '#'
 }
 
 export default function BlogList({ featured, posts }: Props) {
   const [active, setActive] = useState('all')
+  const t = useTranslations('blogPage')
+
+  const filters = t.raw('filters') as { id: string; label: string }[]
+  const headerEyebrow = t('header.eyebrow')
+  const title1 = t('header.title1')
+  const title2 = t('header.title2')
+  const title3 = t('header.title3')
+  const desc = t('desc')
 
   const visible = posts.filter(p => active === 'all' || p.filterTags.includes(active))
   const featuredVisible = active === 'all' || featured.filterTags.includes(active)
@@ -32,13 +32,9 @@ export default function BlogList({ featured, posts }: Props) {
     <>
       <header className="page-header">
         <div className="container">
-          <div className="eyebrow">The blog</div>
-          <h1>Notes from<br />the <span className="serif">build.</span></h1>
-          <p>
-            Long-form thinking on SaaS architecture, Laravel at scale, Flutter in production,
-            team leadership, and the hard-won lessons from shipping 90+ projects. Written
-            when I have something worth saying, not on a content calendar.
-          </p>
+          <div className="eyebrow">{headerEyebrow}</div>
+          <h1>{title1}<br />{title2} <span className="serif">{title3}</span></h1>
+          <p>{desc}</p>
           <div className="filter-bar">
             {filters.map(f => (
               <button
@@ -69,7 +65,7 @@ export default function BlogList({ featured, posts }: Props) {
                 </div>
                 <h2>{featured.title}</h2>
                 <p>{featured.excerpt}</p>
-                <span className="blog-featured-link">Read the post →</span>
+                <span className="blog-featured-link">{t('readPost')}</span>
               </div>
             </Link>
           )}
@@ -87,7 +83,7 @@ export default function BlogList({ featured, posts }: Props) {
                   <h3>{p.title}</h3>
                   <p>{p.excerpt}</p>
                   <div className="blog-read">
-                    Read — {p.readTime.replace(' read', '')} <span>→</span>
+                    {t('readShort')} — {p.readTime.replace(' read', '')} <span>→</span>
                   </div>
                 </div>
               </Link>
@@ -96,7 +92,7 @@ export default function BlogList({ featured, posts }: Props) {
 
           {visible.length === 0 && !featuredVisible && (
             <p style={{ textAlign: 'center', padding: '60px 0', color: 'var(--ink-mute)' }}>
-              No posts in this category yet.
+              {t('noPosts')}
             </p>
           )}
         </div>

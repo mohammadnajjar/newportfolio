@@ -1,21 +1,22 @@
-import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { Link } from '@/lib/i18n/navigation'
 import { SiteTicker, SiteNav, SiteFooter } from '@/modules/common'
 import { BlogTOC } from '@/modules/blog'
 import { FAQAccordion } from '@/modules/faq'
-import { blogPostBodies, blogPosts } from '@/lib/blog-posts'
+import { getBlogPostBodies, getBlogPosts } from '@/lib/blog-posts'
 
 interface PageProps {
   params: Promise<{ slug: string; locale: string }>
 }
 
 export function generateStaticParams() {
-  return Object.keys(blogPostBodies).map(slug => ({ slug }))
+  return Object.keys(getBlogPostBodies('en')).map(slug => ({ slug }))
 }
 
 export async function generateMetadata({ params }: PageProps) {
-  const { slug } = await params
-  const post = blogPostBodies[slug]
+  const { slug, locale } = await params
+  const post = getBlogPostBodies(locale)[slug]
   if (!post) return {}
   return {
     title: post.title,
@@ -24,24 +25,26 @@ export async function generateMetadata({ params }: PageProps) {
 }
 
 export default async function BlogPostPage({ params }: PageProps) {
-  const { slug } = await params
-  const post = blogPostBodies[slug]
+  const { slug, locale } = await params
+  setRequestLocale(locale)
+  const post = getBlogPostBodies(locale)[slug]
   if (!post) notFound()
+  const t = await getTranslations('blogPage.post')
 
-  const related = blogPosts.filter(p => p.slug !== slug).slice(0, 2)
+  const related = getBlogPosts(locale).filter(p => p.slug !== slug).slice(0, 2)
 
   return (
     <>
-      <SiteTicker items={`READING · ${post.category.toUpperCase()} | ${post.readTime.toUpperCase()} | BY MOHAMMAD NAJJAR · DUBAI`} />
+      <SiteTicker items={`${t('tickerBy')} · ${post.category.toUpperCase()} | ${post.readTime.toUpperCase()} | ${t('tickerAuthor')}`} />
       <SiteNav active="blog" />
 
       <section style={{ paddingTop: '40px' }}>
         <div className="container">
           <div className="faq-layout">
-            <BlogTOC items={post.toc} />
+            <BlogTOC items={post.toc} title={t('tocTitle')} />
 
             <article className="blog-article">
-              <Link href="/blog" className="project-back" style={{ marginTop: '24px', display: 'inline-block' }}>← Back to blog</Link>
+              <Link href={'/blog' as never} className="project-back" style={{ marginTop: '24px', display: 'inline-block' }}>{t('back')}</Link>
 
               <div className="blog-meta">
                 <span className="cat">{post.category}</span>
@@ -50,7 +53,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 <span className="dot"></span>
                 <span>{post.readTime}</span>
                 <span className="dot"></span>
-                <span>By Mohammad Najjar</span>
+                <span>{t('by')}</span>
               </div>
 
               <h1>{post.title}</h1>
@@ -59,8 +62,8 @@ export default async function BlogPostPage({ params }: PageProps) {
               <div dangerouslySetInnerHTML={{ __html: post.body }} />
 
               <div className="blog-tags">
-                {post.tags.map(t => (
-                  <span key={t}>{t}</span>
+                {post.tags.map(tag => (
+                  <span key={tag}>{tag}</span>
                 ))}
               </div>
 
@@ -68,7 +71,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 <div className="author-avatar">MN</div>
                 <div className="author-body">
                   <div className="name">Mohammad Najjar</div>
-                  <div className="bio">Full-stack engineer and tech lead based in Dubai. Ships SaaS MVPs, leads engineering teams, writes occasionally about the things that work in production.</div>
+                  <div className="bio">{t('authorBio')}</div>
                 </div>
               </div>
             </article>
@@ -78,9 +81,9 @@ export default async function BlogPostPage({ params }: PageProps) {
 
       <section style={{ background: 'var(--paper-dark)', borderTop: '2px solid var(--ink)', borderBottom: '2px solid var(--ink)' }}>
         <div className="container">
-          <div className="section-eyebrow">Frequently asked</div>
+          <div className="section-eyebrow">{t('faqEyebrow')}</div>
           <h2 className="section-title" style={{ marginBottom: '32px' }}>
-            About this <span className="serif">post.</span>
+            {t('faqTitle1')} <span className="serif">{t('faqTitle2')}</span>
           </h2>
           <div style={{ maxWidth: '880px' }}>
             <FAQAccordion items={post.faq} />
@@ -91,14 +94,11 @@ export default async function BlogPostPage({ params }: PageProps) {
       <section className="mega-cta">
         <div className="container">
           <h2>
-            Got a SaaS idea?<br /><span className="serif">Let&apos;s scope it.</span>
+            {t('ctaTitle1')}<br /><span className="serif">{t('ctaTitle2')}</span>
           </h2>
-          <p>
-            30-minute discovery call, free, no obligation. We&apos;ll figure out together
-            whether six weeks is realistic — or what a smarter scope looks like.
-          </p>
+          <p>{t('ctaDesc')}</p>
           <Link href="/contact" className="btn-big on-dark">
-            Book a call <span className="arrow">↗</span>
+            {t('ctaBtn')} <span className="arrow">↗</span>
           </Link>
         </div>
       </section>
@@ -106,13 +106,13 @@ export default async function BlogPostPage({ params }: PageProps) {
       {related.length > 0 && (
         <section>
           <div className="container">
-            <div className="section-eyebrow">Keep reading</div>
+            <div className="section-eyebrow">{t('relatedEyebrow')}</div>
             <h2 className="section-title" style={{ marginBottom: '32px' }}>
-              Related <span className="serif">posts.</span>
+              {t('relatedTitle1')} <span className="serif">{t('relatedTitle2')}</span>
             </h2>
             <div className="blog-grid">
               {related.map(p => (
-                <Link key={p.slug} href={p.published ? `/blog/${p.slug}` : '#'} className="blog-card">
+                <Link key={p.slug} href={(p.published ? `/blog/${p.slug}` : '#') as never} className="blog-card">
                   <div className={`blog-thumb${p.tone ? ` ${p.tone}` : ''}`}>{p.thumbLabel}</div>
                   <div className="blog-body">
                     <div className="blog-meta">

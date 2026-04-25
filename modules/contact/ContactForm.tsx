@@ -2,57 +2,28 @@
 
 import { Suspense, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
-
-// slug -> visible <option> label
-const serviceMap: Record<string, string> = {
-  'saas-mvp': 'SaaS MVP (6 weeks)',
-  'enterprise-web': 'Enterprise Web Application',
-  'mobile-app': 'Cross-platform Mobile App',
-  'performance': 'Performance Optimization',
-  'fractional-cto': 'Fractional CTO',
-  'audit': 'Technical Audit',
-  'website': 'Custom Website Development',
-  'api-backend': 'API & Backend Engineering',
-  'iot': 'IoT & Real-time Systems',
-  'ecommerce': 'E-commerce Platform',
-  'admin-dashboard': 'Admin Dashboard & Internal Tools',
-  'devops': 'DevOps & Deployment Setup',
-  'wordpress': 'WordPress Development',
-  'shopify': 'Shopify Store Build',
-  'crm': 'CRM System Development',
-  'landing-pages': 'High-Conversion Landing Pages',
-  'mentoring': 'Engineering Team Mentoring',
-  'seo': 'SEO & Multilingual Optimization',
-}
-
-const allServices = [
-  'SaaS MVP (6 weeks)',
-  'Enterprise Web Application',
-  'Cross-platform Mobile App',
-  'Performance Optimization',
-  'Fractional CTO',
-  'Technical Audit',
-  'Custom Website Development',
-  'API & Backend Engineering',
-  'IoT & Real-time Systems',
-  'E-commerce Platform',
-  'Admin Dashboard & Internal Tools',
-  'DevOps & Deployment Setup',
-  'WordPress Development',
-  'Shopify Store Build',
-  'CRM System Development',
-  'High-Conversion Landing Pages',
-  'Engineering Team Mentoring',
-  'SEO & Multilingual Optimization',
-  'Something else',
-]
+import { useTranslations } from 'next-intl'
 
 function ContactFormInner() {
+  const t = useTranslations('contactPage.form')
+  const tServices = useTranslations('servicesPage')
   const params = useSearchParams()
   const slug = params.get('service') || ''
+
+  // Build service slug -> translated label map from the services list
+  const serviceItems = tServices.raw('items') as Array<{ slug: string; title: string }>
+  const serviceMap: Record<string, string> = Object.fromEntries(
+    serviceItems.map(s => [s.slug, s.title])
+  )
+  const allServiceLabels = serviceItems.map(s => s.title)
+  const somethingElse = t('somethingElse')
+
   const preSelectedService = serviceMap[slug] || ''
   const [submitted, setSubmitted] = useState(false)
   const [service, setService] = useState(preSelectedService)
+
+  const budgetOptions = t.raw('budgetOptions') as string[]
+  const timelineOptions = t.raw('timelineOptions') as string[]
 
   return (
     <form
@@ -62,8 +33,8 @@ function ContactFormInner() {
         setSubmitted(true)
       }}
     >
-      <h2>Start a project</h2>
-      <p>Takes less than 2 minutes. Every field helps me reply with something useful.</p>
+      <h2>{t('title')}</h2>
+      <p>{t('subtitle')}</p>
 
       {preSelectedService && (
         <div
@@ -78,42 +49,39 @@ function ContactFormInner() {
             color: 'var(--ink)',
           }}
         >
-          ✓ Pre-filled for <strong>{preSelectedService}</strong> — change anything below.
+          {t.rich('preFilled', {
+            service: () => <strong>{preSelectedService}</strong>,
+          })}
         </div>
       )}
 
       <div className="form-row">
         <div className="form-group">
-          <label htmlFor="name">Your name</label>
-          <input type="text" id="name" name="name" required placeholder="e.g. Sara Al-Hashimi" />
+          <label htmlFor="name">{t('labelName')}</label>
+          <input type="text" id="name" name="name" required placeholder={t('placeholderName')} />
         </div>
         <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input type="email" id="email" name="email" required placeholder="you@yourdomain.com" />
+          <label htmlFor="email">{t('labelEmail')}</label>
+          <input type="email" id="email" name="email" required placeholder={t('placeholderEmail')} />
         </div>
       </div>
 
       <div className="form-row">
         <div className="form-group">
-          <label htmlFor="company">Company (optional)</label>
-          <input type="text" id="company" name="company" placeholder="Acme Studios" />
+          <label htmlFor="company">{t('labelCompany')}</label>
+          <input type="text" id="company" name="company" placeholder={t('placeholderCompany')} />
         </div>
         <div className="form-group">
-          <label htmlFor="budget">Budget range</label>
+          <label htmlFor="budget">{t('labelBudget')}</label>
           <select id="budget" name="budget" required defaultValue="">
-            <option value="">Select a range</option>
-            <option>Under $3,000</option>
-            <option>$3,000 — $8,000</option>
-            <option>$8,000 — $20,000</option>
-            <option>$20,000 — $50,000</option>
-            <option>$50,000+</option>
-            <option>Not sure yet</option>
+            <option value="">{t('selectRange')}</option>
+            {budgetOptions.map(opt => <option key={opt}>{opt}</option>)}
           </select>
         </div>
       </div>
 
       <div className="form-group">
-        <label htmlFor="service">What do you need?</label>
+        <label htmlFor="service">{t('labelService')}</label>
         <select
           id="service"
           name="service"
@@ -121,42 +89,39 @@ function ContactFormInner() {
           value={service}
           onChange={e => setService(e.target.value)}
         >
-          <option value="">Select a service</option>
-          {allServices.map(s => (
+          <option value="">{t('selectService')}</option>
+          {allServiceLabels.map(s => (
             <option key={s}>{s}</option>
           ))}
+          <option>{somethingElse}</option>
         </select>
       </div>
 
       <div className="form-group">
-        <label htmlFor="timeline">Timeline</label>
+        <label htmlFor="timeline">{t('labelTimeline')}</label>
         <select id="timeline" name="timeline" defaultValue="">
-          <option value="">Select a timeline</option>
-          <option>ASAP — I have a hard deadline</option>
-          <option>Within 1 month</option>
-          <option>Within 1–3 months</option>
-          <option>3+ months — still planning</option>
-          <option>Just exploring</option>
+          <option value="">{t('selectTimeline')}</option>
+          {timelineOptions.map(opt => <option key={opt}>{opt}</option>)}
         </select>
       </div>
 
       <div className="form-group">
-        <label htmlFor="message">Tell me about your project</label>
+        <label htmlFor="message">{t('labelMessage')}</label>
         <textarea
           id="message"
           name="message"
           rows={5}
           required
-          placeholder="What are you building, who's it for, and what does success look like? Even two or three sentences is fine — I'll ask for details on the call."
+          placeholder={t('placeholderMessage')}
         />
       </div>
 
       <button type="submit">
-        {submitted ? '✓ Sent — talk soon' : 'Send the message'} <span className="arrow">↗</span>
+        {submitted ? t('submitted') : t('submit')} <span className="arrow">↗</span>
       </button>
 
       <div className="form-footnote">
-        ✓ I reply personally · ✓ NDA available on request · ✓ No cold sales follow-ups
+        {t('footnote')}
       </div>
     </form>
   )

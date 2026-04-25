@@ -1,30 +1,34 @@
-import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { Link } from '@/lib/i18n/navigation'
 import { SiteTicker, SiteNav, SiteFooter } from '@/modules/common'
-import { projectDetails } from '@/lib/projects'
+import { getProjectDetails } from '@/lib/projects'
 
 interface PageProps {
   params: Promise<{ slug: string; locale: string }>
 }
 
 export function generateStaticParams() {
-  return Object.keys(projectDetails).map(slug => ({ slug }))
+  return Object.keys(getProjectDetails('en')).map(slug => ({ slug }))
 }
 
 export async function generateMetadata({ params }: PageProps) {
-  const { slug } = await params
-  const p = projectDetails[slug]
+  const { slug, locale } = await params
+  const p = getProjectDetails(locale)[slug]
   if (!p) return {}
+  const t = await getTranslations({ locale, namespace: 'project' })
   return {
-    title: `${p.title} — Case Study`,
+    title: `${p.title} — ${t('metaCaseStudy')}`,
     description: p.summary,
   }
 }
 
 export default async function ProjectPage({ params }: PageProps) {
-  const { slug } = await params
-  const p = projectDetails[slug]
+  const { slug, locale } = await params
+  setRequestLocale(locale)
+  const p = getProjectDetails(locale)[slug]
   if (!p) notFound()
+  const t = await getTranslations('project')
 
   const nextHref = `/projects/${p.next.slug}`
 
@@ -35,7 +39,7 @@ export default async function ProjectPage({ params }: PageProps) {
 
       <header className="project-hero">
         <div className="container">
-          <Link href="/work" className="project-back">← Back to all work</Link>
+          <Link href={'/work' as never} className="project-back">{t('back')}</Link>
 
           <div className="project-meta-row">
             <span>{p.category}</span>
@@ -54,10 +58,10 @@ export default async function ProjectPage({ params }: PageProps) {
           <div className="project-hero-actions">
             {p.liveUrl && (
               <a href={p.liveUrl} className="btn-big" target="_blank" rel="noopener noreferrer">
-                View live <span className="arrow">↗</span>
+                {t('viewLive')} <span className="arrow">↗</span>
               </a>
             )}
-            <a href="#methods" className="btn-ghost">Read the story →</a>
+            <a href="#methods" className="btn-ghost">{t('readStory')}</a>
           </div>
         </div>
 
@@ -70,14 +74,14 @@ export default async function ProjectPage({ params }: PageProps) {
         <div className="container">
           <div className="project-layout">
             <div className="project-narrative">
-              <h2>Methods &amp; <span className="serif">journey</span></h2>
+              <h2>{t('methodsTitle1')} <span className="serif">{t('methodsTitle2')}</span></h2>
 
-              <h3>The challenge</h3>
+              <h3>{t('challenge')}</h3>
               {p.narrative.challenge.map((para, i) => <p key={i}>{para}</p>)}
 
               <div className="divider"></div>
 
-              <h3>The architecture</h3>
+              <h3>{t('architecture')}</h3>
               {p.narrative.architecture.map((para, i) => <p key={i}>{para}</p>)}
               {p.narrative.architectureBullets.length > 0 && (
                 <ul>
@@ -87,7 +91,7 @@ export default async function ProjectPage({ params }: PageProps) {
 
               <div className="divider"></div>
 
-              <h3>What shipped</h3>
+              <h3>{t('shipped')}</h3>
               {p.narrative.whatShipped.map((para, i) => <p key={i}>{para}</p>)}
               {p.narrative.whatShippedBullets.length > 0 && (
                 <ul>
@@ -97,12 +101,12 @@ export default async function ProjectPage({ params }: PageProps) {
 
               <div className="divider"></div>
 
-              <h3>The outcome</h3>
+              <h3>{t('outcome')}</h3>
               {p.narrative.outcome.map((para, i) => <p key={i}>{para}</p>)}
             </div>
 
             <aside className="project-sidebar">
-              <h4>Project details</h4>
+              <h4>{t('details')}</h4>
               {p.details.map((d, i) => (
                 <div key={i} className="project-detail-item">
                   <div className="lbl">{d.lbl}</div>
@@ -119,8 +123,8 @@ export default async function ProjectPage({ params }: PageProps) {
 
       <section className="kpi-strip">
         <div className="container">
-          <div className="section-eyebrow">The numbers</div>
-          <h2 className="section-title">Real <span className="serif">results</span></h2>
+          <div className="section-eyebrow">{t('numbersEyebrow')}</div>
+          <h2 className="section-title">{t('numbersTitle1')} <span className="serif">{t('numbersTitle2')}</span></h2>
           <div className="kpi-grid">
             {p.kpis.map((k, i) => (
               <div key={i} className="kpi-card">
@@ -138,8 +142,8 @@ export default async function ProjectPage({ params }: PageProps) {
 
       <section className="tech-strip">
         <div className="container">
-          <div className="eyebrow">Technologies</div>
-          <h2>Built with <span className="serif">care</span></h2>
+          <div className="eyebrow">{t('techEyebrow')}</div>
+          <h2>{t('techTitle1')} <span className="serif">{t('techTitle2')}</span></h2>
           <div className="tech-row">
             {p.techStack.map(t => (
               <div key={t} className="tech-pill">{t}</div>
@@ -150,8 +154,8 @@ export default async function ProjectPage({ params }: PageProps) {
 
       <section className="gallery-section">
         <div className="container">
-          <div className="section-eyebrow">Gallery</div>
-          <h2 className="section-title">A peek <span className="serif">inside</span></h2>
+          <div className="section-eyebrow">{t('galleryEyebrow')}</div>
+          <h2 className="section-title">{t('galleryTitle1')} <span className="serif">{t('galleryTitle2')}</span></h2>
           <div className="gallery-grid">
             {p.gallery.map((g, i) => (
               <div key={i} className={`gallery-item ${g.tone}`}>
@@ -165,13 +169,13 @@ export default async function ProjectPage({ params }: PageProps) {
 
       <section className="next-project">
         <div className="container">
-          <div className="eyebrow">Ready for the next one?</div>
-          <Link href={nextHref} className="next-link">
+          <div className="eyebrow">{t('nextEyebrow')}</div>
+          <Link href={nextHref as never} className="next-link">
             <h3>
               {p.next.title}
               <br />
               <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400, color: 'rgba(255,255,255,0.55)' }}>
-                Next case study
+                {t('nextLabel')}
               </span>
             </h3>
             <span className="arrow-big">→</span>

@@ -1,21 +1,21 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 type Group = 'all' | 'languages' | 'frameworks' | 'frontend' | 'backend' | 'data' | 'tools' | 'practices'
 
-const filters: { id: Group; label: string }[] = [
-  { id: 'all',         label: 'All' },
-  { id: 'languages',   label: 'Languages' },
-  { id: 'frameworks',  label: 'Frameworks' },
-  { id: 'frontend',    label: 'Frontend' },
-  { id: 'backend',     label: 'Backend' },
-  { id: 'data',        label: 'Data' },
-  { id: 'tools',       label: 'Tools' },
-  { id: 'practices',   label: 'Practices' },
+const filterIds: { id: Group; key: string }[] = [
+  { id: 'all',         key: 'skillsAll' },
+  { id: 'languages',   key: 'skillsLanguages' },
+  { id: 'frameworks',  key: 'skillsFrameworks' },
+  { id: 'frontend',    key: 'skillsFrontend' },
+  { id: 'backend',     key: 'skillsBackend' },
+  { id: 'data',        key: 'skillsData' },
+  { id: 'tools',       key: 'skillsTools' },
+  { id: 'practices',   key: 'skillsPractices' },
 ]
 
-// icon = simpleicons.org slug + brand hex (no '#').
 type Skill = { name: string; cats: Group[]; icon?: { slug: string; color: string } }
 
 const skills: Skill[] = [
@@ -47,20 +47,21 @@ const skills: Skill[] = [
 
 export default function SkillsGrid() {
   const [active, setActive] = useState<Group>('all')
+  const t = useTranslations('filters')
 
   const visible = active === 'all' ? skills : skills.filter(s => s.cats.includes(active))
 
   return (
     <div>
       <div className="filter-bar">
-        {filters.map(f => (
+        {filterIds.map(f => (
           <button
             key={f.id}
             type="button"
             className={`filter-chip${active === f.id ? ' active' : ''}`}
             onClick={() => setActive(f.id)}
           >
-            {f.label}
+            {t(f.key)}
           </button>
         ))}
       </div>
