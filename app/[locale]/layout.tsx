@@ -24,7 +24,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   const dir = locale === 'ar' ? 'rtl' : 'ltr'
 
   return (
-    <html lang={locale} dir={dir}>
+    <html lang={locale} dir={dir} suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
