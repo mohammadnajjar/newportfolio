@@ -7,7 +7,7 @@ interface TOCItem {
   label: string
 }
 
-export default function BlogTOC({ items }: { items: TOCItem[] }) {
+export default function BlogTOC({ items, title = 'Table of contents' }: { items: TOCItem[]; title?: string }) {
   const [activeId, setActiveId] = useState<string>('')
 
   useEffect(() => {
@@ -31,7 +31,7 @@ export default function BlogTOC({ items }: { items: TOCItem[] }) {
 
   return (
     <div className="faq-sidebar" style={{ position: 'sticky', top: '100px' }}>
-      <h4>Table of contents</h4>
+      <h4>{title}</h4>
       {items.map(item => (
         <a
           key={item.id}

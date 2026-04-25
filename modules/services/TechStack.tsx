@@ -1,24 +1,24 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 
-const filters = [
-  { id: 'all',      label: 'All' },
-  { id: 'arch',     label: 'Architecture' },
-  { id: 'backend',  label: 'Backend Development' },
-  { id: 'database', label: 'Database' },
-  { id: 'devops',   label: 'DevOps' },
-  { id: 'frontend', label: 'Frontend Development' },
-  { id: 'lang',     label: 'Programming Language' },
+const filterIds = [
+  { id: 'all',      key: 'stackAll' },
+  { id: 'arch',     key: 'stackArch' },
+  { id: 'backend',  key: 'stackBackend' },
+  { id: 'database', key: 'stackDatabase' },
+  { id: 'devops',   key: 'stackDevops' },
+  { id: 'frontend', key: 'stackFrontend' },
+  { id: 'lang',     key: 'stackLang' },
 ]
 
 type IconSpec =
-  | { slug: string; color: string }       // simpleicons.org
-  | { url: string }                       // any external URL
+  | { slug: string; color: string }
+  | { url: string }
 
 type Tech = { name: string; cats: string[]; icon: IconSpec }
 
-// AWS removed their brand marks from Simple Icons; skillicons.dev still hosts a clean AWS mark.
 const AWS_ICON: IconSpec = { url: 'https://skillicons.dev/icons?i=aws' }
 
 const stack: Tech[] = [
@@ -59,33 +59,34 @@ const stack: Tech[] = [
 
 export default function TechStack() {
   const [active, setActive] = useState('all')
+  const t = useTranslations('filters')
 
   const visible = active === 'all'
     ? stack
-    : stack.filter(t => t.cats.includes(active))
+    : stack.filter(tech => tech.cats.includes(active))
 
   return (
     <div>
       <div className="filter-bar">
-        {filters.map(f => (
+        {filterIds.map(f => (
           <button
             key={f.id}
             type="button"
             className={`filter-chip${active === f.id ? ' active' : ''}`}
             onClick={() => setActive(f.id)}
           >
-            {f.label}
+            {t(f.key)}
           </button>
         ))}
       </div>
 
       <div className="tech-stack-grid">
-        {visible.map(t => {
-          const src = 'url' in t.icon
-            ? t.icon.url
-            : `https://cdn.simpleicons.org/${t.icon.slug}/${t.icon.color}`
+        {visible.map(tech => {
+          const src = 'url' in tech.icon
+            ? tech.icon.url
+            : `https://cdn.simpleicons.org/${tech.icon.slug}/${tech.icon.color}`
           return (
-            <div key={t.name} className="tech-item">
+            <div key={tech.name} className="tech-item">
               <span className="tech-item-logo">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
@@ -97,7 +98,7 @@ export default function TechStack() {
                   decoding="async"
                 />
               </span>
-              <span>{t.name}</span>
+              <span>{tech.name}</span>
             </div>
           )
         })}

@@ -1,20 +1,29 @@
-import Link from 'next/link'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { Link } from '@/lib/i18n/navigation'
 import SiteTicker from '@/modules/common/SiteTicker'
 import SiteNav from '@/modules/common/SiteNav'
 import SiteFooter from '@/modules/common/SiteFooter'
-import { appsAndSaaS, websites, websiteChips, type ProjectListing } from '@/lib/projects'
+import { getAppsAndSaaS, getWebsites, websiteChips, type ProjectListing } from '@/lib/projects'
 
-export const metadata = {
-  title: 'Work — 90+ Projects',
-  description: 'Selected work from 90+ shipped projects. SaaS, IoT, mobile apps, e-commerce, and corporate websites.',
+interface PageProps {
+  params: Promise<{ locale: string }>
 }
 
-function PortfolioCard({ p }: { p: ProjectListing }) {
+export async function generateMetadata({ params }: PageProps) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'workPage' })
+  return {
+    title: t('metaTitle'),
+    description: t('metaDesc'),
+  }
+}
+
+function PortfolioCard({ p, viewLabel, visitLabel }: { p: ProjectListing; viewLabel: string; visitLabel: string }) {
   const href = p.external || `/projects/${p.slug}`
   const isExternal = !!p.external
   return (
     <Link
-      href={href}
+      href={isExternal ? (href as never) : (href as never)}
       className="portfolio-card"
       target={isExternal ? '_blank' : undefined}
       rel={isExternal ? 'noopener' : undefined}
@@ -32,56 +41,58 @@ function PortfolioCard({ p }: { p: ProjectListing }) {
           {p.tags.map(t => <span key={t}>{t}</span>)}
         </div>
         <div className="portfolio-link">
-          {isExternal ? 'Visit site' : 'View case study'} <span>{isExternal ? '↗' : '→'}</span>
+          {isExternal ? visitLabel : viewLabel} <span>{isExternal ? '↗' : '→'}</span>
         </div>
       </div>
     </Link>
   )
 }
 
-export default function WorkPage() {
+export default async function WorkPage({ params }: PageProps) {
+  const { locale } = await params
+  setRequestLocale(locale)
+  const t = await getTranslations('workPage')
+  const apps = getAppsAndSaaS(locale)
+  const sites = getWebsites(locale)
+
   return (
     <>
-      <SiteTicker items="SELECTED WORK · 2019 — 2026 | 90+ PROJECTS SHIPPED | DUBAI · MENA · WORLDWIDE | SAAS · ENTERPRISE · MOBILE · IOT" />
+      <SiteTicker items={t('ticker')} />
       <SiteNav active="work" />
 
       <header className="page-header">
         <div className="container">
-          <div className="eyebrow">Selected work</div>
-          <h1>Real projects,<br /><span className="serif">real impact</span></h1>
-          <p>
-            A curated selection from 90+ shipped projects. SaaS platforms, enterprise
-            systems, mobile apps, and IoT integrations — each one running in production,
-            serving real users, delivering measurable results.
-          </p>
+          <div className="eyebrow">{t('header.eyebrow')}</div>
+          <h1>{t('header.title1')}<br /><span className="serif">{t('header.title2')}</span></h1>
+          <p>{t('header.desc')}</p>
         </div>
       </header>
 
       <section>
         <div className="container">
-          <div className="section-eyebrow" style={{ marginBottom: '1.5rem' }}>Featured projects</div>
+          <div className="section-eyebrow" style={{ marginBottom: '1.5rem' }}>{t('featuredEyebrow')}</div>
           <div className="portfolio-grid">
-            {appsAndSaaS.map(p => <PortfolioCard key={p.slug} p={p} />)}
+            {apps.map(p => <PortfolioCard key={p.slug} p={p} viewLabel={t('viewCase')} visitLabel={t('visitSite')} />)}
           </div>
         </div>
       </section>
 
       <section style={{ background: 'var(--paper-dark)', padding: '5rem 0' }}>
         <div className="container">
-          <div className="section-eyebrow">Websites & web projects</div>
+          <div className="section-eyebrow">{t('websitesEyebrow')}</div>
           <h2 className="section-title" style={{ marginBottom: '0.5rem' }}>
-            Every pixel, <span className="serif">solo</span>
+            {t('websitesTitle1')} <span className="serif">{t('websitesTitle2')}</span>
           </h2>
           <p style={{ color: 'var(--ink-mute)', marginBottom: '3rem', maxWidth: '560px' }}>
-            80+ websites designed and built end-to-end — solo. From concept and design to deployment and DNS.
+            {t('websitesDesc')}
           </p>
 
           <div className="portfolio-grid">
-            {websites.map(p => <PortfolioCard key={p.slug} p={p} />)}
+            {sites.map(p => <PortfolioCard key={p.slug} p={p} viewLabel={t('viewCase')} visitLabel={t('visitSite')} />)}
           </div>
 
           <div style={{ marginTop: '3rem' }}>
-            <div className="section-eyebrow" style={{ marginBottom: '1.25rem' }}>+ More websites built solo</div>
+            <div className="section-eyebrow" style={{ marginBottom: '1.25rem' }}>{t('moreWebsites')}</div>
             <div className="websites-list">
               {websiteChips.map(c => (
                 <a key={c.url} href={c.url} target="_blank" rel="noopener" className="website-chip">
@@ -97,19 +108,19 @@ export default function WorkPage() {
         <div className="results-row">
           <div className="result-item">
             <div className="result-big">90<span className="plus">+</span></div>
-            <div className="result-lbl">Projects Shipped</div>
+            <div className="result-lbl">{t('results.shipped')}</div>
           </div>
           <div className="result-item">
             <div className="result-big">92<span className="plus">%</span></div>
-            <div className="result-lbl">Best Perf Gain</div>
+            <div className="result-lbl">{t('results.perf')}</div>
           </div>
           <div className="result-item">
             <div className="result-big">14</div>
-            <div className="result-lbl">Industries Served</div>
+            <div className="result-lbl">{t('results.industries')}</div>
           </div>
           <div className="result-item">
             <div className="result-big">6<span className="plus">+</span></div>
-            <div className="result-lbl">Years In Production</div>
+            <div className="result-lbl">{t('results.years')}</div>
           </div>
         </div>
       </div>
