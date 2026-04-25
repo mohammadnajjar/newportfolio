@@ -1,9 +1,58 @@
 'use client'
 
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 
-export default function ContactForm() {
+// slug -> visible <option> label
+const serviceMap: Record<string, string> = {
+  'saas-mvp': 'SaaS MVP (6 weeks)',
+  'enterprise-web': 'Enterprise Web Application',
+  'mobile-app': 'Cross-platform Mobile App',
+  'performance': 'Performance Optimization',
+  'fractional-cto': 'Fractional CTO',
+  'audit': 'Technical Audit',
+  'website': 'Custom Website Development',
+  'api-backend': 'API & Backend Engineering',
+  'iot': 'IoT & Real-time Systems',
+  'ecommerce': 'E-commerce Platform',
+  'admin-dashboard': 'Admin Dashboard & Internal Tools',
+  'devops': 'DevOps & Deployment Setup',
+  'wordpress': 'WordPress Development',
+  'shopify': 'Shopify Store Build',
+  'crm': 'CRM System Development',
+  'landing-pages': 'High-Conversion Landing Pages',
+  'mentoring': 'Engineering Team Mentoring',
+  'seo': 'SEO & Multilingual Optimization',
+}
+
+const allServices = [
+  'SaaS MVP (6 weeks)',
+  'Enterprise Web Application',
+  'Cross-platform Mobile App',
+  'Performance Optimization',
+  'Fractional CTO',
+  'Technical Audit',
+  'Custom Website Development',
+  'API & Backend Engineering',
+  'IoT & Real-time Systems',
+  'E-commerce Platform',
+  'Admin Dashboard & Internal Tools',
+  'DevOps & Deployment Setup',
+  'WordPress Development',
+  'Shopify Store Build',
+  'CRM System Development',
+  'High-Conversion Landing Pages',
+  'Engineering Team Mentoring',
+  'SEO & Multilingual Optimization',
+  'Something else',
+]
+
+function ContactFormInner() {
+  const params = useSearchParams()
+  const slug = params.get('service') || ''
+  const preSelectedService = serviceMap[slug] || ''
   const [submitted, setSubmitted] = useState(false)
+  const [service, setService] = useState(preSelectedService)
 
   return (
     <form
@@ -15,6 +64,23 @@ export default function ContactForm() {
     >
       <h2>Start a project</h2>
       <p>Takes less than 2 minutes. Every field helps me reply with something useful.</p>
+
+      {preSelectedService && (
+        <div
+          style={{
+            padding: '12px 16px',
+            marginBottom: '20px',
+            background: 'var(--accent-soft)',
+            border: '1.5px solid var(--accent)',
+            borderRadius: '12px',
+            fontFamily: 'var(--font-mono)',
+            fontSize: '13px',
+            color: 'var(--ink)',
+          }}
+        >
+          ✓ Pre-filled for <strong>{preSelectedService}</strong> — change anything below.
+        </div>
+      )}
 
       <div className="form-row">
         <div className="form-group">
@@ -48,27 +114,17 @@ export default function ContactForm() {
 
       <div className="form-group">
         <label htmlFor="service">What do you need?</label>
-        <select id="service" name="service" required defaultValue="">
+        <select
+          id="service"
+          name="service"
+          required
+          value={service}
+          onChange={e => setService(e.target.value)}
+        >
           <option value="">Select a service</option>
-          <option>SaaS MVP (6 weeks)</option>
-          <option>Enterprise Web Application</option>
-          <option>Cross-platform Mobile App</option>
-          <option>Performance Optimization</option>
-          <option>Fractional CTO</option>
-          <option>Technical Audit</option>
-          <option>Custom Website Development</option>
-          <option>API & Backend Engineering</option>
-          <option>IoT & Real-time Systems</option>
-          <option>E-commerce Platform</option>
-          <option>Admin Dashboard & Internal Tools</option>
-          <option>DevOps & Deployment Setup</option>
-          <option>WordPress Development</option>
-          <option>Shopify Store Build</option>
-          <option>CRM System Development</option>
-          <option>High-Conversion Landing Pages</option>
-          <option>Engineering Team Mentoring</option>
-          <option>SEO & Multilingual Optimization</option>
-          <option>Something else</option>
+          {allServices.map(s => (
+            <option key={s}>{s}</option>
+          ))}
         </select>
       </div>
 
@@ -103,5 +159,13 @@ export default function ContactForm() {
         ✓ I reply personally · ✓ NDA available on request · ✓ No cold sales follow-ups
       </div>
     </form>
+  )
+}
+
+export default function ContactForm() {
+  return (
+    <Suspense fallback={<div className="contact-form" style={{ minHeight: '600px' }} />}>
+      <ContactFormInner />
+    </Suspense>
   )
 }
