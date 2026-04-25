@@ -864,7 +864,7 @@ final ordersControllerProvider = Provider((ref) {
 // arabic-rtl-patterns
 // ============================================================
 const arabicRtlBody = `
-<p>I've shipped Arabic-English bilingual apps for nine years. The first one took six months and I redid the layout twice. The most recent ones take a week of additional work on top of an English-only build, and they don't break. The difference isn't talent — it's five patterns, baked in from day one. If you bolt RTL on at the end, you suffer. If you start with these, you don't.</p>
+<p>I've shipped Arabic-English bilingual apps for six years. The first one took six months and I redid the layout twice. The most recent ones take a week of additional work on top of an English-only build, and they don't break. The difference isn't talent — it's five patterns, baked in from day one. If you bolt RTL on at the end, you suffer. If you start with these, you don't.</p>
 
 <h2 id="not-flip">RTL is not "flip the layout"</h2>
 
@@ -1137,7 +1137,7 @@ export const blogPostBodies: Record<string, BlogPostFull> = {
 
   'arabic-rtl-patterns': {
     ...blogPosts.find(p => p.slug === 'arabic-rtl-patterns')!,
-    lead: "Nine years of bilingual Arabic-English apps. The first one took six months and I redid the layout twice. The most recent ones add a week of work to an English-only build. The difference isn't talent — it's five patterns, baked in from day one. Bolt them on at the end and you suffer.",
+    lead: "Six years of bilingual Arabic-English apps. The first one took six months and I redid the layout twice. The most recent ones add a week of work to an English-only build. The difference isn't talent — it's five patterns, baked in from day one. Bolt them on at the end and you suffer.",
     toc: [
       { id: 'not-flip', label: "RTL isn't 'flip the layout'" },
       { id: 'pattern-1', label: 'Logical properties' },

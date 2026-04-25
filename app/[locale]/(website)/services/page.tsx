@@ -33,7 +33,7 @@ const industries = [
     icon: '🏗️',
     title: 'Real Estate & Construction',
     desc: 'Property listings, lead-capture CRMs, contract & document management. 60+ corporate sites for developers and brokerages.',
-    proof: '60+ sites · custom CRM stack',
+    proof: '80+ sites · custom CRM stack',
   },
   {
     icon: '💸',
@@ -100,7 +100,7 @@ const services = [
   },
   {
     num: '07', slug: 'website', icon: 'W', title: 'Custom Website Development',
-    desc: 'I\'ve built 60+ corporate, real estate, and brand websites solo. Pixel-perfect, fast, SEO-friendly, multilingual when needed. End-to-end including hosting setup.',
+    desc: 'I\'ve built 80+ corporate, real estate, and brand websites solo. Pixel-perfect, fast, SEO-friendly, multilingual when needed. End-to-end including hosting setup.',
     features: ['Custom design or pre-built theme', 'Bilingual Arabic / English support', 'CMS so you can edit content', 'Hosting + domain + SSL handover'],
     price: 'Starting at', amount: '$1,500',
   },
@@ -302,7 +302,7 @@ export default function ServicesPage() {
               Where the work <span className="serif">actually lives.</span>
             </h2>
             <p className="section-desc">
-              Six years, 90+ projects, eight industries that recur. Below are the
+              Six years, 90+ projects, 14 industries that recur. Below are the
               domains where I&apos;ve already navigated the regulations, the gateways,
               the bilingual edge cases and the operator workflows. If you&apos;re in
               one of these, I won&apos;t need a quarter to ramp up.
