@@ -1601,18 +1601,17 @@ footer {
   .section-intro { margin-bottom: 56px; }
 
   /* Nav */
+  nav.site-nav { flex-wrap: wrap; }
   .nav-links { display: none; }
   .nav-links.open {
     display: flex;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
+    order: 99;
+    width: 100%;
     flex-direction: column;
     gap: 0;
     background: var(--paper);
-    border-bottom: 2px solid var(--ink);
-    padding: 16px 24px;
+    border-top: 2px solid var(--ink);
+    padding: 8px 0 16px;
     font-size: 15px;
   }
   .nav-links.open a { padding: 12px 0; border-bottom: 1px solid var(--ink); }
