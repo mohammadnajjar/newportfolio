@@ -418,6 +418,91 @@ nav.site-nav {
   align-items: center;
 }
 
+/* Identity row: avatar + handle + status */
+.hero-identity {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.hero-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+  object-fit: cover;
+  background: var(--paper-dark);
+  flex-shrink: 0;
+}
+
+.hero-identity-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hero-handle {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+/* Terminal-style caption above the H1 */
+.hero-mono-caption {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin: 14px 0 22px;
+  letter-spacing: -0.01em;
+}
+
+.hmc-prompt {
+  color: var(--accent);
+  font-weight: 700;
+  margin-right: 6px;
+}
+
+.hmc-comment {
+  color: var(--ink-mute);
+  margin-left: 4px;
+}
+
+/* Stack strip below CTAs */
+.hero-stack-strip {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 36px;
+  padding-top: 22px;
+  border-top: 1.5px solid rgba(10, 10, 10, 0.12);
+  flex-wrap: wrap;
+}
+
+.hss-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin-right: 4px;
+}
+
+.hss-logo {
+  opacity: 0.78;
+  transition: opacity 0.2s, transform 0.2s;
+  cursor: default;
+}
+
+.hss-logo:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
 .hero-tag {
   display: inline-flex;
   align-items: center;
@@ -501,6 +586,78 @@ nav.site-nav {
 .hero-card-1 { width: 280px; top: 0; right: 0; transform: rotate(4deg); background: var(--lime); }
 .hero-card-2 { width: 240px; top: 140px; left: 0; transform: rotate(-3deg); z-index: 2; }
 .hero-card-3 { width: 220px; bottom: 20px; right: 60px; transform: rotate(2deg); background: var(--accent); color: var(--paper); }
+
+/* Code card — terminal/editor look in the hero visual */
+.hero-card-code {
+  width: 260px;
+  bottom: 0;
+  right: 30px;
+  transform: rotate(-2deg);
+  background: #0e1116;
+  color: #e6edf3;
+  padding: 0;
+  overflow: hidden;
+  z-index: 3;
+  border-color: var(--ink);
+}
+
+.hero-card-code:hover {
+  transform: rotate(-2deg) translate(-3px, -3px);
+  box-shadow: 11px 11px 0 var(--ink);
+}
+
+.hcc-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: #161b22;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hcc-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.hcc-dot-r { background: #ff5f56; }
+.hcc-dot-y { background: #ffbd2e; }
+.hcc-dot-g { background: #27c93f; }
+
+.hcc-file {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #8b949e;
+  margin-left: 8px;
+  letter-spacing: -0.01em;
+}
+
+.hcc-code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.7;
+  padding: 14px 16px 16px;
+  color: #c9d1d9;
+  white-space: pre-wrap;
+  word-break: normal;
+  margin: 0;
+  background: transparent;
+}
+
+.hcc-code code {
+  font-family: inherit;
+  background: none;
+  padding: 0;
+  border: 0;
+  color: inherit;
+}
+
+.cc-key { color: #ff7b72; font-weight: 600; }   /* keywords (const, true) */
+.cc-var { color: #d2a8ff; }                      /* variable names */
+.cc-str { color: #a5d6ff; }                      /* strings */
+.cc-num { color: #79c0ff; }                      /* numbers */
 
 .hc-label {
   font-family: var(--font-mono);
@@ -1775,8 +1932,75 @@ footer {
   /* Hero */
   .hero { padding: 40px 0 56px; }
   .hero-grid { grid-template-columns: 1fr; }
-  .hero-visual { display: none; }
-  .hero p { font-size: 17px; }
+  .hero p { font-size: 17px; margin-bottom: 28px; max-width: 100%; }
+
+  /* Tighten hero typography so the highlighted word + offset shadow don't overflow */
+  .hero h1 {
+    font-size: clamp(40px, 11vw, 72px);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+  }
+  .hero h1 .highlight {
+    padding: 2px 10px;
+    box-shadow: 4px 4px 0 var(--ink);
+    transform: rotate(-1.5deg);
+  }
+
+  /* Identity row — let the pill wrap below the avatar instead of fighting for space */
+  .hero-identity { gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
+  .hero-avatar { width: 44px; height: 44px; }
+  .hero-tag {
+    font-size: 11px;
+    padding: 6px 12px;
+    margin-bottom: 0;
+  }
+
+  .hero-mono-caption { font-size: 12px; margin: 12px 0 18px; }
+  .hero-cta-group { gap: 10px; }
+  .hero-stack-strip { gap: 12px; margin-top: 28px; padding-top: 18px; }
+  .hero-stack-strip .hss-logo { width: 20px; height: 20px; }
+
+  /* Hero visual: stack cards vertically on mobile, keep light rotation */
+  .hero-visual {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 12px;
+    padding: 8px 4px 20px;     /* room for the offset shadows */
+  }
+
+  .hero-card {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    max-width: 320px;
+    padding: 20px;
+    align-self: center;
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+  .hc-big { font-size: 36px; }
+
+  /* Mobile rotations — kept gentle so the layout still breathes */
+  .hero-card-1     { transform: rotate(2deg); }
+  .hero-card-2     { transform: rotate(-1.5deg); }
+  .hero-card-code  { transform: rotate(1.5deg); }
+
+  /* Disable hover transform on mobile (no hover anyway, avoids janky tap states) */
+  .hero-card:hover,
+  .hero-card-code:hover {
+    transform: rotate(0);
+  }
+  .hero-card-1:hover    { transform: rotate(2deg) translate(-2px, -2px); }
+  .hero-card-2:hover    { transform: rotate(-1.5deg) translate(-2px, -2px); }
+  .hero-card-code:hover { transform: rotate(1.5deg) translate(-2px, -2px); }
+
+  .hcc-bar { padding: 8px 12px; }
+  .hcc-code { font-size: 12px; line-height: 1.6; padding: 12px 14px 14px; }
 
   /* Stats */
   .stats-row { grid-template-columns: repeat(2, 1fr); gap: 20px; }
@@ -1840,6 +2064,40 @@ footer {
 
   .hero { padding: 32px 0 48px; }
   .hero p { font-size: 16px; margin-bottom: 28px; }
+
+  /* Smaller, denser hero on real phones */
+  .hero h1 {
+    font-size: clamp(36px, 12vw, 56px);
+    letter-spacing: -0.025em;
+    margin-bottom: 22px;
+  }
+  .hero h1 .highlight {
+    padding: 2px 8px;
+    box-shadow: 3px 3px 0 var(--ink);
+  }
+
+  .hero-identity { gap: 10px; margin-bottom: 12px; }
+  .hero-avatar { width: 40px; height: 40px; }
+  .hero-tag {
+    font-size: 10.5px;
+    padding: 5px 10px;
+    letter-spacing: -0.01em;
+  }
+  .hero-tag .dot { width: 7px; height: 7px; box-shadow: 0 0 0 2px rgba(198, 244, 50, 0.4); }
+
+  .hero-mono-caption { font-size: 11.5px; margin: 10px 0 16px; }
+
+  .hero-stack-strip { gap: 10px; margin-top: 24px; padding-top: 16px; }
+  .hero-stack-strip .hss-logo { width: 18px; height: 18px; }
+  .hss-label { font-size: 10px; margin-right: 0; }
+
+  /* Cards a touch smaller so they feel proportional to the text column */
+  .hero-card { padding: 18px; max-width: 280px; }
+  .hc-label { font-size: 10.5px; margin-bottom: 6px; }
+  .hc-big { font-size: 30px; }
+  .hc-desc { font-size: 12.5px; }
+  .hcc-code { font-size: 11.5px; padding: 10px 12px 12px; }
+  .hcc-file { font-size: 10.5px; }
 
   .hero-cta-group .btn-big { padding: 16px 24px; font-size: 15px; }
   .btn-big { padding: 16px 24px; font-size: 15px; }
