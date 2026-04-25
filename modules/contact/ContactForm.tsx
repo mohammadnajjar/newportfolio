@@ -62,6 +62,12 @@ export default function ContactForm() {
           <option>E-commerce Platform</option>
           <option>Admin Dashboard & Internal Tools</option>
           <option>DevOps & Deployment Setup</option>
+          <option>WordPress Development</option>
+          <option>Shopify Store Build</option>
+          <option>CRM System Development</option>
+          <option>High-Conversion Landing Pages</option>
+          <option>Engineering Team Mentoring</option>
+          <option>SEO & Multilingual Optimization</option>
           <option>Something else</option>
         </select>
       </div>
