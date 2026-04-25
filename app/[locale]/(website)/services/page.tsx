@@ -129,6 +129,42 @@ const services = [
     features: ['Dockerized stack & docker-compose', 'GitHub Actions CI/CD pipeline', 'Zero-downtime deployment', 'Monitoring + alerts + backups'],
     price: 'Starting at', amount: '$1,000',
   },
+  {
+    num: '13', icon: 'WP', title: 'WordPress Development',
+    desc: 'Custom WordPress sites: corporate, blog, portfolio, multilingual. Custom theme from scratch or Elementor / ACF stack — your choice. Speed-optimized and SEO-ready.',
+    features: ['Custom theme or page builder', 'WooCommerce store setup', 'Multilingual (WPML / Polylang)', 'Speed + SEO + security hardening'],
+    price: 'Starting at', amount: '$900',
+  },
+  {
+    num: '14', icon: 'SH', title: 'Shopify Store Build',
+    desc: 'Shopify stores from scratch or migrating an existing catalog. Custom theme, app integrations, checkout customization, and full launch — including DNS and email.',
+    features: ['Custom Shopify theme (Liquid)', 'Product import & catalog setup', 'Apps + payment + shipping config', 'Launch checklist + 14-day support'],
+    price: 'Starting at', amount: '$1,500',
+  },
+  {
+    num: '15', icon: 'CR', title: 'CRM System Development',
+    desc: 'Custom CRMs that fit how your team actually works. I\'ve built lead-generation CRMs and contract-management CRMs in production — not generic Salesforce wrappers.',
+    features: ['Lead capture, scoring & assignment', 'Pipeline stages & follow-up automation', 'Contract / document management', 'Reports + role-based dashboards'],
+    price: 'Starting at', amount: '$3,500',
+  },
+  {
+    num: '16', icon: 'L', title: 'High-Conversion Landing Pages',
+    desc: 'Built 40+ landing pages optimized for Google Ads — improved quality score, lower CPC, higher lead capture. Fast, clean, A/B-ready, conversion-focused copy.',
+    features: ['Optimized for Google Ads quality score', 'Sub-2s load on 4G mobile', 'A/B-ready variants & analytics wired', 'Lead form + CRM integration'],
+    price: 'Starting at', amount: '$600',
+  },
+  {
+    num: '17', icon: 'T', title: 'Engineering Team Mentoring',
+    desc: 'Lead an 11-person team in production. Train juniors. Coach ICPC contestants. If your team needs hands-on technical mentorship — code review, pair programming, growth — I\'ve done it.',
+    features: ['Weekly 1-on-1s with each engineer', 'Code review + architecture coaching', 'Junior-to-mid skill roadmap', 'Hiring & technical-interview support'],
+    price: 'From', amount: '$1,200 / mo',
+  },
+  {
+    num: '18', icon: 'SE', title: 'SEO & Multilingual Optimization',
+    desc: 'Get found in Arabic and English. Technical SEO, multilingual hreflang, schema, Core Web Vitals, on-page rewrite. Practical SEO — not a 60-page report nobody reads.',
+    features: ['Technical SEO audit + fixes', 'Multilingual setup (AR / EN hreflang)', 'Schema.org + sitemap + indexing', 'Core Web Vitals to green'],
+    price: 'Starting at', amount: '$800',
+  },
 ]
 
 const compareRows = [
