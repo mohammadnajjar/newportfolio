@@ -722,6 +722,130 @@ nav.site-nav {
   letter-spacing: -0.02em;
 }
 
+.service-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.service-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 22px;
+  background: var(--ink);
+  color: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: 50px;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.service-cta:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--ink);
+  background: var(--accent);
+  border-color: var(--ink);
+}
+
+.service-cta .arrow {
+  display: inline-block;
+  transition: transform 0.18s ease;
+}
+
+.service-cta:hover .arrow { transform: translateX(3px); }
+
+.service-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px dashed currentColor;
+  border-radius: 50px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0.75;
+  transition: opacity 0.18s ease, background 0.18s ease;
+}
+
+.service-cta-secondary:hover {
+  opacity: 1;
+  background: var(--paper-dark);
+}
+
+/* Featured (orange) card variants */
+.service-block.featured .service-cta {
+  background: var(--paper);
+  color: var(--ink);
+  border-color: var(--paper);
+}
+
+.service-block.featured .service-cta:hover {
+  background: var(--ink);
+  color: var(--paper);
+  box-shadow: 4px 4px 0 var(--paper);
+}
+
+.service-block.featured .service-cta-secondary {
+  border-color: var(--paper);
+  color: var(--paper);
+}
+
+.service-block.featured .service-cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Mega CTA enhancements */
+.mega-cta-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.mega-cta .btn-ghost-light {
+  color: var(--paper);
+  border-color: var(--paper);
+  background: transparent;
+}
+
+.mega-cta .btn-ghost-light:hover {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.mega-cta-note {
+  margin-top: 28px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+@media (max-width: 560px) {
+  .service-actions { gap: 10px; }
+  .service-cta { padding: 12px 18px; font-size: 13px; }
+  .mega-cta-actions { flex-direction: column; gap: 12px; }
+  .mega-cta-actions .btn-big,
+  .mega-cta-actions .btn-ghost-light { width: 100%; text-align: center; }
+}
+
 
 /* ============================================================
    9. Work grid
@@ -1267,6 +1391,26 @@ nav.site-nav {
 
 .compare-table .yes { color: var(--accent); font-weight: 700; }
 .compare-table .no  { opacity: 0.4; }
+
+.compare-table .th-sub {
+  display: block;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  opacity: 0.65;
+  margin-top: 4px;
+  font-family: var(--font-mono);
+}
+
+.compare-note {
+  margin-top: 28px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-soft);
+  text-align: center;
+  letter-spacing: 0.01em;
+}
 
 
 /* ============================================================
@@ -3033,6 +3177,20 @@ footer {
   font-size: 14px;
   color: var(--ink-soft);
   line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.industry-proof {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  background: var(--accent-soft, rgba(255, 107, 53, 0.12));
+  border: 1px solid var(--accent);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 600;
 }
 
 @media (max-width: 1024px) {
