@@ -93,6 +93,42 @@ const services = [
     features: ['Code quality & security review', 'Infrastructure & DevOps assessment', 'Scalability & bottleneck analysis', 'Prioritized, budgeted action plan'],
     price: 'Fixed price', amount: '$1,200',
   },
+  {
+    num: '07', icon: 'W', title: 'Custom Website Development',
+    desc: 'I\'ve built 60+ corporate, real estate, and brand websites solo. Pixel-perfect, fast, SEO-friendly, multilingual when needed. End-to-end including hosting setup.',
+    features: ['Custom design or pre-built theme', 'Bilingual Arabic / English support', 'CMS so you can edit content', 'Hosting + domain + SSL handover'],
+    price: 'Starting at', amount: '$1,500',
+  },
+  {
+    num: '08', icon: 'A', title: 'API & Backend Engineering',
+    desc: 'Backend-only engagements. I architect and build the API; your team handles the frontend. Battle-tested on 12+ production mobile apps and dozens of web platforms.',
+    features: ['REST or GraphQL API design', 'Authentication, roles & permissions', 'Background jobs & queues', 'OpenAPI documentation included'],
+    price: 'Starting at', amount: '$2,500',
+  },
+  {
+    num: '09', icon: 'I', title: 'IoT & Real-time Systems',
+    desc: 'MQTT pipelines, real-time tracking, sensor data ingestion. The UCOFY platform ingests 58k IoT events/day. I\'ve done this in production — not as a demo.',
+    features: ['MQTT broker + ingestion pipeline', 'Real-time WebSocket dashboards', 'Time-series storage & queries', 'Edge device firmware coordination'],
+    price: 'Starting at', amount: '$6,000',
+  },
+  {
+    num: '10', icon: 'X', title: 'E-commerce Platform',
+    desc: 'Multi-vendor or single-store. Cart, checkout, payments, inventory, delivery tracking, vendor dashboards. Built for Lootah Shop, Dirim Mall, and others in production.',
+    features: ['Multi-vendor or single-store mode', 'Payment gateway integration (Stripe / local)', 'Inventory & order management', 'Customer + admin + vendor portals'],
+    price: 'Starting at', amount: '$5,000',
+  },
+  {
+    num: '11', icon: 'D', title: 'Admin Dashboard & Internal Tools',
+    desc: 'Custom dashboards that replace Excel sheets and chaos. HR, ops, finance, reporting — built for the team that actually uses them, not for the boardroom slide.',
+    features: ['Role-based access & permissions', 'Real-time data views & exports', 'Approval workflows & audit log', 'Built around the actual workflow'],
+    price: 'Starting at', amount: '$2,500',
+  },
+  {
+    num: '12', icon: 'O', title: 'DevOps & Deployment Setup',
+    desc: 'Docker, CI/CD, zero-downtime deploys, monitoring. If your project ships in a hurry but no one set up the infrastructure properly, I clean it up.',
+    features: ['Dockerized stack & docker-compose', 'GitHub Actions CI/CD pipeline', 'Zero-downtime deployment', 'Monitoring + alerts + backups'],
+    price: 'Starting at', amount: '$1,000',
+  },
 ]
 
 const compareRows = [

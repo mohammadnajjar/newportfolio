@@ -56,6 +56,12 @@ export default function ContactForm() {
           <option>Performance Optimization</option>
           <option>Fractional CTO</option>
           <option>Technical Audit</option>
+          <option>Custom Website Development</option>
+          <option>API & Backend Engineering</option>
+          <option>IoT & Real-time Systems</option>
+          <option>E-commerce Platform</option>
+          <option>Admin Dashboard & Internal Tools</option>
+          <option>DevOps & Deployment Setup</option>
           <option>Something else</option>
         </select>
       </div>
