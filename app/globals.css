@@ -1682,7 +1682,9 @@ footer {
 }
 
 .footer-col a {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: var(--paper);
   text-decoration: none;
   font-family: var(--font-display);
@@ -1692,7 +1694,14 @@ footer {
   transition: color 0.2s;
 }
 
+.footer-col a svg {
+  flex-shrink: 0;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
 .footer-col a:hover { color: var(--accent); }
+.footer-col a:hover svg { opacity: 1; }
 
 .footer-bottom {
   padding-top: 28px;
