@@ -150,7 +150,7 @@ export default function HomePage() {
           <div className="section-intro">
             <div className="section-eyebrow">What I do</div>
             <h2 className="section-title">
-              Six services, <span className="serif">one engineer</span>
+              Flagship services, <span className="serif">one engineer</span>
             </h2>
             <p className="section-desc">
               Fixed pricing. No retainers unless you want one. Senior code, every time.
@@ -305,7 +305,7 @@ export default function HomePage() {
 
             <Link href="/work" className="work-item size-sm">
               <div className="work-tag">All work</div>
-              <h3 className="work-title">See all 50+ →</h3>
+              <h3 className="work-title">See all 90+ →</h3>
               <p className="work-desc">Apps, websites, e-commerce — full portfolio.</p>
             </Link>
           </div>

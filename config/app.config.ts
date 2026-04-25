@@ -30,7 +30,7 @@ export const appConfig = {
     yearsExperience: '6+',
     projectsShipped: '90+',
     teamLed: '11',
-    eventsPerDay: '25k+',
+    linkedinFollowers: '25k+',
   },
 } as const
 
