@@ -16,10 +16,30 @@ export default function HomePage() {
         <div className="container">
           <div className="hero-grid">
             <div>
-              <div className="hero-tag">
-                <span className="dot" />
-                Available for new projects · Q3 2026
+              <div className="hero-identity">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://github.com/mohammadnajjar.png?size=120"
+                  alt="Mohammad Najjar"
+                  className="hero-avatar"
+                  width={48}
+                  height={48}
+                  loading="eager"
+                />
+                <div className="hero-identity-text">
+                 
+                  <div className="hero-tag">
+                    <span className="dot" />
+                    Available for new projects · Q3 2026
+                  </div>
+                </div>
               </div>
+
+              <div className="hero-mono-caption">
+                <span className="hmc-prompt">~$</span> whoami{' '}
+                <span className="hmc-comment">// full-stack · dubai · ships fast</span>
+              </div>
+
               <h1>
                 I build <span className="italic">digital</span> products that{' '}
                 <span className="highlight">ship</span>
@@ -36,6 +56,32 @@ export default function HomePage() {
                   See selected work →
                 </Link>
               </div>
+
+              <div className="hero-stack-strip">
+                <span className="hss-label">Stack</span>
+                {[
+                  { slug: 'laravel',     color: 'FF2D20', name: 'Laravel' },
+                  { slug: 'react',       color: '61DAFB', name: 'React' },
+                  { slug: 'flutter',     color: '02569B', name: 'Flutter' },
+                  { slug: 'kubernetes',  color: '326CE5', name: 'Kubernetes' },
+                  { slug: 'docker',      color: '2496ED', name: 'Docker' },
+                  { slug: 'mysql',       color: '4479A1', name: 'MySQL' },
+                  { slug: 'redis',       color: 'DC382D', name: 'Redis' },
+                  { slug: 'typescript',  color: '3178C6', name: 'TypeScript' },
+                ].map(t => (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    key={t.slug}
+                    src={`https://cdn.simpleicons.org/${t.slug}/${t.color}`}
+                    alt={t.name}
+                    title={t.name}
+                    width={22}
+                    height={22}
+                    loading="lazy"
+                    className="hss-logo"
+                  />
+                ))}
+              </div>
             </div>
 
             <div className="hero-visual">
@@ -49,10 +95,27 @@ export default function HomePage() {
                 <div className="hc-big">Tech Lead</div>
                 <div className="hc-desc">@ YS Lootah · 11 engineers</div>
               </div>
-              <div className="hero-card hero-card-3">
-                <div className="hc-label">Performance</div>
-                <div className="hc-big">92%</div>
-                <div className="hc-desc">avg response-time gain on audits</div>
+
+              {/* Code card — replaces the old "Performance 92%" stat */}
+              <div className="hero-card hero-card-code">
+                <div className="hcc-bar">
+                  <span className="hcc-dot hcc-dot-r" />
+                  <span className="hcc-dot hcc-dot-y" />
+                  <span className="hcc-dot hcc-dot-g" />
+                  <span className="hcc-file">~/about.ts</span>
+                </div>
+                <pre className="hcc-code">
+                  <code>
+                    <span className="cc-key">const</span>{' '}
+                    <span className="cc-var">me</span> = {'{'}
+                    {'\n'}  role: <span className="cc-str">&apos;engineer&apos;</span>,
+                    {'\n'}  stack: [<span className="cc-str">&apos;laravel&apos;</span>,{' '}
+                    <span className="cc-str">&apos;flutter&apos;</span>],
+                    {'\n'}  ships: <span className="cc-num">90</span>,
+                    {'\n'}  available: <span className="cc-key">true</span>,
+                    {'\n'}{'}'}
+                  </code>
+                </pre>
               </div>
             </div>
           </div>
