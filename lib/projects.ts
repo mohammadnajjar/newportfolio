@@ -374,6 +374,16 @@ export const websiteChips: { url: string; label: string }[] = [
   { url: 'https://website.prove.ae', label: 'website.prove.ae' },
   { url: 'https://clinic.prove.ae', label: 'clinic.prove.ae' },
   { url: 'https://goldenstarluster.com', label: 'goldenstarluster.com' },
+  { url: 'http://resturant.prove.ae', label: 'resturant.prove.ae' },
+  { url: 'http://apps.prove.ae', label: 'apps.prove.ae' },
+  { url: 'http://ecommerce.prove.ae', label: 'ecommerce.prove.ae' },
+  { url: 'https://media.prove.ae', label: 'media.prove.ae' },
+  { url: 'https://feedback.prove.ae', label: 'feedback.prove.ae' },
+  { url: 'https://ksa.prove-media.com', label: 'ksa.prove-media.com' },
+  { url: 'http://realstate.prove.ae', label: 'realstate.prove.ae' },
+  { url: 'http://services.prove.ae', label: 'services.prove.ae' },
+  { url: 'http://tc.prove.ae', label: 'tc.prove.ae' },
+  { url: 'http://beauty.prove.ae', label: 'beauty.prove.ae' },
 ]
 
 export function getProjectDetails(locale: string): Record<string, ProjectDetail> {
