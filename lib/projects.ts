@@ -440,11 +440,3 @@ projectDetails['yjoz'] = baseDetails({
   next: { slug: 'lootah-islamic', title: 'Lootah Islamic' },
 })
 
-projectDetails['royce'] = baseDetails({
-  slug: 'royce',
-  year: '2024',
-  duration: '10 weeks',
-  role: 'Solo · End-to-end',
-  liveUrl: 'https://royce.ae',
-  next: { slug: 'lootah-islamic', title: 'Lootah Islamic' },
-})
