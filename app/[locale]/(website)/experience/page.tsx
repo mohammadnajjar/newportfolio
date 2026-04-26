@@ -210,7 +210,7 @@ export default async function ExperiencePage({ params }: PageProps) {
               <div className="result-lbl">{t('results.years')}</div>
             </div>
             <div className="result-item">
-              <div className="result-big">80<span className="plus">+</span></div>
+              <div className="result-big">100<span className="plus">+</span></div>
               <div className="result-lbl">{t('results.websites')}</div>
             </div>
             <div className="result-item">

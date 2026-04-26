@@ -61,7 +61,7 @@
       "ctaSecondary": "See selected work →",
       "stack": "Stack",
       "card1Label": "Shipped",
-      "card1Big": "90+",
+      "card1Big": "120+",
       "card1Desc": "production projects across 14 industries",
       "card2Label": "Currently",
       "card2Big": "Tech Lead",
@@ -121,9 +121,9 @@
       "eyebrow": "Selected work",
       "title1": "Real projects,",
       "title2": "real clients",
-      "desc": "A curated selection from 90+ projects. Each one shipped, tested, and serving users.",
+      "desc": "A curated selection from 120+ projects. Each one shipped, tested, and serving users.",
       "seeAllTag": "All work",
-      "seeAllTitle": "See all 90+ →",
+      "seeAllTitle": "See all 120+ →",
       "seeAllDesc": "Apps, websites, e-commerce — full portfolio."
     },
     "skills": {
@@ -198,20 +198,20 @@
     }
   },
   "workPage": {
-    "metaTitle": "Work — 90+ Projects",
-    "metaDesc": "Selected work from 90+ shipped projects. SaaS, IoT, mobile apps, e-commerce, and corporate websites.",
-    "ticker": "SELECTED WORK · 2019 — 2026 | 90+ PROJECTS SHIPPED | DUBAI · MENA · WORLDWIDE | SAAS · ENTERPRISE · MOBILE · IOT",
+    "metaTitle": "Work — 120+ Projects",
+    "metaDesc": "Selected work from 120+ shipped projects. SaaS, IoT, mobile apps, e-commerce, and corporate websites.",
+    "ticker": "SELECTED WORK · 2019 — 2026 | 120+ PROJECTS SHIPPED | DUBAI · MENA · WORLDWIDE | SAAS · ENTERPRISE · MOBILE · IOT",
     "header": {
       "eyebrow": "Selected work",
       "title1": "Real projects,",
       "title2": "real impact",
-      "desc": "A curated selection from 90+ shipped projects. SaaS platforms, enterprise systems, mobile apps, and IoT integrations — each one running in production, serving real users, delivering measurable results."
+      "desc": "A curated selection from 120+ shipped projects. SaaS platforms, enterprise systems, mobile apps, and IoT integrations — each one running in production, serving real users, delivering measurable results."
     },
     "featuredEyebrow": "Featured projects",
     "websitesEyebrow": "Websites & web projects",
     "websitesTitle1": "Every pixel,",
     "websitesTitle2": "solo",
-    "websitesDesc": "80+ websites designed and built end-to-end — solo. From concept and design to deployment and DNS.",
+    "websitesDesc": "100+ websites designed and built end-to-end — solo. From concept and design to deployment and DNS.",
     "moreWebsites": "+ More websites built solo",
     "viewCase": "View case study",
     "visitSite": "Visit site",
@@ -225,7 +225,7 @@
   "servicesPage": {
     "metaTitle": "Services",
     "metaDesc": "SaaS MVP, Enterprise platforms, mobile apps, performance audits, and fractional CTO. Fixed pricing, real accountability.",
-    "ticker": "SERVICES · FIXED PRICING | NO RETAINERS UNLESS YOU WANT ONE | DUBAI · GMT+4 | 6+ YEARS · 90+ PROJECTS",
+    "ticker": "SERVICES · FIXED PRICING | NO RETAINERS UNLESS YOU WANT ONE | DUBAI · GMT+4 | 6+ YEARS · 120+ PROJECTS",
     "header": {
       "eyebrow": "What I offer",
       "title1": "Services built on",
@@ -272,7 +272,7 @@
       },
       {
         "num": "07", "slug": "website", "icon": "W", "title": "Custom Website Development",
-        "desc": "I've built 80+ corporate, real estate, and brand websites solo. Pixel-perfect, fast, SEO-friendly, multilingual when needed. End-to-end including hosting setup.",
+        "desc": "I've built 100+ corporate, real estate, and brand websites solo. Pixel-perfect, fast, SEO-friendly, multilingual when needed. End-to-end including hosting setup.",
         "features": ["Custom design or pre-built theme", "Bilingual Arabic / English support", "CMS so you can edit content", "Hosting + domain + SSL handover"],
         "priceLabel": "Starting at", "price": "$1,500"
       },
@@ -380,7 +380,7 @@
       "eyebrow": "Domains I've shipped in",
       "title1": "Where the work",
       "title2": "actually lives.",
-      "desc": "Six years, 90+ projects, 14 industries that recur. Below are the domains where I've already navigated the regulations, the gateways, the bilingual edge cases and the operator workflows. If you're in one of these, I won't need a quarter to ramp up.",
+      "desc": "Six years, 120+ projects, 14 industries that recur. Below are the domains where I've already navigated the regulations, the gateways, the bilingual edge cases and the operator workflows. If you're in one of these, I won't need a quarter to ramp up.",
       "items": [
         { "icon": "♻️", "title": "Sustainability & IoT", "desc": "UCOFY — waste-tracking platform with MQTT sensor ingestion, weighbridge integration and regulatory reporting. 58k events a day, zero dropped.", "proof": "UCOFY · 5 integrated apps" },
         { "icon": "🛍️", "title": "Retail & E-commerce", "desc": "Lootah Shop, Dirim Mall, ez-estore. Multi-vendor marketplaces, single-store builds, inventory + delivery tracking, vendor portals.", "proof": "3 stores · Stripe + local PSPs" },
@@ -608,12 +608,12 @@
   "experiencePage": {
     "metaTitle": "Experience — 6+ Years Building",
     "metaDesc": "Work experience, leadership roles, education, achievements, languages, and the full skill stack — Mohammad Najjar.",
-    "ticker": "6+ YEARS BUILDING | LEAD ENGINEER · TEAM LEAD | 80+ WEBSITES · 10+ MOBILE APPS | DUBAI · MENA · WORLDWIDE",
+    "ticker": "6+ YEARS BUILDING | LEAD ENGINEER · TEAM LEAD | 100+ WEBSITES · 10+ MOBILE APPS | DUBAI · MENA · WORLDWIDE",
     "header": {
       "eyebrow": "Experience",
       "title1": "Six years,",
       "title2": "one craft",
-      "desc": "Lead Full-Stack Engineer & Technical Project Manager with 6 years across web, mobile, and SaaS. Led engineering teams and delivered 80+ websites, 10+ mobile apps, and multiple CRM systems for tech, real estate, and green-energy clients."
+      "desc": "Lead Full-Stack Engineer & Technical Project Manager with 6 years across web, mobile, and SaaS. Led engineering teams and delivered 100+ websites, 10+ mobile apps, and multiple CRM systems for tech, real estate, and green-energy clients."
     },
     "work": {
       "eyebrow": "Work experience",
@@ -723,7 +723,7 @@
   },
   "blogPage": {
     "metaTitle": "Blog",
-    "metaDesc": "Notes from the build — Mohammad Najjar writes about SaaS architecture, Laravel at scale, Flutter in production, team leadership, and hard-won lessons from shipping 90+ projects.",
+    "metaDesc": "Notes from the build — Mohammad Najjar writes about SaaS architecture, Laravel at scale, Flutter in production, team leadership, and hard-won lessons from shipping 120+ projects.",
     "ticker": "NOTES FROM THE BUILD | SAAS · LARAVEL · FLUTTER · LEADERSHIP | NEW POSTS EVERY TWO WEEKS | WRITTEN FROM DUBAI",
     "header": {
       "eyebrow": "The blog",
@@ -731,7 +731,7 @@
       "title2": "the",
       "title3": "build."
     },
-    "desc": "Long-form thinking on SaaS architecture, Laravel at scale, Flutter in production, team leadership, and the hard-won lessons from shipping 90+ projects. Written when I have something worth saying, not on a content calendar.",
+    "desc": "Long-form thinking on SaaS architecture, Laravel at scale, Flutter in production, team leadership, and the hard-won lessons from shipping 120+ projects. Written when I have something worth saying, not on a content calendar.",
     "filters": [
       { "id": "all", "label": "All posts" },
       { "id": "architecture", "label": "Architecture" },

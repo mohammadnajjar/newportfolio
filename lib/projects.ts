@@ -384,6 +384,11 @@ export const websiteChips: { url: string; label: string }[] = [
   { url: 'http://services.prove.ae', label: 'services.prove.ae' },
   { url: 'http://tc.prove.ae', label: 'tc.prove.ae' },
   { url: 'http://beauty.prove.ae', label: 'beauty.prove.ae' },
+  { url: 'https://mohammadnajjar.com', label: 'mohammadnajjar.com' },
+  { url: 'https://laravel-dubai.com', label: 'laravel-dubai.com' },
+  { url: 'https://web-development.ae', label: 'web-development.ae' },
+  { url: 'https://wordpress-dubai.com', label: 'wordpress-dubai.com' },
+  { url: 'https://njoomaldaleel.com', label: 'njoomaldaleel.com' },
 ]
 
 export function getProjectDetails(locale: string): Record<string, ProjectDetail> {

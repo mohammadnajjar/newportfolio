@@ -6,7 +6,31 @@
       "Bash(curl -s -o /dev/null -w \"CSS %{http_code}\\\\n\" http://localhost:8765/assets/css/styles.css)",
       "Bash(curl -s -o /dev/null -w \"JS %{http_code}\\\\n\" http://localhost:8765/assets/js/main.js)",
       "WebFetch(domain:yslootahtech.com)",
-      "Bash(curl -s -o /dev/null -w \"Server: %{http_code}\\\\n\" http://localhost:8765/index.html)"
+      "Bash(curl -s -o /dev/null -w \"Server: %{http_code}\\\\n\" http://localhost:8765/index.html)",
+      "Bash(dir \"C:\\\\Users\\\\DELL\\\\Downloads\\\\landings-bundle\")",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"Services: %{http_code} | size: %{size_download} bytes\\\\n\" http://localhost:3000/services)",
+      "Bash(curl -s -o /dev/null -w \"Contact:  %{http_code} | size: %{size_download} bytes\\\\n\" http://localhost:3000/contact)",
+      "Bash(curl -s -o /dev/null -w \"Contact \\(no params\\): %{http_code} | size: %{size_download} bytes\\\\n\" http://localhost:3000/contact)",
+      "Bash(curl -s -o /dev/null -w \"Contact ?service=iot: %{http_code} | size: %{size_download} bytes\\\\n\" \"http://localhost:3000/contact?service=iot\")",
+      "Bash(curl -s -o /dev/null -w \"Services final: %{http_code} | size: %{size_download} bytes\\\\n\" http://localhost:3000/services)",
+      "Bash(curl -s -o /dev/null -w \"services=%{http_code}\\\\n\" http://localhost:3000/services)",
+      "Bash(curl -s -o /dev/null -w \"blog/laravel-performance=%{http_code}\\\\n\" http://localhost:3000/blog/laravel-performance)",
+      "Bash(curl -s -o /dev/null -w \"blog/flutter-offline-sync=%{http_code}\\\\n\" http://localhost:3000/blog/flutter-offline-sync)",
+      "Bash(curl -s -o /dev/null -w \"blog/leading-eleven-engineers=%{http_code}\\\\n\" http://localhost:3000/blog/leading-eleven-engineers)",
+      "Bash(curl -s -o /dev/null -w \"blog/multi-tenant-laravel=%{http_code}\\\\n\" http://localhost:3000/blog/multi-tenant-laravel)",
+      "Bash(curl -s -o /dev/null -w '%{http_code}' https://cdn.simpleicons.org/__TRACKED_VAR__/000000)",
+      "Bash(curl -s -o /dev/null -w '%{http_code}' 'https://skillicons.dev/icons?i=__TRACKED_VAR__')",
+      "Bash(curl -s -o /dev/null -w '%{http_code}' https://cdn.jsdelivr.net/gh/devicons/devicon/icons/__TRACKED_VAR__)",
+      "Bash(curl -s 'https://skillicons.dev/icons?i=__TRACKED_VAR__')",
+      "Bash(curl -s \"http://localhost:3000/services\")",
+      "Bash(curl -s -o /dev/null -w \"github avatar = %{http_code}\\\\n\" \"https://github.com/mohammadnajjar.png?size=120\")",
+      "Bash(curl -s -o /dev/null -w \"home page = %{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s \"http://localhost:3000/\")",
+      "Bash(curl -s -o /dev/null -w \"home=%{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(vercel --prod --yes)",
+      "Bash(curl -s -o /dev/null -w \"https://landings-bundle.vercel.app/ -> %{http_code} | %{size_download} bytes | %{time_total}s\\\\n\" -L https://landings-bundle.vercel.app/)"
     ]
   }
 }

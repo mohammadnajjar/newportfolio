@@ -128,7 +128,7 @@ export default async function HomePage({ params }: Props) {
                     {'\n'}  role: <span className="cc-str">&apos;engineer&apos;</span>,
                     {'\n'}  stack: [<span className="cc-str">&apos;laravel&apos;</span>,{' '}
                     <span className="cc-str">&apos;flutter&apos;</span>],
-                    {'\n'}  ships: <span className="cc-num">90</span>,
+                    {'\n'}  ships: <span className="cc-num">120</span>,
                     {'\n'}  available: <span className="cc-key">true</span>,
                     {'\n'}{'}'}
                   </code>
@@ -147,7 +147,7 @@ export default async function HomePage({ params }: Props) {
             <div className="stat-lbl">{t('stats.yearsLabel')}</div>
           </div>
           <div className="stat-item">
-            <div className="stat-big">90<span className="plus">+</span></div>
+            <div className="stat-big">120<span className="plus">+</span></div>
             <div className="stat-lbl">{t('stats.projectsLabel')}</div>
           </div>
           <div className="stat-item">

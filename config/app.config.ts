@@ -28,7 +28,7 @@ export const appConfig = {
   },
   stats: {
     yearsExperience: '6+',
-    projectsShipped: '90+',
+    projectsShipped: '120+',
     teamLed: '11',
     linkedinFollowers: '25k+',
   },

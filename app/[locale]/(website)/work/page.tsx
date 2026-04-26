@@ -107,7 +107,7 @@ export default async function WorkPage({ params }: PageProps) {
       <div className="results-strip">
         <div className="results-row">
           <div className="result-item">
-            <div className="result-big">90<span className="plus">+</span></div>
+            <div className="result-big">120<span className="plus">+</span></div>
             <div className="result-lbl">{t('results.shipped')}</div>
           </div>
           <div className="result-item">
