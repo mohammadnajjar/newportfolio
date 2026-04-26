@@ -279,15 +279,15 @@ export default function HomePage() {
               </div>
             </Link>
 
-            <Link href="/projects/royce" className="work-item size-md lime">
-              <div className="work-tag">Real Estate</div>
-              <h3 className="work-title">Royce</h3>
+            <Link href="/projects/lootah-biofuels" className="work-item size-md lime">
+              <div className="work-tag">Energy · Web & App</div>
+              <h3 className="work-title">Lootah Biofuels</h3>
               <p className="work-desc">
-                Premium real estate platform for Dubai market — residential, commercial, and
-                off-plan listings with advanced filters.
+                Corporate platform for a UAE biofuel energy leader — backend powering the
+                mobile app plus the full website at lootahbiofuels.com.
               </p>
               <div className="work-tech">
-                <span>Laravel</span><span>React</span><span>Custom CMS</span>
+                <span>Laravel</span><span>Flutter</span><span>WordPress</span>
               </div>
             </Link>
 

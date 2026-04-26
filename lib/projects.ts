@@ -169,16 +169,6 @@ export const appsAndSaaS: ProjectListing[] = [
 // Websites grid
 export const websites: ProjectListing[] = [
   {
-    slug: 'royce',
-    title: 'Royce',
-    category: 'Real Estate · Dubai',
-    description: 'Premium real estate website for royce.ae. Sub-300ms property search on 1,800+ listings with bilingual Arabic/English support.',
-    badge: 'Featured',
-    tone: 'tone-blue',
-    tags: ['Laravel', 'React', 'Meilisearch'],
-    filterTags: ['websites', 'realestate'],
-  },
-  {
     slug: 'yslinvestments',
     title: 'YSL Investments',
     shortTitle: 'YSL',
@@ -447,7 +437,7 @@ projectDetails['yjoz'] = baseDetails({
   duration: '18 months',
   role: 'Tech Lead · Backend Architect',
   liveUrl: 'https://yjoz.com',
-  next: { slug: 'royce', title: 'Royce' },
+  next: { slug: 'lootah-islamic', title: 'Lootah Islamic' },
 })
 
 projectDetails['royce'] = baseDetails({
