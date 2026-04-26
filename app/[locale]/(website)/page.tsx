@@ -227,16 +227,16 @@ export default async function HomePage({ params }: Props) {
               </div>
             </Link>
 
-            <Link href="/projects/royce" className="work-item size-md lime">
-              <div className="work-tag">{locale === 'ar' ? 'عقارات' : 'Real Estate'}</div>
-              <h3 className="work-title">Royce</h3>
+            <Link href="/projects/lootah-biofuels" className="work-item size-md lime">
+              <div className="work-tag">{locale === 'ar' ? 'طاقة · ويب وتطبيق' : 'Energy · Web & App'}</div>
+              <h3 className="work-title">Lootah Biofuels</h3>
               <p className="work-desc">
                 {locale === 'ar'
-                  ? 'منصة عقارات متميزة لسوق دبي — قوائم سكنية وتجارية ومبيعات على الخارطة مع فلاتر متقدمة.'
-                  : 'Premium real estate platform for Dubai market — residential, commercial, and off-plan listings with advanced filters.'}
+                  ? 'منصة شركة رائدة في طاقة الوقود الحيوي بالإمارات — backend يشغّل التطبيق الجوال والموقع الرسمي على lootahbiofuels.com.'
+                  : 'Corporate platform for a UAE biofuel energy leader — backend powering the mobile app plus the full website at lootahbiofuels.com.'}
               </p>
               <div className="work-tech">
-                <span>Laravel</span><span>React</span><span>Custom CMS</span>
+                <span>Laravel</span><span>Flutter</span><span>WordPress</span>
               </div>
             </Link>
 

@@ -97,7 +97,6 @@ const en: LocaleStrings = {
     'offer123': { category: 'Deals & Offers · Mobile App', description: 'Deals and offers aggregator mobile app. Built the backend API handling merchant onboarding, offer listings, user targeting, and redemption tracking.', badge: 'Backend' },
   },
   websites: {
-    'royce': { category: 'Real Estate · Dubai', description: 'Premium real estate website for royce.ae. Sub-300ms property search on 1,800+ listings with bilingual Arabic/English support.', badge: 'Featured' },
     'yslinvestments': { category: 'Holding Group · Corporate', description: 'Corporate website for yslinvestments.com — a diversified Dubai investment group. Multi-brand subsidiary pages, investor portal, press center.', badge: 'Corporate' },
     'zmkauto': { category: 'Automotive · UAE', description: 'Full digital platform for zmkauto.com in the UAE automotive industry. Inventory management, trade-in flow, lead routing, and reporting dashboards.', badge: 'Automotive' },
     'mindtrax': { category: 'AI / Tech · Web', description: 'AI-powered product website at mindtraxai.com. Full design and development, landing page, product showcase, and onboarding flow.', badge: 'AI' },
@@ -178,7 +177,6 @@ const ar: LocaleStrings = {
     'offer123': { category: 'عروض وخصومات · تطبيق جوال', description: 'تطبيق تجميع عروض وخصومات. بنيت الـ API الخلفي للتعامل مع تسجيل التجار، قوائم العروض، استهداف المستخدمين، وتتبع الاسترداد.', badge: 'Backend' },
   },
   websites: {
-    'royce': { category: 'عقارات · دبي', description: 'موقع عقارات متميز على royce.ae. بحث عقاري بأقل من ٣٠٠ مللي ثانية على +١,٨٠٠ قائمة مع دعم ثنائي اللغة عربي/إنجليزي.', badge: 'مميز' },
     'yslinvestments': { category: 'مجموعة قابضة · شركات', description: 'موقع شركة yslinvestments.com — مجموعة استثمارية متنوعة في دبي. صفحات شركات تابعة متعددة، بوابة مستثمرين، مركز إعلامي.', badge: 'شركات' },
     'zmkauto': { category: 'سيارات · الإمارات', description: 'منصة رقمية كاملة لـ zmkauto.com في قطاع السيارات الإماراتي. إدارة المخزون، تدفق المقايضة، توجيه العملاء، ولوحات تقارير.', badge: 'سيارات' },
     'mindtrax': { category: 'ذكاء اصطناعي / تقنية · ويب', description: 'موقع منتج بالذكاء الاصطناعي على mindtraxai.com. تصميم وتطوير كامل، صفحة هبوط، عرض منتج، وتدفق ترحيب.', badge: 'AI' },
@@ -267,7 +265,6 @@ const appsAndSaaSMeta: Array<{ slug: string; shortTitle?: string; tone: Tone; ta
 ]
 
 const websitesMeta: Array<{ slug: string; shortTitle?: string; tone: Tone; tags: string[]; filterTags: string[]; title: string; external?: string }> = [
-  { slug: 'royce',           title: 'Royce',           tone: 'tone-blue',  tags: ['Laravel', 'React', 'Meilisearch'],   filterTags: ['websites', 'realestate'] },
   { slug: 'yslinvestments',  shortTitle: 'YSL', title: 'YSL Investments',  tone: 'tone-paper', tags: ['Laravel', 'Multi-tenant', 'CMS'],     filterTags: ['websites', 'enterprise'] },
   { slug: 'zmkauto',         shortTitle: 'ZMK', title: 'ZMK Auto',         tone: '',            tags: ['Laravel', 'Vue.js', 'Reporting'],     filterTags: ['websites', 'enterprise'] },
   { slug: 'mindtrax',        shortTitle: 'MindTrax', title: 'MindTrax AI', tone: 'tone-accent', tags: ['Laravel', 'React', 'AI Integration'], filterTags: ['websites', 'enterprise'], external: 'https://mindtraxai.com' },
@@ -446,14 +443,6 @@ export function getProjectDetails(locale: string): Record<string, ProjectDetail>
     duration: locale === 'ar' ? '١٨ شهراً' : '18 months',
     role: locale === 'ar' ? 'قائد تقني · مهندس Backend' : 'Tech Lead · Backend Architect',
     liveUrl: 'https://yjoz.com',
-    next: { slug: 'royce', title: 'Royce' },
-  })
-
-  details['royce'] = baseDetails('royce', {
-    year: '2024',
-    duration: locale === 'ar' ? '١٠ أسابيع' : '10 weeks',
-    role: locale === 'ar' ? 'منفرد · من البداية للنهاية' : 'Solo · End-to-end',
-    liveUrl: 'https://royce.ae',
     next: { slug: 'lootah-islamic', title: 'Lootah Islamic' },
   })
 
