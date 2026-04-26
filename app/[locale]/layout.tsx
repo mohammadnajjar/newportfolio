@@ -15,26 +15,27 @@ export function generateStaticParams() {
 export default async function LocaleLayout({ children, params }: LocaleLayoutProps) {
   const { locale } = await params
 
-  if (!routing.locales.includes(locale as 'en')) {
+  if (!routing.locales.includes(locale as 'en' | 'ar')) {
     notFound()
   }
 
   setRequestLocale(locale)
   const messages = await getMessages()
   const dir = locale === 'ar' ? 'rtl' : 'ltr'
+  const fontHref =
+    locale === 'ar'
+      ? 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap'
+      : 'https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap'
 
   return (
     <html lang={locale} dir={dir} suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap"
-          rel="stylesheet"
-        />
+        <link href={fontHref} rel="stylesheet" />
       </head>
-      <body>
-        <NextIntlClientProvider messages={messages}>
+      <body className={locale === 'ar' ? 'locale-ar' : 'locale-en'}>
+        <NextIntlClientProvider messages={messages} locale={locale}>
           {children}
         </NextIntlClientProvider>
       </body>

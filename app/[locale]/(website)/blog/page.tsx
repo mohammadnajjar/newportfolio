@@ -1,21 +1,32 @@
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 import SiteTicker from '@/modules/common/SiteTicker'
 import SiteNav from '@/modules/common/SiteNav'
 import SiteFooter from '@/modules/common/SiteFooter'
 import BlogList from '@/modules/blog/BlogList'
-import { blogPosts } from '@/lib/blog-posts'
+import { getBlogPosts } from '@/lib/blog-posts'
 
-export const metadata = {
-  title: 'Blog',
-  description: 'Notes from the build — Mohammad Najjar writes about SaaS architecture, Laravel at scale, Flutter in production, team leadership, and hard-won lessons from shipping 90+ projects.',
+interface PageProps {
+  params: Promise<{ locale: string }>
 }
 
-export default function BlogPage() {
-  const featured = blogPosts.find(p => p.featured)!
-  const others = blogPosts.filter(p => !p.featured)
+export async function generateMetadata({ params }: PageProps) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'blogPage' })
+  return { title: t('metaTitle'), description: t('metaDesc') }
+}
+
+export default async function BlogPage({ params }: PageProps) {
+  const { locale } = await params
+  setRequestLocale(locale)
+  const t = await getTranslations('blogPage')
+
+  const posts = getBlogPosts(locale)
+  const featured = posts.find(p => p.featured)!
+  const others = posts.filter(p => !p.featured)
 
   return (
     <>
-      <SiteTicker items="NOTES FROM THE BUILD | SAAS · LARAVEL · FLUTTER · LEADERSHIP | NEW POSTS EVERY TWO WEEKS | WRITTEN FROM DUBAI" />
+      <SiteTicker items={t('ticker')} />
       <SiteNav active="blog" />
 
       <BlogList featured={featured} posts={others} />
@@ -23,12 +34,12 @@ export default function BlogPage() {
       <section style={{ paddingTop: 0 }}>
         <div className="container">
           <div style={{ padding: '48px', border: '2px solid var(--ink)', borderRadius: '24px', background: 'var(--paper-dark)', textAlign: 'center' }}>
-            <div className="section-eyebrow" style={{ marginBottom: '12px' }}>Stay in the loop</div>
+            <div className="section-eyebrow" style={{ marginBottom: '12px' }}>{t('newsletter.eyebrow')}</div>
             <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 900, letterSpacing: '-0.03em', marginBottom: '14px' }}>
-              New post, <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400 }}>every other Friday.</span>
+              {t('newsletter.title1')} <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 400 }}>{t('newsletter.title2')}</span>
             </h3>
             <p style={{ fontSize: '16px', color: 'var(--ink-soft)', maxWidth: '520px', margin: '0 auto 24px' }}>
-              No spam, no sponsored drivel. Just the one thing I&apos;ve learned this fortnight that I think is worth your inbox.
+              {t('newsletter.desc')}
             </p>
             <form
               style={{ display: 'flex', gap: '12px', maxWidth: '480px', margin: '0 auto', flexWrap: 'wrap' }}
@@ -40,11 +51,11 @@ export default function BlogPage() {
                 type="email"
                 name="email"
                 required
-                placeholder="you@yourdomain.com"
+                placeholder={t('newsletter.placeholder')}
                 style={{ flex: 1, minWidth: '220px', padding: '14px 18px', border: '2px solid var(--ink)', borderRadius: '50px', fontFamily: 'var(--font-display)', fontSize: '15px', background: 'var(--paper)', outline: 'none' }}
               />
               <button type="submit" className="btn-big" style={{ padding: '14px 28px', fontSize: '15px' }}>
-                Subscribe <span className="arrow">↗</span>
+                {t('newsletter.subscribe')} <span className="arrow">↗</span>
               </button>
             </form>
           </div>

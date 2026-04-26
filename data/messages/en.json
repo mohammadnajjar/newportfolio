@@ -7,20 +7,813 @@
     "work": "Work",
     "services": "Services",
     "process": "Process",
+    "experience": "Experience",
     "blog": "Blog",
     "faq": "FAQ",
-    "contact": "Contact"
+    "contact": "Contact",
+    "hireMe": "Hire Me →",
+    "toggle": "Toggle navigation",
+    "language": "Language",
+    "english": "English",
+    "arabic": "العربية"
   },
   "footer": {
     "navigation": "Navigation",
     "connect": "Connect",
-    "rights": "All rights reserved"
+    "rights": "All rights reserved",
+    "location": "Dubai, UAE · GMT+4",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "whatsapp": "WhatsApp",
+    "bookCall": "Book a Call",
+    "sendMessage": "Send me a message",
+    "headlineTalk1": "Let's talk.",
+    "headlineTalk2": "I respond",
+    "headlineTalk3": "in hours.",
+    "headlineContact1": "Message me.",
+    "headlineContact2": "I'll reply.",
+    "headlineDefault1": "Got a project",
+    "headlineDefault2": "in mind?"
   },
   "common": {
     "readMore": "Read more",
     "viewAll": "View all",
     "bookCall": "Book a call",
     "talk": "talk",
-    "contact": "contact"
+    "contact": "contact",
+    "loading": "Loading...",
+    "back": "Back",
+    "next": "Next",
+    "free": "Free"
+  },
+  "home": {
+    "ticker": "AVAILABLE FOR Q3 2026 PROJECTS | DUBAI · GMT+4 | LARAVEL · REACT · FLUTTER · IOT | TECH LEAD @ YS LOOTAH",
+    "hero": {
+      "available": "Available for new projects · Q3 2026",
+      "monoCaption": "whoami",
+      "monoComment": "// full-stack · dubai · ships fast",
+      "title1": "I build",
+      "title2": "digital",
+      "title3": "products that",
+      "title4": "ship",
+      "description": "Full-stack engineer based in Dubai. Six years building enterprise SaaS, IoT platforms, and mobile apps that real people use every day.",
+      "ctaPrimary": "Start a project",
+      "ctaSecondary": "See selected work →",
+      "stack": "Stack",
+      "card1Label": "Shipped",
+      "card1Big": "90+",
+      "card1Desc": "production projects across 14 industries",
+      "card2Label": "Currently",
+      "card2Big": "Tech Lead",
+      "card2Desc": "@ YS Lootah · 11 engineers"
+    },
+    "stats": {
+      "yearsLabel": "Years building",
+      "projectsLabel": "Projects shipped",
+      "engineersLabel": "Engineers led",
+      "followersLabel": "LinkedIn followers"
+    },
+    "services": {
+      "eyebrow": "What I do",
+      "title1": "Flagship services,",
+      "title2": "one engineer",
+      "desc": "Fixed pricing. No retainers unless you want one. Senior code, every time.",
+      "items": [
+        {
+          "title": "SaaS MVP in 6 weeks",
+          "desc": "Auth, billing, admin panel, your one core feature. Live and taking payments in six weeks or I keep working free until it is.",
+          "priceLabel": "Starting at",
+          "price": "$4,500"
+        },
+        {
+          "title": "Enterprise Web Platform",
+          "desc": "Multi-role dashboards, complex business rules, integration with legacy apps, IoT tracking, real-time monitoring. Built for scale from day one.",
+          "priceLabel": "Starting at",
+          "price": "$8,000"
+        },
+        {
+          "title": "Cross-platform Mobile App",
+          "desc": "Flutter-based. One codebase, iOS + Android. Push notifications, payment integration, App Store + Play Store deployment included.",
+          "priceLabel": "Starting at",
+          "price": "$3,500"
+        },
+        {
+          "title": "Performance Optimization",
+          "desc": "Your app is slow? I find the bottlenecks. Database queries, caching strategy, frontend bundle size, server configuration. Guaranteed 50%+ improvement.",
+          "priceLabel": "Starting at",
+          "price": "$800"
+        },
+        {
+          "title": "Fractional CTO",
+          "desc": "Need CTO-level thinking without full-time cost? 10–20 hours/week: architecture decisions, code reviews, hiring, roadmap planning, team mentoring.",
+          "priceLabel": "From",
+          "price": "$2,000 / mo"
+        },
+        {
+          "title": "Technical Audit",
+          "desc": "48-hour deep dive into your codebase, infrastructure, and architecture. You get a written report with prioritized recommendations and clear next steps.",
+          "priceLabel": "Fixed price",
+          "price": "$1,200"
+        }
+      ]
+    },
+    "work": {
+      "eyebrow": "Selected work",
+      "title1": "Real projects,",
+      "title2": "real clients",
+      "desc": "A curated selection from 90+ projects. Each one shipped, tested, and serving users.",
+      "seeAllTag": "All work",
+      "seeAllTitle": "See all 90+ →",
+      "seeAllDesc": "Apps, websites, e-commerce — full portfolio."
+    },
+    "skills": {
+      "eyebrow": "Skills",
+      "title1": "The full",
+      "title2": "tech stack",
+      "desc": "Languages, frameworks, databases, and the practices that hold them together."
+    },
+    "testimonial": {
+      "quote1": "Mohammad is an outstanding full-stack engineer who ranks in the",
+      "quoteHighlight": "top 10%",
+      "quote2": "of our peer group. Thoughtful, thorough, and a true professional throughout every interaction.",
+      "name": "Join Imagine Program",
+      "role": "OFFICIAL RECOMMENDATION · 2023"
+    },
+    "process": {
+      "eyebrow": "How we work",
+      "title1": "Simple,",
+      "title2": "transparent",
+      "title3": "process",
+      "desc": "No surprises. Clear milestones. Weekly demos. You're always in control.",
+      "items": [
+        {
+          "t": "Discovery Call",
+          "d": "30-minute call to understand your goals, challenges, and constraints. I ask the tough questions upfront so we avoid surprises later.",
+          "time": "30 min · Free"
+        },
+        {
+          "t": "Proposal & Plan",
+          "d": "Within 48 hours: stack recommendation, timeline, itemized budget, deliverables. No vague promises — everything is specific and measurable.",
+          "time": "48 hours"
+        },
+        {
+          "t": "Design & Architecture",
+          "d": "Wireframes, database schema, API contracts, UI mockups. Everything documented before a single line of code is written. You approve every step.",
+          "time": "1–2 weeks"
+        },
+        {
+          "t": "Weekly Sprints",
+          "d": "Live demo every Friday. You see real progress, give feedback, and we adjust before changes become expensive. Maximum transparency.",
+          "time": "4–12 weeks"
+        },
+        {
+          "t": "Testing & Launch",
+          "d": "Full QA, performance testing, security review, deployment on your infrastructure. Complete handover with documentation.",
+          "time": "1 week"
+        },
+        {
+          "t": "Post-Launch Support",
+          "d": "30 days of free bug fixes. Optional monthly maintenance retainer for ongoing improvements, security updates, and new features.",
+          "time": "Ongoing"
+        }
+      ]
+    },
+    "megaCta": {
+      "title1": "Let's build",
+      "title2": "something",
+      "title3": "excellent",
+      "desc": "Free 30-minute consultation. No pressure, no sales pitch. Just an honest conversation about your project and whether I'm the right person for it.",
+      "cta": "Send me a message"
+    },
+    "faq": {
+      "eyebrow": "Common questions",
+      "title1": "Quick",
+      "title2": "answers",
+      "items": [
+        { "q": "When are you available to start?", "a": "I usually have one or two slots opening per quarter. Book a discovery call and I'll tell you the soonest realistic start date." },
+        { "q": "Do you work with international clients?", "a": "Yes — I'm in Dubai (GMT+4) but work with founders from Europe, the US, and across MENA. Async-friendly and on-call when needed." },
+        { "q": "What if my project changes mid-build?", "a": "It usually does. We track changes weekly. Small ones are absorbed; large ones get a quick re-scope so you stay in control of budget and timeline." },
+        { "q": "Can you refer me if you're not the right fit?", "a": "Absolutely. I have a small network of trusted designers and engineers I refer to. No commission — just trying to help you ship." }
+      ]
+    }
+  },
+  "workPage": {
+    "metaTitle": "Work — 90+ Projects",
+    "metaDesc": "Selected work from 90+ shipped projects. SaaS, IoT, mobile apps, e-commerce, and corporate websites.",
+    "ticker": "SELECTED WORK · 2019 — 2026 | 90+ PROJECTS SHIPPED | DUBAI · MENA · WORLDWIDE | SAAS · ENTERPRISE · MOBILE · IOT",
+    "header": {
+      "eyebrow": "Selected work",
+      "title1": "Real projects,",
+      "title2": "real impact",
+      "desc": "A curated selection from 90+ shipped projects. SaaS platforms, enterprise systems, mobile apps, and IoT integrations — each one running in production, serving real users, delivering measurable results."
+    },
+    "featuredEyebrow": "Featured projects",
+    "websitesEyebrow": "Websites & web projects",
+    "websitesTitle1": "Every pixel,",
+    "websitesTitle2": "solo",
+    "websitesDesc": "80+ websites designed and built end-to-end — solo. From concept and design to deployment and DNS.",
+    "moreWebsites": "+ More websites built solo",
+    "viewCase": "View case study",
+    "visitSite": "Visit site",
+    "results": {
+      "shipped": "Projects Shipped",
+      "perf": "Best Perf Gain",
+      "industries": "Industries Served",
+      "years": "Years In Production"
+    }
+  },
+  "servicesPage": {
+    "metaTitle": "Services",
+    "metaDesc": "SaaS MVP, Enterprise platforms, mobile apps, performance audits, and fractional CTO. Fixed pricing, real accountability.",
+    "ticker": "SERVICES · FIXED PRICING | NO RETAINERS UNLESS YOU WANT ONE | DUBAI · GMT+4 | 6+ YEARS · 90+ PROJECTS",
+    "header": {
+      "eyebrow": "What I offer",
+      "title1": "Services built on",
+      "title2": "real experience",
+      "desc": "No generic offerings. Every service below reflects work I've already delivered multiple times — refined until it became repeatable and reliable. Fixed pricing, clear deliverables, real accountability."
+    },
+    "items": [
+      {
+        "num": "01 / FLAGSHIP", "slug": "saas-mvp", "icon": "S",
+        "title": "SaaS MVP in 6 weeks",
+        "desc": "From idea to production launch. My signature offer — the fastest way to validate a SaaS idea with real paying users.",
+        "features": ["Laravel + React architecture", "Authentication, billing & admin dashboard", "Full RTL support if your market needs it", "Deployed on your infrastructure, day 42"],
+        "priceLabel": "Starting at", "price": "$4,500"
+      },
+      {
+        "num": "02", "slug": "enterprise-web", "icon": "E", "title": "Enterprise Web Application",
+        "desc": "Complex, multi-role platforms with custom workflows. Think UCOFY — 5 integrated apps, IoT tracking, real-time monitoring. Built for scale from day one.",
+        "features": ["Multi-role access control from the start", "Reporting, audit log & data export", "Real-time features & WebSocket integration", "Performance-tested at expected load"],
+        "priceLabel": "Starting at", "price": "$8,000"
+      },
+      {
+        "num": "03", "slug": "mobile-app", "icon": "M", "title": "Cross-platform Mobile App",
+        "desc": "Flutter-based. One codebase, iOS + Android. Push notifications, payments, offline support, App Store and Play Store deployment included.",
+        "features": ["Native iOS & Android from one codebase", "Offline-first with local sync", "Payment + push notification integration", "Store submissions handled end-to-end"],
+        "priceLabel": "Starting at", "price": "$3,500"
+      },
+      {
+        "num": "04", "slug": "performance", "icon": "P", "title": "Performance Optimization",
+        "desc": "Your app is slow? I find the bottlenecks. Database queries, caching strategy, frontend bundle, server config. Guaranteed 50%+ improvement or refund.",
+        "features": ["Full profiling & root-cause analysis", "DB indexing, query plans & N+1 hunt", "Caching & CDN layer design", "Frontend bundle & Core Web Vitals fix"],
+        "priceLabel": "Starting at", "price": "$800"
+      },
+      {
+        "num": "05", "slug": "fractional-cto", "icon": "C", "title": "Fractional CTO",
+        "desc": "Need CTO-level thinking without the full-time cost? 10–20 hours a week: architecture decisions, code reviews, hiring, roadmap, team mentoring.",
+        "features": ["Architecture & tech stack decisions", "Hiring pipeline & technical interviews", "Weekly code review & mentoring", "Board-facing tech reporting"],
+        "priceLabel": "From", "price": "$2,000 / mo"
+      },
+      {
+        "num": "06", "slug": "audit", "icon": "R", "title": "Technical Audit",
+        "desc": "A 48-hour deep dive into your codebase, infrastructure and architecture. You get a written report with prioritized recommendations and clear next steps.",
+        "features": ["Code quality & security review", "Infrastructure & DevOps assessment", "Scalability & bottleneck analysis", "Prioritized, budgeted action plan"],
+        "priceLabel": "Fixed price", "price": "$1,200"
+      },
+      {
+        "num": "07", "slug": "website", "icon": "W", "title": "Custom Website Development",
+        "desc": "I've built 80+ corporate, real estate, and brand websites solo. Pixel-perfect, fast, SEO-friendly, multilingual when needed. End-to-end including hosting setup.",
+        "features": ["Custom design or pre-built theme", "Bilingual Arabic / English support", "CMS so you can edit content", "Hosting + domain + SSL handover"],
+        "priceLabel": "Starting at", "price": "$1,500"
+      },
+      {
+        "num": "08", "slug": "api-backend", "icon": "A", "title": "API & Backend Engineering",
+        "desc": "Backend-only engagements. I architect and build the API; your team handles the frontend. Battle-tested on 12+ production mobile apps and dozens of web platforms.",
+        "features": ["REST or GraphQL API design", "Authentication, roles & permissions", "Background jobs & queues", "OpenAPI documentation included"],
+        "priceLabel": "Starting at", "price": "$2,500"
+      },
+      {
+        "num": "09", "slug": "iot", "icon": "I", "title": "IoT & Real-time Systems",
+        "desc": "MQTT pipelines, real-time tracking, sensor data ingestion. The UCOFY platform ingests 58k IoT events/day. I've done this in production — not as a demo.",
+        "features": ["MQTT broker + ingestion pipeline", "Real-time WebSocket dashboards", "Time-series storage & queries", "Edge device firmware coordination"],
+        "priceLabel": "Starting at", "price": "$6,000"
+      },
+      {
+        "num": "10", "slug": "ecommerce", "icon": "X", "title": "E-commerce Platform",
+        "desc": "Multi-vendor or single-store. Cart, checkout, payments, inventory, delivery tracking, vendor dashboards. Built for Lootah Shop, Dirim Mall, and others in production.",
+        "features": ["Multi-vendor or single-store mode", "Payment gateway integration (Stripe / local)", "Inventory & order management", "Customer + admin + vendor portals"],
+        "priceLabel": "Starting at", "price": "$5,000"
+      },
+      {
+        "num": "11", "slug": "admin-dashboard", "icon": "D", "title": "Admin Dashboard & Internal Tools",
+        "desc": "Custom dashboards that replace Excel sheets and chaos. HR, ops, finance, reporting — built for the team that actually uses them, not for the boardroom slide.",
+        "features": ["Role-based access & permissions", "Real-time data views & exports", "Approval workflows & audit log", "Built around the actual workflow"],
+        "priceLabel": "Starting at", "price": "$2,500"
+      },
+      {
+        "num": "12", "slug": "devops", "icon": "O", "title": "DevOps & Deployment Setup",
+        "desc": "Docker, CI/CD, zero-downtime deploys, monitoring. If your project ships in a hurry but no one set up the infrastructure properly, I clean it up.",
+        "features": ["Dockerized stack & docker-compose", "GitHub Actions CI/CD pipeline", "Zero-downtime deployment", "Monitoring + alerts + backups"],
+        "priceLabel": "Starting at", "price": "$1,000"
+      },
+      {
+        "num": "13", "slug": "wordpress", "icon": "WP", "title": "WordPress Development",
+        "desc": "Custom WordPress sites: corporate, blog, portfolio, multilingual. Custom theme from scratch or Elementor / ACF stack — your choice. Speed-optimized and SEO-ready.",
+        "features": ["Custom theme or page builder", "WooCommerce store setup", "Multilingual (WPML / Polylang)", "Speed + SEO + security hardening"],
+        "priceLabel": "Starting at", "price": "$900"
+      },
+      {
+        "num": "14", "slug": "shopify", "icon": "SH", "title": "Shopify Store Build",
+        "desc": "Shopify stores from scratch or migrating an existing catalog. Custom theme, app integrations, checkout customization, and full launch — including DNS and email.",
+        "features": ["Custom Shopify theme (Liquid)", "Product import & catalog setup", "Apps + payment + shipping config", "Launch checklist + 14-day support"],
+        "priceLabel": "Starting at", "price": "$1,500"
+      },
+      {
+        "num": "15", "slug": "crm", "icon": "CR", "title": "CRM System Development",
+        "desc": "Custom CRMs that fit how your team actually works. I've built lead-generation CRMs and contract-management CRMs in production — not generic Salesforce wrappers.",
+        "features": ["Lead capture, scoring & assignment", "Pipeline stages & follow-up automation", "Contract / document management", "Reports + role-based dashboards"],
+        "priceLabel": "Starting at", "price": "$3,500"
+      },
+      {
+        "num": "16", "slug": "landing-pages", "icon": "L", "title": "High-Conversion Landing Pages",
+        "desc": "Built 40+ landing pages optimized for Google Ads — improved quality score, lower CPC, higher lead capture. Fast, clean, A/B-ready, conversion-focused copy.",
+        "features": ["Optimized for Google Ads quality score", "Sub-2s load on 4G mobile", "A/B-ready variants & analytics wired", "Lead form + CRM integration"],
+        "priceLabel": "Starting at", "price": "$600"
+      },
+      {
+        "num": "17", "slug": "mentoring", "icon": "T", "title": "Engineering Team Mentoring",
+        "desc": "Lead an 11-person team in production. Train juniors. Coach ICPC contestants. If your team needs hands-on technical mentorship — code review, pair programming, growth — I've done it.",
+        "features": ["Weekly 1-on-1s with each engineer", "Code review + architecture coaching", "Junior-to-mid skill roadmap", "Hiring & technical-interview support"],
+        "priceLabel": "From", "price": "$1,200 / mo"
+      },
+      {
+        "num": "18", "slug": "seo", "icon": "SE", "title": "SEO & Multilingual Optimization",
+        "desc": "Get found in Arabic and English. Technical SEO, multilingual hreflang, schema, Core Web Vitals, on-page rewrite. Practical SEO — not a 60-page report nobody reads.",
+        "features": ["Technical SEO audit + fixes", "Multilingual setup (AR / EN hreflang)", "Schema.org + sitemap + indexing", "Core Web Vitals to green"],
+        "priceLabel": "Starting at", "price": "$800"
+      }
+    ],
+    "getQuote": "Get a quote",
+    "askWhatsapp": "Ask on WhatsApp",
+    "whatsappMessage": "Hi Mohammad, I'm interested in your \"{title}\" service. Can we talk?",
+    "compare": {
+      "eyebrow": "What's included",
+      "title1": "Baked into every",
+      "title2": "engagement.",
+      "desc": "Not a menu of optional add-ons. Whatever you hire me for, these are the defaults — no upsells, no surprise invoices. The ✓ / — pattern just shows where each item naturally applies.",
+      "headerWhat": "What you get",
+      "headerBuild": "Build",
+      "headerBuildSub": "MVP · Web · E-comm",
+      "headerMobile": "Mobile",
+      "headerMobileSub": "Flutter app",
+      "headerOptimize": "Optimize",
+      "headerOptimizeSub": "Audit · Perf · SEO",
+      "headerAdvisory": "Advisory",
+      "headerAdvisorySub": "CTO · Mentoring",
+      "rows": [
+        "Free NDA, signed before any code is shown",
+        "Fixed price agreed up front (or monthly retainer for advisory)",
+        "Weekly Friday demo of working software",
+        "Full source-code ownership — 100% yours, day one",
+        "Deployed to your infrastructure, with handover docs",
+        "30 days of free bug fixes after launch",
+        "Written architecture / decision document",
+        "Security review before launch (auth, payments, PII)",
+        "Performance baseline + Core Web Vitals report",
+        "Pair programming & code review with your team",
+        "Roadmap, hiring & technical-interview guidance",
+        "Direct WhatsApp / Slack channel during the engagement"
+      ],
+      "note": "✓  Want something not listed? Ask. Most \"extras\" on other agencies' invoices are already on this page."
+    },
+    "industries": {
+      "eyebrow": "Domains I've shipped in",
+      "title1": "Where the work",
+      "title2": "actually lives.",
+      "desc": "Six years, 90+ projects, 14 industries that recur. Below are the domains where I've already navigated the regulations, the gateways, the bilingual edge cases and the operator workflows. If you're in one of these, I won't need a quarter to ramp up.",
+      "items": [
+        { "icon": "♻️", "title": "Sustainability & IoT", "desc": "UCOFY — waste-tracking platform with MQTT sensor ingestion, weighbridge integration and regulatory reporting. 58k events a day, zero dropped.", "proof": "UCOFY · 5 integrated apps" },
+        { "icon": "🛍️", "title": "Retail & E-commerce", "desc": "Lootah Shop, Dirim Mall, ez-estore. Multi-vendor marketplaces, single-store builds, inventory + delivery tracking, vendor portals.", "proof": "3 stores · Stripe + local PSPs" },
+        { "icon": "🚚", "title": "Logistics & Field Ops", "desc": "Route Pilot for last-mile dispatch, UCOFY driver coordination. Offline-first Flutter, conflict-resolved sync, live tracking dashboards.", "proof": "Route Pilot · UCOFY drivers" },
+        { "icon": "🏥", "title": "Health & Medical", "desc": "Patient portals, appointment booking, doctor-side dashboards. Bilingual Arabic/English with HIPAA-style access controls.", "proof": "Multiple clinics · UAE + KSA" },
+        { "icon": "🏗️", "title": "Real Estate & Construction", "desc": "Property listings, lead-capture CRMs, contract & document management. 60+ corporate sites for developers and brokerages.", "proof": "80+ sites · custom CRM stack" },
+        { "icon": "💸", "title": "FinTech & Payments", "desc": "Stripe + local gateway integrations, Saudi payments (HyperPay, Tap, Tabby), refund flows, audit trails — built into SaaS and e-commerce.", "proof": "Production billing · 3 PSPs" },
+        { "icon": "📞", "title": "CRM & Internal Tools", "desc": "Lead-gen CRMs, contract-management dashboards, role-based admin panels. Replaces Excel chaos with workflow-shaped software.", "proof": "CRM builds · 4 industries" },
+        { "icon": "🎓", "title": "Education & Training", "desc": "Mentored 11-engineer teams in production, coached ICPC contestants, built training platforms. The work behind the engineers, not just the code.", "proof": "11-person team lead · ICPC coach" }
+      ]
+    },
+    "stack": {
+      "eyebrow": "Stack",
+      "title1": "The technology I",
+      "title2": "trust.",
+      "desc": "No résumé-padding here — these are the tools I reach for daily, in production, on real client work. Boring, battle-tested, fast."
+    },
+    "megaCta": {
+      "title1": "Not sure which",
+      "title2": "one",
+      "title3": "fits?",
+      "desc": "30-minute free call. Tell me the goal, the constraints and the deadline — I'll tell you honestly which service fits (or if none of them do).",
+      "ctaPrimary": "Book a discovery call",
+      "ctaSecondary": "Or WhatsApp directly →",
+      "note": "✓ Free 30-min call  ·  ✓ Free NDA on request  ·  ✓ Reply under 4h"
+    }
+  },
+  "processPage": {
+    "metaTitle": "Process",
+    "metaDesc": "Six clearly-defined stages from first call to post-launch support. Transparent, fixed-price, weekly demos.",
+    "ticker": "PROCESS · DISCOVERY → PROPOSAL → DESIGN → SPRINTS → LAUNCH → SUPPORT | WEEKLY DEMOS | YOUR CODE · YOUR CLOUD",
+    "header": {
+      "eyebrow": "How we work together",
+      "title1": "Simple,",
+      "title2": "transparent",
+      "title3": "process.",
+      "desc": "No surprises, no vague promises. Six clearly-defined stages from the first call to post-launch support. You see real progress every week, and you're always in control — of the scope, the schedule, and the code."
+    },
+    "stages": [
+      { "n": "01", "t": "Discovery Call", "sub": "Free · No obligation", "p": "A 30-minute conversation to understand your goals, constraints, and what \"done\" actually looks like. I ask the tough questions upfront so we avoid expensive surprises later.", "li": ["What problem does this solve, and for whom?", "What's your budget, and is it realistic for the scope?", "What does success look like — in metrics, not adjectives?"], "time": "30 min · Free" },
+      { "n": "02", "t": "Proposal & Plan", "sub": "Written, itemized, specific", "p": "Within 48 hours of our call, you get a document — stack recommendation, timeline, itemized budget, and concrete deliverables. No vague promises, everything specific and measurable.", "li": ["Architecture decisions (and why)", "Milestone-by-milestone timeline", "Line-item budget with no hidden fees"], "time": "48 hours" },
+      { "n": "03", "t": "Design & Architecture", "sub": "Paper before code", "p": "Wireframes, database schema, API contracts, UI mockups — everything documented before a single line of production code is written. You approve every step.", "li": ["Figma mockups for every screen", "Database schema & relationships", "API contract (OpenAPI spec)"], "time": "1–2 weeks" },
+      { "n": "04", "t": "Weekly Sprints", "sub": "Build · Demo · Adjust", "p": "A live demo every Friday. You see real progress, give real feedback, and we adjust before small changes become expensive. Your staging environment is always reachable.", "li": ["Friday demo call, 30–45 min", "Always-on staging environment", "Daily commits visible in your repo"], "time": "4–12 weeks" },
+      { "n": "05", "t": "Testing & Launch", "sub": "QA · Perf · Security", "p": "Full QA pass, performance testing, security review, and deployment on your infrastructure — your servers or your cloud, not mine. Complete handover with written documentation.", "li": ["Load & performance testing", "Security review (OWASP Top 10)", "Deployment runbook & handover docs"], "time": "1 week" },
+      { "n": "06", "t": "Post-Launch Support", "sub": "30 days free · Retainer optional", "p": "30 days of free bug fixes — you shouldn't pay to fix my mistakes. Optional monthly retainer afterwards for ongoing features, security patches, and improvements.", "li": ["30 days of bug fixes, free", "Optional retainer from $800 / mo", "Clear escalation path for urgent issues"], "time": "Ongoing" }
+    ],
+    "principles": {
+      "eyebrow": "The principles behind it",
+      "title1": "The way I work",
+      "title2": "is the product.",
+      "items": [
+        ["01", "Transparency over polish", "You see the real state of the work every week, even the messy bits. Polish comes at the end; visibility comes from day one."],
+        ["02", "Your code, your infrastructure", "Every line belongs to you, 100%. Deployed on your cloud, your servers, your domain. No vendor lock-in, ever."],
+        ["03", "Fixed price, flexible scope", "The price you sign is the price you pay. If scope changes, we renegotiate openly — no silent overruns, no billed surprises."],
+        ["04", "Architecture before ambition", "Grand visions only survive on solid foundations. We agree the schema, contracts and flows before the first commit."],
+        ["05", "Honest over optimistic", "If I don't know, I'll say so. If a deadline is at risk, you'll hear it early — not the day it slips."],
+        ["06", "Performance is a feature", "Every feature ships with a performance budget. Slow software is broken software, even when all the tests pass."]
+      ]
+    },
+    "tools": {
+      "eyebrow": "How the sausage gets made",
+      "title1": "Tools I use",
+      "title2": "every day",
+      "items": [
+        { "lbl": "Planning", "name": "Linear", "desc": "Issue tracking, sprint planning, transparent roadmap." },
+        { "lbl": "Design", "name": "Figma", "desc": "Wireframes, mockups, and a shared design system." },
+        { "lbl": "Backend", "name": "Laravel", "desc": "Battle-tested PHP framework. Ships fast, scales sensibly." },
+        { "lbl": "Frontend", "name": "React + Vite", "desc": "Modern frontend, fast builds, TypeScript by default." },
+        { "lbl": "Mobile", "name": "Flutter", "desc": "Native iOS + Android from a single well-tested codebase." },
+        { "lbl": "DevOps", "name": "Docker + CI", "desc": "Reproducible builds, GitHub Actions, zero-downtime deploys." },
+        { "lbl": "DB", "name": "MySQL / Postgres", "desc": "Relational, indexed, queried with intention." },
+        { "lbl": "Comms", "name": "Slack / WhatsApp", "desc": "I live in your channel. 4-hour average response time." }
+      ]
+    },
+    "megaCta": {
+      "title1": "Ready when",
+      "title2": "you",
+      "title3": "are.",
+      "desc": "Start with the discovery call. 30 minutes, no pitch — just a conversation about what you're trying to build and whether I'm the right fit.",
+      "cta": "Book the call"
+    }
+  },
+  "faqPage": {
+    "metaTitle": "FAQ",
+    "metaDesc": "Frequently asked questions about working together — availability, pricing, payment, IP, and support.",
+    "ticker": "FAQ · ANSWERS BEFORE YOU ASK | AVAILABILITY · PRICING · IP · SUPPORT | EMAIL ME ANYTIME",
+    "header": {
+      "eyebrow": "Questions answered",
+      "title1": "Frequently",
+      "title2": "asked.",
+      "desc": "Everything clients typically ask before we start — availability, pricing, payments, IP ownership, support, working style. Honest answers, no marketing fluff. If something's missing, send me a note."
+    },
+    "jumpTo": "Jump to",
+    "groups": [
+      {
+        "id": "working",
+        "title1": "Working",
+        "title2": "together",
+        "desc": "Availability, scope, collaboration model.",
+        "items": [
+          { "q": "What's your current availability?", "a": "I accept a maximum of 3 concurrent projects to protect quality. Typical project start is 1–2 weeks after contract signing. For urgent needs I offer a rush option with a 20% premium." },
+          { "q": "Do you work with international clients?", "a": "Yes. I'm based in Dubai but most of my freelance work is remote. I regularly collaborate with clients across Europe, the US, and MENA. Daily standup in your timezone is not a problem." },
+          { "q": "Do you work alone or with a team?", "a": "For small-to-medium projects (under $10k): solo. For larger enterprise engagements I lead a hand-picked team of 2–5 trusted engineers under my direct supervision. You always deal with me as the primary contact." },
+          { "q": "What if I only have a rough idea, not a spec?", "a": "That's the norm, not the exception. The discovery call and proposal stage exist exactly for that — we turn your rough idea into a scoped, estimated, realistic plan. No need to write a spec to get started." },
+          { "q": "Can you take over a project someone else started?", "a": "Yes, but I require a paid technical audit first ($1,200, fixed). This protects us both — I can see what I'm inheriting, and you get a written report either way, even if we decide not to continue together." }
+        ]
+      },
+      {
+        "id": "pricing",
+        "title1": "Pricing &",
+        "title2": "payment",
+        "desc": "How engagements are priced and how money moves.",
+        "items": [
+          { "q": "What's your payment structure?", "a": "Standard: 30% upfront, 40% at mid-project milestone, 30% upon delivery. Accepted methods: bank transfer (AED, USD, EUR), Wise, PayPal, or crypto (USDT). All fees are fixed — no hidden surprises." },
+          { "q": "Do you offer hourly rates?", "a": "For ad-hoc work, yes — $75/hour. For full projects, I strongly prefer fixed pricing. Fixed pricing aligns incentives: I'm paid to deliver outcomes, not to spend hours." },
+          { "q": "What happens if scope changes mid-project?", "a": "Change requests get a written mini-proposal: what it is, how it impacts timeline, and a fixed price add-on. You approve or decline before I touch a line of code. No silent scope creep." },
+          { "q": "Do you invoice in AED, USD, or EUR?", "a": "All three. Invoices are issued from my Dubai entity with proper VAT handling. I can also invoice in GBP on request." },
+          { "q": "Are there any discounts?", "a": "Nonprofits and early-stage founders (pre-seed, no funding) can ask for a 15% scope discount. I don't negotiate pricing otherwise — my rates are already set fairly for the deliverable." }
+        ]
+      },
+      {
+        "id": "delivery",
+        "title1": "Delivery &",
+        "title2": "support",
+        "desc": "What you get, and what happens after launch.",
+        "items": [
+          { "q": "What if I need changes after delivery?", "a": "Every project comes with 30 days of free bug fixes. For new features or major changes, monthly maintenance retainers start at $800/month. Hourly rate $75/hour for ad-hoc work." },
+          { "q": "Where does the code get deployed?", "a": "On your infrastructure, always. Your cloud, your servers, your domain. I don't host client code. You own the deployment pipeline and credentials from day one." },
+          { "q": "What if you become unavailable mid-project?", "a": "Every project has a written continuity plan — repository access, deployment runbook, and architecture doc. If something happens to me, any competent Laravel/React engineer can pick up where I left off. No lock-in." },
+          { "q": "Do you provide documentation?", "a": "Yes — architecture overview, API reference (OpenAPI spec), a deployment runbook, and a short handover video. All included. Documentation is a deliverable, not an afterthought." },
+          { "q": "How fast do you respond during a project?", "a": "Average response time during active work: under 4 hours in business hours (GST/GMT+4). For urgent production issues on clients with retainers, under 1 hour." }
+        ]
+      },
+      {
+        "id": "legal",
+        "title1": "Legal &",
+        "title2": "IP",
+        "desc": "Who owns what, and how we protect it.",
+        "items": [
+          { "q": "How do you handle intellectual property?", "a": "I sign NDAs before any detailed discussion — free of charge. All code, files, and documentation belong to you 100%. I don't use your project in my portfolio without explicit written permission." },
+          { "q": "Do you use open-source or proprietary libraries?", "a": "I use permissively-licensed open-source libraries (MIT, Apache, BSD). No AGPL, no copyleft surprises, no commercial SDKs without your explicit approval. Every dependency is audited before shipping." },
+          { "q": "What contract do you work under?", "a": "Either my standard MSA + SOW, or yours — I'm happy to review and sign reasonable client agreements. Dubai jurisdiction by default, but I've worked under English, EU and US law as well." },
+          { "q": "Can I see examples of past NDAs or contracts?", "a": "Templates yes, signed ones no — that would defeat the point of the NDA. Ask and I'll send you my current MSA and mutual NDA templates for your legal team to review." },
+          { "q": "Do you carry professional insurance?", "a": "Yes — professional indemnity coverage via a Dubai-based insurer. Certificate of coverage available on request during contracting." }
+        ]
+      }
+    ],
+    "help": {
+      "title1": "Didn't find",
+      "title2": "your",
+      "title3": "answer?",
+      "desc": "No problem. Send me the question directly — I'll reply within a few hours, and I won't charge you to ask.",
+      "emailMe": "Email me",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "contactPage": {
+    "metaTitle": "Contact",
+    "metaDesc": "Get in touch — email, WhatsApp, LinkedIn, or book a free 30-minute discovery call. Replies in under 4 hours, GMT+4.",
+    "ticker": "CONTACT · DUBAI · GMT+4 | RESPONSE UNDER 4H IN BUSINESS HOURS | FREE NDA · FREE DISCOVERY CALL",
+    "header": "Get in touch",
+    "intro": {
+      "title1": "Let's build",
+      "title2": "something",
+      "title3": "useful.",
+      "desc": "Tell me what you're trying to ship. I reply inside 4 hours in business hours (Dubai, GMT+4), often much faster. No obligation, no sales pitch — if we're not the right fit I'll say so and point you somewhere better."
+    },
+    "channels": {
+      "emailLabel": "Email — fastest",
+      "whatsappLabel": "WhatsApp — for quick questions",
+      "linkedinLabel": "LinkedIn — for long threads",
+      "bookCallLabel": "Book a call — 30 minutes, free"
+    },
+    "sla": {
+      "headline": "4-hour average response",
+      "desc": "Business hours, GMT+4. Under 1 hour for retainer clients on urgent issues."
+    },
+    "where": {
+      "eyebrow": "Where I work",
+      "title1": "Dubai,",
+      "title2": "UAE.",
+      "desc": "Based in Dubai (GMT+4). Most engagements are remote, but I meet local clients in person when it helps. Regularly work across MENA, Europe, and the US with live overlap hours.",
+      "hours": "Business hours · Sun — Thu · 09:00 — 19:00 GST",
+      "weekend": "Weekend response · within 24h for urgent items",
+      "travel": "Travel · available for on-site kickoffs"
+    },
+    "quickFaq": {
+      "eyebrow": "Quick answers",
+      "title1": "Before you",
+      "title2": "ask.",
+      "items": [
+        { "q": "How fast do you respond?", "a": "Average is under 4 hours during business hours (GMT+4). Urgent items on retainer clients are under an hour." },
+        { "q": "Do I need a finished spec to reach out?", "a": "No. Most clients start with a rough idea. The discovery call exists to turn it into a scoped, estimated, realistic plan." },
+        { "q": "Can you sign an NDA before we talk details?", "a": "Yes, and it's free. Send me yours or use my mutual template. We sign before anything sensitive hits a message." },
+        { "q": "Can we meet in person if I'm in Dubai?", "a": "Happy to — DIFC, Business Bay or Downtown. Just propose a coffee spot in the form or on WhatsApp and I'll confirm." }
+      ],
+      "fullFaq": "See full FAQ →"
+    },
+    "form": {
+      "title": "Start a project",
+      "subtitle": "Takes less than 2 minutes. Every field helps me reply with something useful.",
+      "preFilled": "✓ Pre-filled for {service} — change anything below.",
+      "labelName": "Your name",
+      "placeholderName": "e.g. Sara Al-Hashimi",
+      "labelEmail": "Email",
+      "placeholderEmail": "you@yourdomain.com",
+      "labelCompany": "Company (optional)",
+      "placeholderCompany": "Acme Studios",
+      "labelBudget": "Budget range",
+      "selectRange": "Select a range",
+      "budgetOptions": ["Under $3,000", "$3,000 — $8,000", "$8,000 — $20,000", "$20,000 — $50,000", "$50,000+", "Not sure yet"],
+      "labelService": "What do you need?",
+      "selectService": "Select a service",
+      "labelTimeline": "Timeline",
+      "selectTimeline": "Select a timeline",
+      "timelineOptions": ["ASAP — I have a hard deadline", "Within 1 month", "Within 1–3 months", "3+ months — still planning", "Just exploring"],
+      "labelMessage": "Tell me about your project",
+      "placeholderMessage": "What are you building, who's it for, and what does success look like? Even two or three sentences is fine — I'll ask for details on the call.",
+      "submit": "Send the message",
+      "submitted": "✓ Sent — talk soon",
+      "footnote": "✓ I reply personally · ✓ NDA available on request · ✓ No cold sales follow-ups",
+      "somethingElse": "Something else"
+    }
+  },
+  "experiencePage": {
+    "metaTitle": "Experience — 6+ Years Building",
+    "metaDesc": "Work experience, leadership roles, education, achievements, languages, and the full skill stack — Mohammad Najjar.",
+    "ticker": "6+ YEARS BUILDING | LEAD ENGINEER · TEAM LEAD | 80+ WEBSITES · 10+ MOBILE APPS | DUBAI · MENA · WORLDWIDE",
+    "header": {
+      "eyebrow": "Experience",
+      "title1": "Six years,",
+      "title2": "one craft",
+      "desc": "Lead Full-Stack Engineer & Technical Project Manager with 6 years across web, mobile, and SaaS. Led engineering teams and delivered 80+ websites, 10+ mobile apps, and multiple CRM systems for tech, real estate, and green-energy clients."
+    },
+    "work": {
+      "eyebrow": "Work experience",
+      "title1": "From",
+      "title2": "contestant",
+      "title3": "to tech lead",
+      "desc": "A timeline of roles, teams, and shipped products — full-time, freelance, and teaching positions across Dubai and the wider MENA region."
+    },
+    "roles": [
+      {
+        "company": "YS Lootah Tech", "location": "Dubai", "title": "Lead Full-Stack Engineer & Team Lead", "type": "Full-time", "period": "06/2024 — Present",
+        "bullets": ["Manage & mentor an 11-person engineering team (Laravel, React, Flutter, QA) — >35% drop in post-release defects.", "Mobile: architected and released 10 Android applications.", "Web: delivered 30+ production sites (see portfolio).", "Introduced OKR-driven Agile ceremonies; velocity improved 28% over three quarters."]
+      },
+      {
+        "company": "Freelance", "title": "Full-Stack Developer", "type": "Part-time", "period": "10/2022 — Present",
+        "bullets": ["Built and maintained 50+ live websites — top-tier performance, design consistency, and ongoing feature enhancements.", "Designed and developed 10+ high-conversion landing pages, optimizing UX and significantly improving campaign results."]
+      },
+      {
+        "company": "Newline Information Technology & Marketing", "title": "Team Leader & Web Developer", "type": "Full-time", "period": "05/2023 — 06/2024",
+        "bullets": ["Led the engineering of a CRM system, enhancing lead-generation efficiency.", "Created an innovative CRM solution tailored for contract management — streamlined contract handling and operational workflows.", "Built 10 modern, responsive websites using advanced development practices tailored to client industries and conversion goals.", "Created 30+ high-performing landing pages — significantly increased campaign engagement and drove measurable growth in lead capture and ROI."]
+      },
+      {
+        "company": "Act Local Digital Marketing", "location": "Dubai", "title": "Full-Stack Web Developer", "type": "Full-time", "period": "02/2023 — 04/2023",
+        "bullets": ["Developed 4 fully responsive WordPress websites from scratch — custom themes, Elementor layouts, multilingual SEO.", "Built and optimized 2 high-converting landing pages for Google Ads campaigns — improved ad quality score and lead capture rates."]
+      },
+      {
+        "company": "Castles Code", "title": "Frontend Instructor", "type": "Part-time", "period": "01/2023 — 12/2023",
+        "bullets": ["Developed a comprehensive curriculum for 15 students, enhancing practical front-end skills.", "Provided sustained technical support, significantly elevating student proficiency."]
+      },
+      {
+        "company": "ICPC — International Collegiate Programming Contest", "title": "Coach", "type": "Part-time", "period": "06/2022 — 09/2022",
+        "bullets": ["Conducted an impactful training camp educating 70+ students in C++, data structures, and algorithms.", "Fostered enhanced technical understanding among students with a notable success rate."]
+      },
+      {
+        "company": "Unique Software Ideas Community", "title": "Junior Full-Stack Developer", "type": "Full-time", "period": "08/2021 — 02/2022",
+        "bullets": ["Completed 5 front-end projects focused on innovative design and performance optimization.", "Used a diverse stack — JavaScript, jQuery, PHP — for dynamic web application development."]
+      },
+      {
+        "company": "Injaz", "title": "Back-End Developer (Internship)", "type": "Internship", "period": "10/2020 — 12/2020",
+        "bullets": ["Developed 2 responsive web applications using PHP and Laravel — including an educational platform.", "Implemented MySQL databases, optimizing data management and website functionality."]
+      },
+      {
+        "company": "ICPC — International Collegiate Programming Contest", "title": "Contestant", "type": "Part-time", "period": "05/2019 — 06/2020",
+        "bullets": ["Led a team to victory in the SCPC 2019 Private Universities category.", "Secured 8th place among all Aleppo universities in AleppoCPC 2019."]
+      },
+      {
+        "company": "Wikilogia Hackathon — MyTaxi", "title": "Front-End Developer", "type": "Hackathon", "period": "02/2018 — 04/2018",
+        "bullets": ["Contributed significantly to the MyTaxi project — focused on front-end development and database management."]
+      }
+    ],
+    "volunteering": {
+      "eyebrow": "Volunteering & extracurriculars",
+      "title1": "Leadership",
+      "title2": "beyond code",
+      "desc": "Elected representation, community organizing, and student advocacy — the non-engineering side of the resume.",
+      "items": [
+        {
+          "org": "National Union of Syrian Students", "title": "Student Body President", "period": "01/2018 — 06/2022",
+          "bullets": ["Mediated with university administration, enhancing student experiences and addressing key concerns.", "Conducted a meeting with 300+ students to identify their pain points and communication needs with the administration.", "Orchestrated student-focused initiatives, leading to a 90% election victory."]
+        }
+      ]
+    },
+    "skills": {
+      "eyebrow": "Skills",
+      "title1": "The full",
+      "title2": "tech stack",
+      "desc": "Languages, frameworks, databases, and the practices that hold them together.",
+      "personalEyebrow": "Personal skills",
+      "personalSkills": ["Team Leadership", "Teamwork", "Communication", "Volunteer Management"]
+    },
+    "education": {
+      "eyebrow": "Education",
+      "school": "Ittihad Private University",
+      "degree": "Bachelor of Information Technology — Computer Science",
+      "gpa": "GPA: 3.03 / 4.00",
+      "location": "Aleppo, Syria",
+      "period": "10/2016 — 09/2022"
+    },
+    "languages": {
+      "eyebrow": "Languages",
+      "items": [
+        { "name": "Arabic", "level": "Native", "pct": 100 },
+        { "name": "English", "level": "Fluent", "pct": 90 }
+      ]
+    },
+    "achievements": {
+      "eyebrow": "Achievements",
+      "items": [
+        "Championed the Private Universities category in SCPC 2019.",
+        "Ranked 8th in AleppoCPC 2019.",
+        "Certificate of Participation — Wikilogia Hackathon 2018."
+      ]
+    },
+    "recommendation": {
+      "eyebrow": "Recommendation",
+      "quote1": "Endorsed by Join Imagine with a recommendation letter — ranked in the top",
+      "quote2": "10%",
+      "quote3": "of their peer group.",
+      "by": "— Join Imagine"
+    },
+    "results": {
+      "years": "Years Building",
+      "websites": "Websites Shipped",
+      "mobile": "Mobile Apps",
+      "engineers": "Engineers Led"
+    }
+  },
+  "blogPage": {
+    "metaTitle": "Blog",
+    "metaDesc": "Notes from the build — Mohammad Najjar writes about SaaS architecture, Laravel at scale, Flutter in production, team leadership, and hard-won lessons from shipping 90+ projects.",
+    "ticker": "NOTES FROM THE BUILD | SAAS · LARAVEL · FLUTTER · LEADERSHIP | NEW POSTS EVERY TWO WEEKS | WRITTEN FROM DUBAI",
+    "header": {
+      "eyebrow": "The blog",
+      "title1": "Notes from",
+      "title2": "the",
+      "title3": "build."
+    },
+    "desc": "Long-form thinking on SaaS architecture, Laravel at scale, Flutter in production, team leadership, and the hard-won lessons from shipping 90+ projects. Written when I have something worth saying, not on a content calendar.",
+    "filters": [
+      { "id": "all", "label": "All posts" },
+      { "id": "architecture", "label": "Architecture" },
+      { "id": "laravel", "label": "Laravel" },
+      { "id": "flutter", "label": "Flutter" },
+      { "id": "leadership", "label": "Leadership" },
+      { "id": "performance", "label": "Performance" }
+    ],
+    "readPost": "Read the post →",
+    "readShort": "Read",
+    "noPosts": "No posts in this category yet.",
+    "newsletter": {
+      "eyebrow": "Stay in the loop",
+      "title1": "New post,",
+      "title2": "every other Friday.",
+      "desc": "No spam, no sponsored drivel. Just the one thing I've learned this fortnight that I think is worth your inbox.",
+      "placeholder": "you@yourdomain.com",
+      "subscribe": "Subscribe"
+    },
+    "post": {
+      "tickerBy": "READING",
+      "tickerAuthor": "BY MOHAMMAD NAJJAR · DUBAI",
+      "back": "← Back to blog",
+      "by": "By Mohammad Najjar",
+      "tocTitle": "Table of contents",
+      "authorBio": "Full-stack engineer and tech lead based in Dubai. Ships SaaS MVPs, leads engineering teams, writes occasionally about the things that work in production.",
+      "faqEyebrow": "Frequently asked",
+      "faqTitle1": "About this",
+      "faqTitle2": "post.",
+      "ctaTitle1": "Got a SaaS idea?",
+      "ctaTitle2": "Let's scope it.",
+      "ctaDesc": "30-minute discovery call, free, no obligation. We'll figure out together whether six weeks is realistic — or what a smarter scope looks like.",
+      "ctaBtn": "Book a call",
+      "relatedEyebrow": "Keep reading",
+      "relatedTitle1": "Related",
+      "relatedTitle2": "posts."
+    }
+  },
+  "filters": {
+    "skillsAll": "All",
+    "skillsLanguages": "Languages",
+    "skillsFrameworks": "Frameworks",
+    "skillsFrontend": "Frontend",
+    "skillsBackend": "Backend",
+    "skillsData": "Data",
+    "skillsTools": "Tools",
+    "skillsPractices": "Practices",
+    "stackAll": "All",
+    "stackArch": "Architecture",
+    "stackBackend": "Backend Development",
+    "stackDatabase": "Database",
+    "stackDevops": "DevOps",
+    "stackFrontend": "Frontend Development",
+    "stackLang": "Programming Language"
+  },
+  "project": {
+    "back": "← Back to all work",
+    "viewLive": "View live",
+    "readStory": "Read the story →",
+    "methodsTitle1": "Methods &",
+    "methodsTitle2": "journey",
+    "challenge": "The challenge",
+    "architecture": "The architecture",
+    "shipped": "What shipped",
+    "outcome": "The outcome",
+    "details": "Project details",
+    "numbersEyebrow": "The numbers",
+    "numbersTitle1": "Real",
+    "numbersTitle2": "results",
+    "techEyebrow": "Technologies",
+    "techTitle1": "Built with",
+    "techTitle2": "care",
+    "galleryEyebrow": "Gallery",
+    "galleryTitle1": "A peek",
+    "galleryTitle2": "inside",
+    "nextEyebrow": "Ready for the next one?",
+    "nextLabel": "Next case study",
+    "metaCaseStudy": "Case Study"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "desc": "The page you're looking for has moved or never existed.",
+    "back": "← Back home"
   }
 }

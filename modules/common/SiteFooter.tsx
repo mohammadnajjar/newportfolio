@@ -1,5 +1,6 @@
 import type { ReactElement } from 'react'
-import Link from 'next/link'
+import { getTranslations } from 'next-intl/server'
+import { Link } from '@/lib/i18n/navigation'
 
 const IconEmail = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -27,73 +28,80 @@ const IconCalendar = () => (
 
 type HeadlineKey = 'talk' | 'contact' | ''
 
-const headlineMap: Record<HeadlineKey, ReactElement> = {
-  talk: (
+function Headline({ headline, t }: { headline: HeadlineKey; t: (k: string) => string }): ReactElement {
+  if (headline === 'talk') {
+    return (
+      <>
+        {t('headlineTalk1')} <span className="serif">{t('headlineTalk2')}</span><br />{t('headlineTalk3')}
+      </>
+    )
+  }
+  if (headline === 'contact') {
+    return (
+      <>
+        {t('headlineContact1')} <span className="serif">{t('headlineContact2')}</span>
+      </>
+    )
+  }
+  return (
     <>
-      Let&apos;s talk. <span className="serif">I respond</span><br />in hours.
+      {t('headlineDefault1')} <span className="serif">{t('headlineDefault2')}</span>
     </>
-  ),
-  contact: (
-    <>
-      Message me. <span className="serif">I&apos;ll reply.</span>
-    </>
-  ),
-  '': (
-    <>
-      Got a project <span className="serif">in mind?</span>
-    </>
-  ),
+  )
 }
 
-export default function SiteFooter({ headline = '' }: { headline?: HeadlineKey }) {
+export default async function SiteFooter({ headline = '' }: { headline?: HeadlineKey }) {
+  const t = await getTranslations('footer')
+  const tNav = await getTranslations('nav')
+
   return (
     <footer>
       <div className="container">
         <div className="footer-top">
           <div>
             <div className="footer-huge">
-              {headlineMap[headline]}
+              <Headline headline={headline} t={t} />
             </div>
             <Link
               href="mailto:mohammadnajjamgl@gmail.com?subject=Project%20Inquiry"
               className="btn-big on-dark"
               style={{ marginTop: '32px', display: 'inline-flex' }}
             >
-              Send me a message <span className="arrow">↗</span>
+              {t('sendMessage')} <span className="arrow">↗</span>
             </Link>
           </div>
 
           <div className="footer-col">
-            <h4>Navigation</h4>
-            <Link href="/work">Work</Link>
-            <Link href="/services">Services</Link>
-            <Link href="/process">Process</Link>
-            <Link href="/experience">Experience</Link>
-            <Link href="/blog">Blog</Link>
-            <Link href="/faq">FAQ</Link>
-            <Link href="/contact">Contact</Link>
+            <h4>{t('navigation')}</h4>
+            <Link href="/work">{tNav('work')}</Link>
+            <Link href="/services">{tNav('services')}</Link>
+            <Link href="/process">{tNav('process')}</Link>
+            <Link href="/experience">{tNav('experience')}</Link>
+            <Link href="/blog">{tNav('blog')}</Link>
+            <Link href="/faq">{tNav('faq')}</Link>
+            <Link href="/contact">{tNav('contact')}</Link>
           </div>
 
           <div className="footer-col">
-            <h4>Connect</h4>
+            <h4>{t('connect')}</h4>
             <a href="mailto:mohammadnajjamgl@gmail.com" target="_blank" rel="noopener noreferrer">
-              <IconEmail /> Email
+              <IconEmail /> {t('email')}
             </a>
             <a href="https://linkedin.com/in/mglnaj" target="_blank" rel="noopener noreferrer">
-              <IconLinkedIn /> LinkedIn
+              <IconLinkedIn /> {t('linkedin')}
             </a>
             <a href="https://wa.me/971501026045" target="_blank" rel="noopener noreferrer">
-              <IconWhatsApp /> WhatsApp
+              <IconWhatsApp /> {t('whatsapp')}
             </a>
             <a href="https://cal.com/mohammadnajjar" target="_blank" rel="noopener noreferrer">
-              <IconCalendar /> Book a Call
+              <IconCalendar /> {t('bookCall')}
             </a>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <span>© 2026 Mohammad Najjar. All rights reserved.</span>
-          <span>Dubai, UAE · GMT+4</span>
+          <span>© 2026 Mohammad Najjar. {t('rights')}.</span>
+          <span>{t('location')}</span>
         </div>
       </div>
     </footer>
