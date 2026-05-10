@@ -4,6 +4,8 @@ import { getProjectDetails } from '@/lib/projects'
 import { blogPostBodies } from '@/lib/blog-posts'
 import { routing } from '@/lib/i18n/routing'
 
+export const dynamic = 'force-static'
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = appConfig.site.url
   const now = new Date()
