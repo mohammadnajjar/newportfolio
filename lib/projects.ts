@@ -83,6 +83,9 @@ interface LocaleStrings {
 
 const en: LocaleStrings = {
   appsAndSaaS: {
+    'gonsure': { category: 'Insurance CRM · Event-driven · Multi-channel', description: 'Insurance lifecycle CRM ingesting GTM DataLayer events via HMAC-verified webhooks across a 14-module architecture. Tracks journeys across 6 stages and 30 substages in real time.', badge: '2026 Flagship' },
+    'damin': { category: 'Insurance CRM · Lead Management', description: 'Lead management CRM with a centralized Stage Engine, 30+ substages, JSONB custom fields, bilingual UI, financial reporting, and Livewire Kanban boards.', badge: 'Lead Engine' },
+    'we-publishing': { category: 'Education SaaS · Multi-tenant', description: 'Customized Laravel school SaaS with database-per-tenant architecture, digital book delivery, student portal, real-time chat, dashboards, and full Arabic translation.', badge: 'SaaS Platform' },
     'ucofy': { category: 'IoT · SaaS · Multi-role', description: 'Full digital platform managing the used cooking oil lifecycle in UAE. 5 integrated apps, IoT sensors, real-time tracking, regulator-grade audit trail.', badge: 'Flagship' },
     'yjoz': { category: 'Rental & Booking · Mobile', description: 'Rental & booking platform for iOS and Android. Led backend architecture and a Flutter team, serving thousands of active users across the UAE.', badge: 'Team Lead' },
     'lootah-islamic': { category: 'Islamic Finance · Mobile App', description: 'Sharia-compliant Islamic products marketplace. Built the backend API powering the iOS & Android app with product catalog, user auth, and order management.', badge: 'Backend' },
@@ -163,6 +166,9 @@ const en: LocaleStrings = {
 
 const ar: LocaleStrings = {
   appsAndSaaS: {
+    'gonsure': { category: 'تأمين · CRM · متعدد القنوات', description: 'نظام CRM لدورة حياة التأمين يستقبل أحداث GTM عبر webhooks موقعة HMAC ضمن بنية من ١٤ موديول، ويتتبع الرحلة عبر ٦ مراحل و٣٠ مرحلة فرعية لحظياً.', badge: 'المشروع الأحدث' },
+    'damin': { category: 'تأمين · إدارة Leads', description: 'CRM لإدارة العملاء المحتملين مع Stage Engine مركزي و٣٠+ مرحلة فرعية وحقول JSONB مخصصة وواجهة ثنائية اللغة ولوحات Kanban.', badge: 'محرك مراحل' },
+    'we-publishing': { category: 'تعليم · SaaS متعدد المستأجرين', description: 'تخصيص منصة Laravel تعليمية ببنية قاعدة بيانات لكل مستأجر، مع مكتبة كتب رقمية وبوابة طالب ودردشة فورية ولوحات تقارير وترجمة عربية كاملة.', badge: 'منصة SaaS' },
     'ucofy': { category: 'إنترنت الأشياء · SaaS · متعدد الأدوار', description: 'منصة رقمية كاملة تدير دورة حياة زيت الطهي المستعمل في الإمارات. ٥ تطبيقات متكاملة، حساسات IoT، تتبع لحظي، سجل تدقيق بمستوى الجهات التنظيمية.', badge: 'الرئيسي' },
     'yjoz': { category: 'تأجير وحجز · جوال', description: 'منصة تأجير وحجز لـ iOS و Android. قدت معمارية الـ backend وفريق Flutter، تخدم آلاف المستخدمين النشطين عبر الإمارات.', badge: 'قائد فريق' },
     'lootah-islamic': { category: 'تمويل إسلامي · تطبيق جوال', description: 'سوق منتجات إسلامية متوافقة مع الشريعة. بنيت الـ API الخلفي لتطبيق iOS و Android مع كتالوج المنتجات والمصادقة وإدارة الطلبات.', badge: 'Backend' },
@@ -250,6 +256,9 @@ function getStrings(locale: string): LocaleStrings {
 
 // Tone & filter tags don't change per locale
 const appsAndSaaSMeta: Array<{ slug: string; shortTitle?: string; tone: Tone; tags: string[]; filterTags: string[]; title: string }> = [
+  { slug: 'gonsure',          shortTitle: 'Gonsure', title: 'Gonsure Lifecycle CRM', tone: 'tone-accent', tags: ['Laravel 11', 'Livewire 4', 'PostgreSQL', 'Azure DevOps'], filterTags: ['apps', 'enterprise'] },
+  { slug: 'damin',            shortTitle: 'Damin',   title: 'Damin Insurance CRM', tone: 'tone-blue', tags: ['Laravel 11', 'Livewire 4', 'JSONB', 'Reporting'], filterTags: ['apps', 'enterprise'] },
+  { slug: 'we-publishing',    shortTitle: 'WE',      title: 'We Publishing SaaS', tone: 'tone-lime', tags: ['Laravel 10', 'Multi-tenant', 'Pusher', 'MySQL'], filterTags: ['apps', 'enterprise'] },
   { slug: 'ucofy',            shortTitle: 'UCOFY', title: 'Lootah UCOFY', tone: 'tone-accent', tags: ['Laravel', 'Flutter', 'IoT', 'MySQL'],                          filterTags: ['apps', 'enterprise'] },
   { slug: 'yjoz',             shortTitle: 'YJOZ',  title: 'Yjoz',         tone: 'tone-lime',   tags: ['Flutter', 'Laravel API', 'Firebase', 'Payments'],             filterTags: ['apps', 'ecommerce'] },
   { slug: 'lootah-islamic',                        title: 'Lootah Islamic', tone: 'tone-blue', tags: ['Laravel', 'Flutter', 'REST API', 'MySQL'],                    filterTags: ['apps', 'ecommerce'] },
@@ -469,8 +478,130 @@ export function getProjectDetails(locale: string): Record<string, ProjectDetail>
       { num: '99.9', plus: '%', lbl: s.ucofy.kpiUptimeLbl, desc: s.ucofy.kpiUptimeDesc },
     ],
     techStack: ['Laravel 11', 'PHP 8.3', 'MySQL 8', 'Redis', 'Mosquitto MQTT', 'Flutter', 'Riverpod', 'Docker', 'Nginx', 'GitHub Actions'],
-    next: { slug: 'yjoz', title: 'YJOZ' },
+    next: { slug: 'gonsure', title: 'Gonsure Lifecycle CRM' },
     tickerItems: 'CASE STUDY · UCOFY | IOT · SAAS · MULTI-ROLE | UAE · 2023 → PRESENT | 5 APPS · 1.2K USERS · 58K EVENTS/DAY',
+  })
+
+  details['gonsure'] = baseDetails('gonsure', {
+    year: '2026 — present',
+    duration: locale === 'ar' ? 'من 04/2026 حتى الآن' : '04/2026 — present',
+    role: locale === 'ar' ? 'مهندس معماري · قائد تقني' : 'Solution Architect · Lead Engineer',
+    liveUrl: 'https://gonsure.com',
+    summary: locale === 'ar'
+      ? 'نظام CRM لدورة حياة التأمين يستقبل أحداث GTM عبر webhooks موقعة HMAC ضمن بنية معيارية من ١٤ موديول، ويتتبع رحلة العميل لحظياً عبر ٦ مراحل و٣٠ مرحلة فرعية.'
+      : 'An insurance lifecycle CRM ingesting GTM DataLayer events through HMAC-verified webhooks across a 14-module modular architecture, tracking customers in real time across 6 stages and 30 substages.',
+    narrative: {
+      challenge: locale === 'ar'
+        ? [
+            'فرق التسويق والعمليات احتاجت CRM يفهم سلوك العميل الفعلي من الأحداث، لا مجرد Leads تُدخل يدوياً.',
+            'كان المطلوب ربط الرحلة الكاملة من الإشارة التسويقية إلى الحالة التشغيلية مع أتمتة واضحة وتتبّع كامل.'
+          ]
+        : [
+            'Marketing and operations teams needed a CRM that understood behavioral events, not just manually entered leads.',
+            'The platform had to unify customer journey tracking, campaign logic, and operational follow-up without losing auditability.'
+          ],
+      architecture: locale === 'ar'
+        ? ['Laravel 11 بهيكلية معيارية من ١٤ موديول، مع PostgreSQL و Livewire 4 وطبقة webhook تتحقق من HMAC لأحداث GTM DataLayer.']
+        : ['Laravel 11 modular monolith across 14 modules, backed by PostgreSQL and Livewire 4, with an HMAC-verified webhook ingestion layer for GTM DataLayer events.'],
+      architectureBullets: locale === 'ar'
+        ? ['بوابة webhooks موقعة بـ HMAC', 'محرك مراحل عبر ٦ مراحل و٣٠ مرحلة فرعية', 'تقسيم rule-based للجمهور والحملات', 'تنفيذ متعدد القنوات عبر WhatsApp و SMS و Email']
+        : ['HMAC-verified webhook gateway for behavioral events', 'Journey engine spanning 6 stages and 30 substages', 'Rule-based segmentation and campaign targeting', 'Multi-channel delivery across WhatsApp, SMS, and email'],
+      whatShipped: locale === 'ar'
+        ? ['CRM تشغيلي كامل لإدارة رحلة العميل التأمينية من الحدث التسويقي حتى المتابعة والحملات والتقارير.']
+        : ['A production insurance lifecycle CRM covering journey tracking, operations, campaign delivery, and reporting.'],
+      whatShippedBullets: locale === 'ar'
+        ? ['تقسيم rule-based', 'حملات متعددة القنوات مع opt-out enforcement', 'إنشاء حالات تلقائي للأحداث الحرجة', 'تقارير KPI و Funnel مع CSV/Excel export']
+        : ['Rule-based segmentation', 'Multi-channel campaigns with opt-out enforcement', 'Automated case creation on critical events', 'KPI and funnel reporting with CSV/Excel export'],
+      outcome: locale === 'ar'
+        ? ['وحدة رؤية تشغيلية موحّدة للرحلة كاملة، مع ربط واضح بين التسويق والمتابعة والحالات في نظام واحد قابل للتوسع.']
+        : ['Unified marketing, journey, and case-management visibility inside one scalable operating system for the insurance team.'],
+    },
+    kpis: [
+      { num: '14', lbl: locale === 'ar' ? 'موديولات' : 'Modules', desc: locale === 'ar' ? 'ضمن الهيكلية الأساسية للمنتج.' : 'Inside the modular architecture.' },
+      { num: '6', lbl: locale === 'ar' ? 'مراحل الرحلة' : 'Journey Stages', desc: locale === 'ar' ? 'المسار الرئيسي للعميل.' : 'Primary customer journey stages.' },
+      { num: '30', plus: '+', lbl: locale === 'ar' ? 'مراحل فرعية' : 'Substages', desc: locale === 'ar' ? 'تفصيلات الحالة ضمن الرحلة.' : 'Fine-grained journey tracking.' },
+      { num: '3', lbl: locale === 'ar' ? 'قنوات' : 'Channels', desc: locale === 'ar' ? 'WhatsApp و SMS و Email.' : 'WhatsApp, SMS, and email campaigns.' },
+    ],
+    techStack: ['Laravel 11', 'PHP 8.3', 'Livewire 4', 'PostgreSQL', 'Spatie Permission', 'Spatie Laravel Data', 'Docker', 'Azure DevOps'],
+    next: { slug: 'damin', title: 'Damin Insurance CRM' },
+    tickerItems: 'CASE STUDY · GONSURE | INSURANCE CRM · EVENT-DRIVEN | 2026 → PRESENT | 14 MODULES · 6 STAGES · 30+ SUBSTAGES',
+  })
+
+  details['damin'] = baseDetails('damin', {
+    year: '2026 — present',
+    duration: locale === 'ar' ? 'من 02/2026 حتى الآن' : '02/2026 — present',
+    role: locale === 'ar' ? 'قائد بناء النظام' : 'Lead Engineer',
+    liveUrl: 'https://daminbroker.com',
+    summary: locale === 'ar'
+      ? 'CRM لإدارة العملاء المحتملين والتأمين مع Pipeline كامل من Contact إلى Issue، ومحرك مراحل مركزي وحقول JSONB مخصصة وتقارير مالية وتحويلية وواجهة ثنائية اللغة.'
+      : 'A lead-management CRM with a full Contact → Lead → Opportunity → Issue pipeline, a centralized Stage Engine, JSONB custom fields, financial reporting, and a bilingual UI.',
+    narrative: {
+      challenge: locale === 'ar'
+        ? ['احتاج فريق الوساطة نظاماً يفرض انتقالات صحيحة بين المراحل مع سجل تاريخي واضح لكل حركة.', 'كما احتاجوا تقارير مالية وتحويلية مخصصة لا توفرها الأنظمة الجاهزة بسهولة.']
+        : ['The brokerage team needed strict stage governance, clear movement history, and a single operating pipeline from first contact to issue resolution.', 'They also needed bilingual workflows and reporting that generic CRMs rarely model well.'],
+      architecture: locale === 'ar'
+        ? ['Laravel 11 مع Stage Engine مركزي، و PostgreSQL 15 وحقول JSONB مخصصة وواجهات Livewire Kanban ولوحة ثنائية اللغة.']
+        : ['Laravel 11 backed by PostgreSQL 15, with a central Stage Engine, JSONB-backed custom fields, and bilingual Livewire Kanban surfaces.'],
+      architectureBullets: locale === 'ar'
+        ? ['Stage Engine للتنقلات والتاريخ', 'JSONB custom fields system', 'RBAC عبر ٤ أدوار باستخدام Spatie Permission', 'لوحات Kanban وتقارير تشغيلية ومالية']
+        : ['Central Stage Engine for transitions and history', 'JSONB custom fields system', 'RBAC across 4 roles with Spatie Permission', 'Kanban workflow plus operational and financial reports'],
+      whatShipped: locale === 'ar'
+        ? ['نظام CRM كامل لإدارة الـ leads والفرص والقضايا مع تقارير وتحكم أدوار وواجهة عربية/إنجليزية.']
+        : ['A production CRM for lead, opportunity, and issue management with reporting, permissions, and bilingual execution.'],
+      whatShippedBullets: locale === 'ar'
+        ? ['Pipeline من Contact إلى Issue', 'تقارير Finance و Win/Loss و Pipeline Value و Team Performance و Conversion Funnel', 'Livewire Kanban boards', 'إشعارات وتاريخ تغيرات مركزي']
+        : ['Contact → Lead → Opportunity → Issue pipeline', 'Finance, win/loss, pipeline value, team performance, and conversion funnel reporting', 'Livewire Kanban boards', 'Automated notifications and centralized history logging'],
+      outcome: locale === 'ar'
+        ? ['توحيد طريقة تعامل الفريق مع الـ leads والتقارير ضمن نظام واحد واضح وقابل للقياس.']
+        : ['Standardized how the brokerage team handles leads, transitions, and reporting inside one measurable system.'],
+    },
+    kpis: [
+      { num: '30', plus: '+', lbl: locale === 'ar' ? 'مراحل فرعية' : 'Substages', desc: locale === 'ar' ? 'تفصيل دقيق للـ pipeline.' : 'Granular pipeline control.' },
+      { num: '4', lbl: locale === 'ar' ? 'أدوار' : 'Roles', desc: locale === 'ar' ? 'RBAC عبر Spatie Permission.' : 'RBAC powered by Spatie Permission.' },
+      { num: '5', lbl: locale === 'ar' ? 'تقارير أساسية' : 'Core Reports', desc: locale === 'ar' ? 'تقارير مالية وتحويلية وتشغيلية.' : 'Financial, funnel, and performance reporting.' },
+      { num: '2', lbl: locale === 'ar' ? 'لغات' : 'Languages', desc: locale === 'ar' ? 'واجهة عربية وإنجليزية كاملة.' : 'Full Arabic and English UI.' },
+    ],
+    techStack: ['Laravel 11', 'PHP 8.3', 'Livewire 4', 'Alpine.js', 'PostgreSQL 15', 'Docker', 'Azure DevOps', 'Spatie Permission'],
+    next: { slug: 'we-publishing', title: 'We Publishing SaaS' },
+    tickerItems: 'CASE STUDY · DAMIN | INSURANCE CRM · LEAD MANAGEMENT | 2026 → PRESENT | 30+ SUBSTAGES · JSONB · BILINGUAL',
+  })
+
+  details['we-publishing'] = baseDetails('we-publishing', {
+    year: '2025 — 2026',
+    duration: locale === 'ar' ? '12/2025 — 04/2026' : '12/2025 — 04/2026',
+    role: locale === 'ar' ? 'مهندس Full-Stack أول' : 'Senior Full-Stack Engineer',
+    summary: locale === 'ar'
+      ? 'تخصيص منصة SaaS تعليمية على Laravel 10 ببنية قاعدة بيانات لكل مستأجر، تخدم أربع فئات من المستخدمين، مع مكتبة كتب رقمية وبوابة طالب ودردشة فورية ولوحات تقارير وترجمة عربية كاملة.'
+      : 'A customized Laravel 10 education SaaS with database-per-tenant architecture, four user tiers, digital book delivery, student portal features, real-time chat, dashboards, and full Arabic localization.',
+    narrative: {
+      challenge: locale === 'ar'
+        ? ['المطلوب لم يكن مجرد موقع تعليمي، بل تخصيص عميق لمنصة SaaS مدرسية متعددة المستأجرين مع عزل بيانات حقيقي وتدفقات استخدام يومية.', 'كان لا بد من دعم المحتوى الرقمي والواجبات والاختبارات والدردشة الفورية مع تعريب كامل للواجهة.']
+        : ['The platform needed deep tenant-specific customization, not a superficial school website refresh.', 'It had to support digital content, assignments, exams, student communication, and Arabic UX across the full product.'],
+      architecture: locale === 'ar'
+        ? ['Laravel 10 ببنية database-per-tenant، مع Queue Jobs وWebSockets عبر Pusher وواجهة Bootstrap 4 + jQuery.']
+        : ['Laravel 10 with database-per-tenant isolation, queue jobs, WebSockets via Pusher, and a Bootstrap 4 + jQuery front-end.'],
+      architectureBullets: locale === 'ar'
+        ? ['Database-per-tenant architecture', 'أربع فئات مستخدمين ببوابات منفصلة', 'مكتبة كتب رقمية PDF / Flash / Flipbook', 'تعريب كامل وتقوية أمنية على مبادئ OWASP']
+        : ['Database-per-tenant architecture', 'Four user tiers with separate portals', 'Digital book delivery via PDF, Flash, and Flipbook', 'Arabic localization plus OWASP-minded hardening'],
+      whatShipped: locale === 'ar'
+        ? ['منصة تعليمية SaaS مخصصة للإنتاج تشمل الطلاب والمعلمين والإدارة والمحتوى الرقمي والتقارير.']
+        : ['A production-ready education SaaS tailored for school operations, content delivery, and role-specific workflows.'],
+      whatShippedBullets: locale === 'ar'
+        ? ['مكتبة رقمية مع licensing وتوزيع حسب المنهج', 'بوابة طالب مع واجبات واختبارات ودردشة فورية', 'لوحات تقارير تشغيلية', 'ترجمة عربية كاملة للمنتج']
+        : ['Digital library with licensing and curriculum-based assignment', 'Student portal for assignments, exams, and real-time chat', 'Reporting dashboards for school operations', 'Full Arabic translation across the product'],
+      outcome: locale === 'ar'
+        ? ['منصة أكثر جاهزية للتشغيل اليومي داخل بيئات متعددة المستأجرين مع تجربة عربية كاملة ومحتوى رقمي منظم.']
+        : ['A more production-ready school SaaS across multi-tenant environments with a complete Arabic user experience and structured digital content delivery.'],
+    },
+    kpis: [
+      { num: '4', lbl: locale === 'ar' ? 'فئات مستخدمين' : 'User Tiers', desc: locale === 'ar' ? 'Super Admin و School Admin و Teacher و Student.' : 'Super Admin, School Admin, Teacher, and Student.' },
+      { num: '3', lbl: locale === 'ar' ? 'أنواع كتب' : 'Book Types', desc: locale === 'ar' ? 'PDF و Flash و Flipbook.' : 'PDF, Flash, and Flipbook delivery.' },
+      { num: '1', plus: '00%', lbl: locale === 'ar' ? 'تعريب الواجهة' : 'Arabic UI', desc: locale === 'ar' ? 'المنتج مترجم بالكامل.' : 'Full product localization.' },
+      { num: '1', lbl: locale === 'ar' ? 'بنية Multi-DB' : 'Multi-DB', desc: locale === 'ar' ? 'عزل قاعدة بيانات لكل مستأجر.' : 'Database-per-tenant isolation.' },
+    ],
+    techStack: ['Laravel 10', 'PHP 8.3', 'MySQL', 'Bootstrap 4', 'jQuery', 'Pusher', 'DOMPDF', 'Maatwebsite Excel'],
+    next: { slug: 'ucofy', title: 'Lootah UCOFY' },
+    tickerItems: 'CASE STUDY · WE PUBLISHING | EDUCATION SAAS · MULTI-TENANT | 2025 → 2026 | 4 USER TIERS · DIGITAL LIBRARY',
   })
 
   details['yjoz'] = baseDetails('yjoz', {

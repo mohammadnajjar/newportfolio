@@ -125,10 +125,12 @@ export default async function HomePage({ params }: Props) {
                   <code>
                     <span className="cc-key">const</span>{' '}
                     <span className="cc-var">me</span> = {'{'}
-                    {'\n'}  role: <span className="cc-str">&apos;engineer&apos;</span>,
+                    {'\n'}  role: <span className="cc-str">&apos;tech-lead&apos;</span>,
                     {'\n'}  stack: [<span className="cc-str">&apos;laravel&apos;</span>,{' '}
-                    <span className="cc-str">&apos;flutter&apos;</span>],
+                    <span className="cc-str">&apos;next.js&apos;</span>,{' '}
+                    <span className="cc-str">&apos;livewire&apos;</span>],
                     {'\n'}  ships: <span className="cc-num">120</span>,
+                    {'\n'}  leads: <span className="cc-num">11</span>,
                     {'\n'}  available: <span className="cc-key">true</span>,
                     {'\n'}{'}'}
                   </code>
@@ -200,56 +202,50 @@ export default async function HomePage({ params }: Props) {
           </div>
 
           <div className="work-grid">
-            <Link href="/projects/ucofy" className="work-item size-lg featured">
-              <div className="work-tag">IoT · SaaS · Multi-role</div>
+            <Link href="/projects/gonsure" className="work-item size-lg featured">
+              <div className="work-tag">{locale === 'ar' ? 'تأمين · CRM · مدفوع بالأحداث' : 'Insurance · Event-driven CRM'}</div>
+              <h3 className="work-title">GONSURE</h3>
+              <p className="work-desc">
+                {locale === 'ar'
+                  ? 'منصة CRM لدورة حياة التأمين تستقبل أحداث GTM عبر webhooks موقعة HMAC، وتدير الرحلة عبر ٦ مراحل و٣٠ مرحلة فرعية مع حملات متعددة القنوات وتقارير Funnel تشغيلية.'
+                  : 'An insurance lifecycle CRM ingesting GTM events through HMAC-verified webhooks, tracking customers across 6 stages and 30 substages with multi-channel campaigns and operational funnel reporting.'}
+              </p>
+              <div className="work-tech">
+                <span>Laravel 11</span><span>Livewire 4</span><span>PostgreSQL</span>
+                <span>Webhooks</span><span>Azure DevOps</span><span>CRM</span>
+              </div>
+            </Link>
+
+            <Link href="/projects/damin" className="work-item size-md accent">
+              <div className="work-tag">{locale === 'ar' ? 'تأمين · إدارة Leads' : 'Insurance · Lead Management'}</div>
+              <h3 className="work-title">DAMIN</h3>
+              <p className="work-desc">
+                {locale === 'ar'
+                  ? 'Pipeline متكامل من Contact إلى Issue مع Stage Engine مركزي وحقول JSONB مخصصة وتقارير مالية ولوحات Kanban ثنائية اللغة.'
+                  : 'A full lead-management pipeline from Contact to Issue with a central Stage Engine, JSONB custom fields, financial reporting, and bilingual Livewire Kanban boards.'}
+              </p>
+              <div className="work-tech">
+                <span>Laravel 11</span><span>Livewire 4</span><span>PostgreSQL</span>
+              </div>
+            </Link>
+
+            <Link href="/projects/we-publishing" className="work-item size-md lime">
+              <div className="work-tag">{locale === 'ar' ? 'تعليم · SaaS متعدد المستأجرين' : 'Education · Multi-tenant SaaS'}</div>
+              <h3 className="work-title">WE Publishing</h3>
+              <p className="work-desc">
+                {locale === 'ar'
+                  ? 'تخصيص منصة تعليمية SaaS ببنية قاعدة بيانات لكل مستأجر مع مكتبة كتب رقمية وبوابة طالب ودردشة فورية وترجمة عربية كاملة.'
+                  : 'A customized education SaaS with database-per-tenant architecture, digital book delivery, student portal, real-time chat, and full Arabic localization.'}
+              </p>
+              <div className="work-tech">
+                <span>Laravel 10</span><span>Multi-tenant</span><span>Pusher</span>
+              </div>
+            </Link>
+
+            <Link href="/projects/ucofy" className="work-item size-sm">
+              <div className="work-tag">{locale === 'ar' ? 'إنترنت الأشياء' : 'IoT flagship'}</div>
               <h3 className="work-title">UCOFY</h3>
-              <p className="work-desc">
-                {locale === 'ar'
-                  ? 'منصة رقمية كاملة تدير دورة حياة جمع زيت الطهي المستعمل بالكامل. ٥ تطبيقات متكاملة، تتبع لحظي للسائقين، تكامل مع حساسات IoT، ونظام تقارير ومحاسبة شامل.'
-                  : 'A full digital platform managing the entire lifecycle of used cooking oil collection. 5 integrated applications, real-time driver tracking, IoT sensor integration, and a comprehensive reporting and accountability system.'}
-              </p>
-              <div className="work-tech">
-                <span>Laravel</span><span>Flutter</span><span>MySQL</span>
-                <span>Real-time</span><span>IoT</span><span>Multi-role</span>
-              </div>
-            </Link>
-
-            <Link href="/projects/yjoz" className="work-item size-md accent">
-              <div className="work-tag">{locale === 'ar' ? 'تجارة إلكترونية · جوال' : 'E-commerce · Mobile'}</div>
-              <h3 className="work-title">YJOZ</h3>
-              <p className="work-desc">
-                {locale === 'ar'
-                  ? 'تطبيق تجارة إلكترونية كامل الميزات لـ iOS و Android مع المخزون والمدفوعات الآمنة وتجربة مستخدم محسّنة للتحويل.'
-                  : 'Full-featured e-commerce mobile application for iOS and Android with inventory, secure payments, and conversion-optimized UX.'}
-              </p>
-              <div className="work-tech">
-                <span>Flutter</span><span>Laravel API</span><span>Payment Gateway</span>
-              </div>
-            </Link>
-
-            <Link href="/projects/lootah-biofuels" className="work-item size-md lime">
-              <div className="work-tag">{locale === 'ar' ? 'طاقة · ويب وتطبيق' : 'Energy · Web & App'}</div>
-              <h3 className="work-title">Lootah Biofuels</h3>
-              <p className="work-desc">
-                {locale === 'ar'
-                  ? 'منصة شركة رائدة في طاقة الوقود الحيوي بالإمارات — backend يشغّل التطبيق الجوال والموقع الرسمي على lootahbiofuels.com.'
-                  : 'Corporate platform for a UAE biofuel energy leader — backend powering the mobile app plus the full website at lootahbiofuels.com.'}
-              </p>
-              <div className="work-tech">
-                <span>Laravel</span><span>Flutter</span><span>WordPress</span>
-              </div>
-            </Link>
-
-            <Link href="/projects/yslinvestments" className="work-item size-sm">
-              <div className="work-tag">{locale === 'ar' ? 'قابضة' : 'Holding'}</div>
-              <h3 className="work-title">YSL Investments</h3>
-              <p className="work-desc">{locale === 'ar' ? 'منصة شركة لمجموعة استثمارية متنوعة في دبي.' : 'Corporate platform for a diversified Dubai investment group.'}</p>
-            </Link>
-
-            <Link href="/projects/zmkauto" className="work-item size-sm">
-              <div className="work-tag">{locale === 'ar' ? 'سيارات' : 'Automotive'}</div>
-              <h3 className="work-title">ZMK Auto</h3>
-              <p className="work-desc">{locale === 'ar' ? 'حل رقمي كامل لقطاع السيارات في الإمارات.' : 'Full digital solution for UAE automotive industry.'}</p>
+              <p className="work-desc">{locale === 'ar' ? 'خمس تطبيقات متكاملة لتتبع دورة حياة زيت الطهي المستعمل في الإمارات.' : 'Five integrated apps for the used cooking oil lifecycle across the UAE.'}</p>
             </Link>
 
             <Link href="/work" className="work-item size-sm">

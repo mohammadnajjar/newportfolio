@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { Link } from '@/lib/i18n/navigation'
+import { appConfig } from '@/config/app.config'
 import SiteTicker from '@/modules/common/SiteTicker'
 import SiteNav from '@/modules/common/SiteNav'
 import SiteFooter from '@/modules/common/SiteFooter'
@@ -21,6 +22,9 @@ export default async function ContactPage({ params }: PageProps) {
   setRequestLocale(locale)
   const t = await getTranslations('contactPage')
   const quickFaqItems = t.raw('quickFaq.items') as { q: string; a: string }[]
+  const linkedInLabel = appConfig.contact.linkedin.replace(/^https?:\/\/(www\.)?/, '')
+  const githubLabel = appConfig.contact.github.replace(/^https?:\/\/(www\.)?/, '')
+  const siteLabel = appConfig.site.url.replace(/^https?:\/\//, '')
 
   return (
     <>
@@ -40,28 +44,42 @@ export default async function ContactPage({ params }: PageProps) {
             <p>{t('intro.desc')}</p>
 
             <div className="contact-channels">
-              <a href="mailto:mohammadnajjamgl@gmail.com" className="contact-channel">
+              <a href={`mailto:${appConfig.contact.email}`} className="contact-channel">
                 <div className="contact-channel-icon">@</div>
                 <div className="contact-channel-body">
                   <div className="lbl">{t('channels.emailLabel')}</div>
-                  <div className="val">mohammadnajjamgl@gmail.com</div>
+                  <div className="val">{appConfig.contact.email}</div>
                 </div>
               </a>
-              <a href="https://wa.me/971501026045" target="_blank" rel="noopener noreferrer" className="contact-channel">
+              <a href={appConfig.contact.whatsappUrl} target="_blank" rel="noopener noreferrer" className="contact-channel">
                 <div className="contact-channel-icon">W</div>
                 <div className="contact-channel-body">
                   <div className="lbl">{t('channels.whatsappLabel')}</div>
-                  <div className="val">+971 50 102 6045</div>
+                  <div className="val">{appConfig.contact.phoneDisplay}</div>
                 </div>
               </a>
-              <a href="https://www.linkedin.com/in/mglnaj" target="_blank" rel="noopener noreferrer" className="contact-channel">
+              <a href={appConfig.contact.linkedin} target="_blank" rel="noopener noreferrer" className="contact-channel">
                 <div className="contact-channel-icon">L</div>
                 <div className="contact-channel-body">
                   <div className="lbl">{t('channels.linkedinLabel')}</div>
-                  <div className="val">linkedin.com/in/mglnaj</div>
+                  <div className="val">{linkedInLabel}</div>
                 </div>
               </a>
-              <a href="https://cal.com/mohammadnajjar" target="_blank" rel="noopener noreferrer" className="contact-channel">
+              <a href={appConfig.contact.github} target="_blank" rel="noopener noreferrer" className="contact-channel">
+                <div className="contact-channel-icon">G</div>
+                <div className="contact-channel-body">
+                  <div className="lbl">GitHub — code &amp; OSS</div>
+                  <div className="val">{githubLabel}</div>
+                </div>
+              </a>
+              <a href={appConfig.site.url} target="_blank" rel="noopener noreferrer" className="contact-channel">
+                <div className="contact-channel-icon">S</div>
+                <div className="contact-channel-body">
+                  <div className="lbl">Website — portfolio &amp; case studies</div>
+                  <div className="val">{siteLabel}</div>
+                </div>
+              </a>
+              <a href={appConfig.contact.cal} target="_blank" rel="noopener noreferrer" className="contact-channel">
                 <div className="contact-channel-icon">C</div>
                 <div className="contact-channel-body">
                   <div className="lbl">{t('channels.bookCallLabel')}</div>

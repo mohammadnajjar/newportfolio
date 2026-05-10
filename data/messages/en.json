@@ -47,25 +47,25 @@
     "free": "Free"
   },
   "home": {
-    "ticker": "AVAILABLE FOR Q3 2026 PROJECTS | DUBAI · GMT+4 | LARAVEL · REACT · FLUTTER · IOT | TECH LEAD @ YS LOOTAH",
+    "ticker": "SENIOR FULL-STACK ENGINEER · TECH LEAD | 120+ SHIPPED PROJECTS | LARAVEL · REACT · NEXT.JS · FLUTTER | DUBAI · GMT+4",
     "hero": {
-      "available": "Available for new projects · Q3 2026",
+      "available": "Available for senior product builds · Q3 2026",
       "monoCaption": "whoami",
-      "monoComment": "// full-stack · dubai · ships fast",
+      "monoComment": "// senior full-stack · tech lead · dubai",
       "title1": "I build",
       "title2": "digital",
       "title3": "products that",
       "title4": "ship",
-      "description": "Full-stack engineer based in Dubai. Six years building enterprise SaaS, IoT platforms, and mobile apps that real people use every day.",
+      "description": "Senior Full-Stack Engineer and Tech Lead based in Dubai. 6+ years building production SaaS, CRM systems, event-driven platforms, and mobile apps across 14 industries.",
       "ctaPrimary": "Start a project",
       "ctaSecondary": "See selected work →",
       "stack": "Stack",
       "card1Label": "Shipped",
       "card1Big": "120+",
-      "card1Desc": "production projects across 14 industries",
+      "card1Desc": "production projects across SaaS, CRM, mobile, and web",
       "card2Label": "Currently",
       "card2Big": "Tech Lead",
-      "card2Desc": "@ YS Lootah · 11 engineers"
+      "card2Desc": "@ YS Lootah Tech · 11 engineers"
     },
     "stats": {
       "yearsLabel": "Years building",
@@ -121,7 +121,7 @@
       "eyebrow": "Selected work",
       "title1": "Real projects,",
       "title2": "real clients",
-      "desc": "A curated selection from 120+ projects. Each one shipped, tested, and serving users.",
+      "desc": "Recent CRM, SaaS, insurance, education, IoT, and product work - shipped for real teams, with real operational pressure.",
       "seeAllTag": "All work",
       "seeAllTitle": "See all 120+ →",
       "seeAllDesc": "Apps, websites, e-commerce — full portfolio."
@@ -130,7 +130,7 @@
       "eyebrow": "Skills",
       "title1": "The full",
       "title2": "tech stack",
-      "desc": "Languages, frameworks, databases, and the practices that hold them together."
+      "desc": "From Laravel and Livewire to PostgreSQL, Docker, Azure DevOps, and the delivery practices that keep products stable."
     },
     "testimonial": {
       "quote1": "Mohammad is an outstanding full-stack engineer who ranks in the",
@@ -606,62 +606,62 @@
     }
   },
   "experiencePage": {
-    "metaTitle": "Experience — 6+ Years Building",
-    "metaDesc": "Work experience, leadership roles, education, achievements, languages, and the full skill stack — Mohammad Najjar.",
-    "ticker": "6+ YEARS BUILDING | LEAD ENGINEER · TEAM LEAD | 100+ WEBSITES · 10+ MOBILE APPS | DUBAI · MENA · WORLDWIDE",
+    "metaTitle": "Experience — Senior Full-Stack Engineer & Tech Lead",
+    "metaDesc": "Senior Full-Stack Engineer and Tech Lead with 6+ years shipping SaaS, CRM systems, web platforms, and mobile apps across 14 industries.",
+    "ticker": "SENIOR FULL-STACK ENGINEER | TECH LEAD @ YS LOOTAH TECH | 120+ PROJECTS | LARAVEL · REACT · NEXT.JS · FLUTTER | DUBAI · GMT+4",
     "header": {
       "eyebrow": "Experience",
       "title1": "Six years,",
       "title2": "one craft",
-      "desc": "Lead Full-Stack Engineer & Technical Project Manager with 6 years across web, mobile, and SaaS. Led engineering teams and delivered 100+ websites, 10+ mobile apps, and multiple CRM systems for tech, real estate, and green-energy clients."
+      "desc": "Senior Full-Stack Engineer and Tech Lead with 6+ years building production SaaS, web platforms, and CRM systems across 14 industries. Lead an 11-engineer team at YS Lootah Tech and have shipped 120+ projects on Laravel, React, Vue, Next.js, and Flutter with a focus on scalable architecture, event-driven systems, and CI/CD."
     },
     "work": {
       "eyebrow": "Work experience",
       "title1": "From",
       "title2": "contestant",
       "title3": "to tech lead",
-      "desc": "A timeline of roles, teams, and shipped products — full-time, freelance, and teaching positions across Dubai and the wider MENA region."
+      "desc": "Leadership, product delivery, freelance execution, teaching, and competitive-programming roots - all contributing to how I ship today."
     },
     "roles": [
       {
-        "company": "YS Lootah Tech", "location": "Dubai", "title": "Lead Full-Stack Engineer & Team Lead", "type": "Full-time", "period": "06/2024 — Present",
-        "bullets": ["Manage & mentor an 11-person engineering team (Laravel, React, Flutter, QA) — >35% drop in post-release defects.", "Mobile: architected and released 10 Android applications.", "Web: delivered 30+ production sites (see portfolio).", "Introduced OKR-driven Agile ceremonies; velocity improved 28% over three quarters."]
+        "company": "YS Lootah Tech", "location": "Dubai, UAE", "title": "Lead Full-Stack Engineer & Team Lead", "type": "Full-time", "period": "06/2024 — Present",
+        "bullets": ["Manage and mentor an 11-person engineering team across Laravel, React, Flutter, and QA, contributing to a 35%+ drop in post-release defects.", "Architected and released 10 Android applications across multiple business lines.", "Delivered 30+ production web projects alongside internal systems and product work.", "Introduced OKR-driven Agile ceremonies; team velocity improved 28% across three consecutive quarters."]
       },
       {
-        "company": "Freelance", "title": "Full-Stack Developer", "type": "Part-time", "period": "10/2022 — Present",
-        "bullets": ["Built and maintained 50+ live websites — top-tier performance, design consistency, and ongoing feature enhancements.", "Designed and developed 10+ high-conversion landing pages, optimizing UX and significantly improving campaign results."]
+        "company": "Freelancer", "location": "Remote", "title": "Full-Stack Developer", "type": "Part-time", "period": "10/2022 — Present",
+        "bullets": ["Shipped and maintained 50+ live websites end-to-end, ensuring strong performance, design consistency, and ongoing feature delivery.", "Created and launched 10+ high-conversion landing pages that improved user experience and campaign performance."]
       },
       {
-        "company": "Newline Information Technology & Marketing", "title": "Team Leader & Web Developer", "type": "Full-time", "period": "05/2023 — 06/2024",
-        "bullets": ["Led the engineering of a CRM system, enhancing lead-generation efficiency.", "Created an innovative CRM solution tailored for contract management — streamlined contract handling and operational workflows.", "Built 10 modern, responsive websites using advanced development practices tailored to client industries and conversion goals.", "Created 30+ high-performing landing pages — significantly increased campaign engagement and drove measurable growth in lead capture and ROI."]
+        "company": "Newline Information Technology & Marketing", "location": "Dubai, UAE", "title": "Team Leader & Web Developer", "type": "Full-time", "period": "05/2023 — 06/2024",
+        "bullets": ["Led the end-to-end engineering of two production CRM platforms: a multi-company lead-generation system automating lead distribution, and a contract-management system streamlining lifecycle workflows.", "Delivered 10 modern client websites and 30+ Google Ads landing pages, driving measurable gains in lead capture, conversion, and campaign ROI."]
       },
       {
-        "company": "Act Local Digital Marketing", "location": "Dubai", "title": "Full-Stack Web Developer", "type": "Full-time", "period": "02/2023 — 04/2023",
-        "bullets": ["Developed 4 fully responsive WordPress websites from scratch — custom themes, Elementor layouts, multilingual SEO.", "Built and optimized 2 high-converting landing pages for Google Ads campaigns — improved ad quality score and lead capture rates."]
+        "company": "Act Local Digital Marketing", "location": "Dubai, UAE", "title": "Full-Stack Web Developer", "type": "Full-time", "period": "02/2023 — 04/2023",
+        "bullets": ["Crafted 4 responsive WordPress websites from scratch with custom themes, ACF, Elementor layouts, and multilingual SEO.", "Launched and optimized 2 conversion-focused landing pages for Google Ads campaigns, improving quality score and lead capture rates."]
       },
       {
-        "company": "Castles Code", "title": "Frontend Instructor", "type": "Part-time", "period": "01/2023 — 12/2023",
-        "bullets": ["Developed a comprehensive curriculum for 15 students, enhancing practical front-end skills.", "Provided sustained technical support, significantly elevating student proficiency."]
+        "company": "Castles Code", "location": "Remote", "title": "Frontend Instructor", "type": "Part-time", "period": "01/2023 — 12/2023",
+        "bullets": ["Designed a practical frontend curriculum for 15 students and provided ongoing technical support.", "Raised student proficiency through structured mentoring, review sessions, and hands-on guidance."]
       },
       {
-        "company": "ICPC — International Collegiate Programming Contest", "title": "Coach", "type": "Part-time", "period": "06/2022 — 09/2022",
-        "bullets": ["Conducted an impactful training camp educating 70+ students in C++, data structures, and algorithms.", "Fostered enhanced technical understanding among students with a notable success rate."]
+        "company": "ICPC Community", "title": "Coach", "type": "Part-time", "period": "06/2022 — 09/2022",
+        "bullets": ["Ran an intensive training camp for 70+ students covering C++, data structures, and algorithms.", "Coached competitive-programming students with a strong emphasis on problem solving and contest readiness."]
       },
       {
-        "company": "Unique Software Ideas Community", "title": "Junior Full-Stack Developer", "type": "Full-time", "period": "08/2021 — 02/2022",
-        "bullets": ["Completed 5 front-end projects focused on innovative design and performance optimization.", "Used a diverse stack — JavaScript, jQuery, PHP — for dynamic web application development."]
+        "company": "Unique Software Ideas Community", "location": "Remote", "title": "Junior Full-Stack Developer", "type": "Full-time", "period": "08/2021 — 02/2022",
+        "bullets": ["Built five client-facing projects with an emphasis on clean UI, fast delivery, and performance-minded implementation.", "Worked across JavaScript, jQuery, PHP, and frontend-heavy product requirements."]
       },
       {
-        "company": "Injaz", "title": "Back-End Developer (Internship)", "type": "Internship", "period": "10/2020 — 12/2020",
-        "bullets": ["Developed 2 responsive web applications using PHP and Laravel — including an educational platform.", "Implemented MySQL databases, optimizing data management and website functionality."]
+        "company": "Injaz", "title": "Back-End Developer Intern", "type": "Internship", "period": "10/2020 — 12/2020",
+        "bullets": ["Developed two Laravel and PHP web applications, including an education-focused platform.", "Designed MySQL-backed data flows to support application features and day-to-day operations."]
       },
       {
         "company": "ICPC — International Collegiate Programming Contest", "title": "Contestant", "type": "Part-time", "period": "05/2019 — 06/2020",
-        "bullets": ["Led a team to victory in the SCPC 2019 Private Universities category.", "Secured 8th place among all Aleppo universities in AleppoCPC 2019."]
+        "bullets": ["Won the SCPC 2019 Private Universities category.", "Placed 8th across all Aleppo universities in AleppoCPC 2019."]
       },
       {
         "company": "Wikilogia Hackathon — MyTaxi", "title": "Front-End Developer", "type": "Hackathon", "period": "02/2018 — 04/2018",
-        "bullets": ["Contributed significantly to the MyTaxi project — focused on front-end development and database management."]
+        "bullets": ["Built frontend and database pieces for the MyTaxi hackathon project during one of my earliest shipped team experiences."]
       }
     ],
     "volunteering": {
@@ -672,7 +672,7 @@
       "items": [
         {
           "org": "National Union of Syrian Students", "title": "Student Body President", "period": "01/2018 — 06/2022",
-          "bullets": ["Mediated with university administration, enhancing student experiences and addressing key concerns.", "Conducted a meeting with 300+ students to identify their pain points and communication needs with the administration.", "Orchestrated student-focused initiatives, leading to a 90% election victory."]
+          "bullets": ["Represented students in direct coordination with university administration on academic and operational concerns.", "Ran large-scale student listening sessions and advocacy initiatives across campus.", "Won the election with 90% of the vote."]
         }
       ]
     },
@@ -681,13 +681,13 @@
       "title1": "The full",
       "title2": "tech stack",
       "desc": "Languages, frameworks, databases, and the practices that hold them together.",
-      "personalEyebrow": "Personal skills",
-      "personalSkills": ["Team Leadership", "Teamwork", "Communication", "Volunteer Management"]
+      "personalEyebrow": "Leadership & practice",
+      "personalSkills": ["Team leadership", "Mentoring", "Architecture decisions", "Hiring", "Technical interviewing", "AI-first workflow", "Volunteer management", "Cross-functional communication"]
     },
     "education": {
       "eyebrow": "Education",
       "school": "Ittihad Private University",
-      "degree": "Bachelor of Information Technology — Computer Science",
+      "degree": "Bachelor of Information Technology, Major in Computer Science",
       "gpa": "GPA: 3.03 / 4.00",
       "location": "Aleppo, Syria",
       "period": "10/2016 — 09/2022"
@@ -702,17 +702,18 @@
     "achievements": {
       "eyebrow": "Achievements",
       "items": [
-        "Championed the Private Universities category in SCPC 2019.",
-        "Ranked 8th in AleppoCPC 2019.",
-        "Certificate of Participation — Wikilogia Hackathon 2018."
+        "Champion — SCPC 2019, Private Universities category.",
+        "8th place — AleppoCPC 2019.",
+        "Join Imagine Program — top 10% of peer group (2023).",
+        "Student Body President — National Union of Syrian Students (2018 — 2022), elected with 90% of the vote."
       ]
     },
     "recommendation": {
       "eyebrow": "Recommendation",
-      "quote1": "Endorsed by Join Imagine with a recommendation letter — ranked in the top",
+      "quote1": "Endorsed by Join Imagine with an official recommendation letter — ranked in the top",
       "quote2": "10%",
       "quote3": "of their peer group.",
-      "by": "— Join Imagine"
+      "by": "— Join Imagine Program · 2023"
     },
     "results": {
       "years": "Years Building",

@@ -6,24 +6,26 @@
 export const appConfig = {
   site: {
     name: 'Mohammad Najjar',
-    title: 'Mohammad Najjar — Senior software engineer · Dubai',
+    title: 'Mohammad Najjar — Senior Full-Stack Engineer & Tech Lead · Dubai',
     description:
-      'Senior software engineer based in Dubai. Building SaaS products, mobile apps, and web platforms with Laravel, Flutter, and React.',
+      'Senior Full-Stack Engineer and Tech Lead based in Dubai. Building production SaaS, CRM systems, web platforms, and event-driven products across 14 industries.',
     url: 'https://mohammadnajjar.com',
     locale: 'en_US',
   },
   author: {
     name: 'Mohammad Najjar',
-    role: 'Senior Software Engineer',
+    role: 'Senior Full-Stack Engineer & Tech Lead',
     location: 'Dubai, UAE',
     timezone: 'GMT+4',
     initials: 'MN',
   },
   contact: {
     email: 'mohammadnajjamgl@gmail.com',
+    phoneDisplay: '+971 50 102 6045',
     whatsapp: '+971501026045',
     whatsappUrl: 'https://wa.me/971501026045',
     linkedin: 'https://www.linkedin.com/in/mglnaj',
+    github: 'https://github.com/mohammadnajjar',
     cal: 'https://cal.com/mohammadnajjar',
   },
   stats: {

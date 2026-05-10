@@ -1,6 +1,7 @@
 import type { ReactElement } from 'react'
 import { getTranslations } from 'next-intl/server'
 import { Link } from '@/lib/i18n/navigation'
+import { appConfig } from '@/config/app.config'
 
 const IconEmail = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -23,6 +24,12 @@ const IconWhatsApp = () => (
 const IconCalendar = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
     <path d="M19 3h-1V1h-2v2H8V1H6v2H5C3.89 3 3.01 3.9 3.01 5L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+  </svg>
+)
+
+const IconGithub = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12 .5C5.649.5.5 5.649.5 12c0 5.086 3.292 9.402 7.86 10.924.575.106.785-.25.785-.556 0-.275-.01-1.004-.016-1.971-3.197.694-3.872-1.54-3.872-1.54-.523-1.328-1.278-1.682-1.278-1.682-1.044-.714.08-.699.08-.699 1.155.081 1.762 1.186 1.762 1.186 1.026 1.758 2.69 1.25 3.346.956.104-.743.402-1.25.731-1.537-2.552-.29-5.236-1.276-5.236-5.68 0-1.255.448-2.281 1.184-3.085-.119-.29-.513-1.457.113-3.037 0 0 .965-.309 3.162 1.179A10.98 10.98 0 0 1 12 6.032c.974.005 1.955.132 2.872.387 2.195-1.488 3.158-1.18 3.158-1.18.628 1.58.234 2.748.115 3.038.737.804 1.182 1.83 1.182 3.085 0 4.415-2.689 5.387-5.251 5.672.414.356.783 1.059.783 2.135 0 1.541-.014 2.783-.014 3.162 0 .309.207.668.79.555C20.21 21.398 23.5 17.084 23.5 12c0-6.351-5.149-11.5-11.5-11.5Z"/>
   </svg>
 )
 
@@ -63,7 +70,7 @@ export default async function SiteFooter({ headline = '' }: { headline?: Headlin
               <Headline headline={headline} t={t} />
             </div>
             <Link
-              href="mailto:mohammadnajjamgl@gmail.com?subject=Project%20Inquiry"
+              href={`mailto:${appConfig.contact.email}?subject=Project%20Inquiry`}
               className="btn-big on-dark"
               style={{ marginTop: '32px', display: 'inline-flex' }}
             >
@@ -84,16 +91,19 @@ export default async function SiteFooter({ headline = '' }: { headline?: Headlin
 
           <div className="footer-col">
             <h4>{t('connect')}</h4>
-            <a href="mailto:mohammadnajjamgl@gmail.com" target="_blank" rel="noopener noreferrer">
+            <a href={`mailto:${appConfig.contact.email}`} target="_blank" rel="noopener noreferrer">
               <IconEmail /> {t('email')}
             </a>
-            <a href="https://linkedin.com/in/mglnaj" target="_blank" rel="noopener noreferrer">
+            <a href={appConfig.contact.linkedin} target="_blank" rel="noopener noreferrer">
               <IconLinkedIn /> {t('linkedin')}
             </a>
-            <a href="https://wa.me/971501026045" target="_blank" rel="noopener noreferrer">
+            <a href={appConfig.contact.github} target="_blank" rel="noopener noreferrer">
+              <IconGithub /> GitHub
+            </a>
+            <a href={appConfig.contact.whatsappUrl} target="_blank" rel="noopener noreferrer">
               <IconWhatsApp /> {t('whatsapp')}
             </a>
-            <a href="https://cal.com/mohammadnajjar" target="_blank" rel="noopener noreferrer">
+            <a href={appConfig.contact.cal} target="_blank" rel="noopener noreferrer">
               <IconCalendar /> {t('bookCall')}
             </a>
           </div>
